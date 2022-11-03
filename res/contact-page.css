@@ -1,0 +1,263 @@
+.contact-page-container {
+  min-height: 100vh;
+}
+.contact-page-contact-page {
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.contact-page-headingrectangle4 {
+  top: 92px;
+  left: 635px;
+  width: 624px;
+  height: 40px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.contact-page-text {
+  top: 92px;
+  left: 897px;
+  color: rgba(255, 255, 255, 1);
+  width: 125px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-menubutton {
+  top: 45px;
+  left: 48px;
+  width: 45px;
+  height: 47px;
+  position: absolute;
+}
+.contact-page-quickmenu {
+  top: 41px;
+  left: 1654px;
+  width: 217px;
+  height: 51px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.contact-page-text02 {
+  top: 55px;
+  left: 1679px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-text04 {
+  top: 55px;
+  left: 1764px;
+  color: rgba(255, 255, 255, 1);
+  width: 81px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-contactcard {
+  top: 172px;
+  left: 603px;
+  width: 688px;
+  height: 736px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.contact-page-text06 {
+  top: 313px;
+  left: 862px;
+  color: rgba(255, 255, 255, 1);
+  width: 195px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-text08 {
+  top: 393px;
+  left: 821px;
+  color: rgba(255, 255, 255, 1);
+  width: 278px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-text10 {
+  top: 627px;
+  left: 913px;
+  color: rgba(255, 255, 255, 1);
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-text12 {
+  top: 707px;
+  left: 797px;
+  color: rgba(255, 255, 255, 1);
+  width: 325px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.contact-page-themeselector {
+  top: 39px;
+  left: 863px;
+  width: 167px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.contact-page-themesrectangle {
+  top: 0px;
+  left: 0px;
+  width: 167px;
+  height: 30px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(126, 50, 50, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 11.326000213623047px;
+}
+.contact-page-defaulttheme {
+  top: 4px;
+  left: 11px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+}
+.contact-page-bluetheme {
+  top: 4px;
+  left: 45px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+}
+.contact-page-blacktheme {
+  top: 4px;
+  left: 135px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+}
+.contact-page-greentheme {
+  top: 4px;
+  left: 105px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+}
+.contact-page-orangetheme {
+  top: 4px;
+  left: 75px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+}
+.contact-page-text14 {
+  top: 931px;
+  left: 846px;
+  color: rgba(166, 64, 96, 1);
+  width: 275px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
