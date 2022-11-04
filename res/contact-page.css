@@ -48,16 +48,16 @@
   position: absolute;
 }
 .contact-page-quickmenu {
-  top: 41px;
-  left: 1654px;
-  width: 217px;
+  top: 38px;
+  left: 1536px;
+  width: 329px;
   height: 51px;
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
 .contact-page-text02 {
-  top: 55px;
+  top: 52px;
   left: 1679px;
   color: rgba(255, 255, 255, 1);
   width: 58px;
@@ -75,8 +75,37 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+.contact-page-text02:hover{
+  text-decoration: underline overline;
+}
+
+.contact-page-home {
+  top: 52px;
+  left: 1575px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.contact-page-home:hover{
+  text-decoration: underline overline;
+}
+
 .contact-page-text04 {
-  top: 55px;
+  top: 52px;
   left: 1764px;
   color: rgba(255, 255, 255, 1);
   width: 81px;
@@ -94,6 +123,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+.contact-page-text04:hover{
+  text-decoration: underline overline;
+}
+
 .contact-page-contactcard {
   top: 172px;
   left: 603px;
@@ -179,6 +213,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .contact-page-themeselector {
   top: 39px;
   left: 863px;
@@ -190,6 +225,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .contact-page-themesrectangle {
   top: 0px;
   left: 0px;
@@ -202,6 +238,7 @@
   border-width: 2px;
   border-radius: 11.326000213623047px;
 }
+
 .contact-page-defaulttheme {
   top: 4px;
   left: 11px;
@@ -209,7 +246,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.contact-page-defaulttheme:hover{
+  border-width: 4px;
+}
+
 .contact-page-bluetheme {
   top: 4px;
   left: 45px;
@@ -217,7 +261,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.contact-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .contact-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -225,7 +276,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.contact-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .contact-page-greentheme {
   top: 4px;
   left: 105px;
@@ -233,7 +291,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.contact-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .contact-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -241,7 +306,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.contact-page-orangetheme:hover{
+  border-width: 4px;
+}
+
 .contact-page-text14 {
   top: 931px;
   left: 846px;
@@ -260,4 +332,8 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+
+.contact-page-text14:hover{
+  text-decoration: underline overline;
 }

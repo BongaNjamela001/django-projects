@@ -14,15 +14,15 @@
 }
 .about-page-quickmenuabout {
   top: 59px;
-  left: 1608px;
-  width: 263px;
+  left: 1512px;
+  width: 359px;
   height: 37px;
   position: absolute;
   border-color: transparent;
   border-radius: 8.248282432556152px;
 }
 .about-page-text {
-  top: 64px;
+  top: 66px;
   left: 1637px;
   color: rgba(255, 255, 255, 1);
   width: 81px;
@@ -39,6 +39,31 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.about-page-text:hover{
+  text-decoration: underline overline;
+}
+.about-page-home {
+  top: 66px;
+  left: 1540px;
+  color: rgba(255, 255, 255, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.about-page-home:hover{
+  text-decoration: underline overline;
 }
 .about-page-text02 {
   top: 66px;
@@ -59,6 +84,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+.about-page-text02:hover{
+  text-decoration: underline overline;
+}
+
 .about-page-themeselector {
   top: 53px;
   left: 876px;
@@ -89,6 +119,11 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
+}
+.about-page-defaulttheme:hover{
+  border-width: 4px;
 }
 .about-page-bluetheme {
   top: 4px;
@@ -97,7 +132,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.about-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .about-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -105,7 +147,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.about-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .about-page-greentheme {
   top: 4px;
   left: 105px;
@@ -113,7 +162,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.about-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .about-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -121,6 +177,12 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
+}
+
+.about-page-orangetheme:hover{
+  border-width: 4px;
 }
 .about-page-aboutpageheading {
   top: 104px;
@@ -244,7 +306,7 @@
 }
 .about-page-profilepicturehflip2 {
   top: 168px;
-  left: 1871px;
+  left: 1572px;
   width: 299px;
   height: 259px;
   position: absolute;

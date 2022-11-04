@@ -40,6 +40,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .comp-eng-page-menubutton {
   top: 45px;
   left: 48px;
@@ -49,8 +50,8 @@
 }
 .comp-eng-page-quickmenu {
   top: 45px;
-  left: 1506px;
-  width: 368px;
+  left: 1389px;
+  width: 485px;
   height: 51px;
   position: absolute;
   border-color: transparent;
@@ -75,6 +76,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text02:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-text04 {
   top: 59px;
   left: 1616px;
@@ -94,6 +98,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text04:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-text06 {
   top: 59px;
   left: 1725px;
@@ -112,6 +119,31 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.comp-eng-page-text06:hover{
+  text-decoration: underline overline;
+}
+.comp-eng-page-home {
+  top: 59px;
+  left: 1438px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.comp-eng-page-home:hover{
+  text-decoration: underline overline;
 }
 .comp-eng-page-compengfilescard {
   top: 181px;
@@ -161,6 +193,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text08:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-cengprojbstreescard {
   top: 269px;
   left: 93px;
@@ -202,6 +237,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text10:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-cengprojparallelcard {
   top: 357px;
   left: 93px;
@@ -240,6 +278,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.comp-eng-page-text12:hover{
+  text-decoration: underline overline;
 }
 .comp-eng-page-cengprojdijkstracard {
   top: 445px;
@@ -282,6 +323,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text14:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-cengprojmobilecard {
   top: 533px;
   left: 93px;
@@ -320,6 +364,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.comp-eng-page-text16:hover{
+  text-decoration: underline overline;
 }
 .comp-eng-page-cengprojbenchmarkcard {
   top: 621px;
@@ -362,6 +409,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text18:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-cengproji2ccard {
   top: 709px;
   left: 93px;
@@ -400,6 +450,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.comp-eng-page-text20:hover{
+  text-decoration: underline overline;
 }
 .comp-eng-page-cengprojadcscard {
   top: 797px;
@@ -442,6 +495,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text22:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-cengprojlotcard {
   top: 882px;
   left: 93px;
@@ -481,6 +537,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.comp-eng-page-text24:hover{
+  text-decoration: underline overline;
+}
 .comp-eng-page-themeselector {
   top: 39px;
   left: 916px;
@@ -511,6 +570,11 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
+}
+.comp-eng-page-defaulttheme:hover{
+  border-width: 4px;
 }
 .comp-eng-page-bluetheme {
   top: 4px;
@@ -519,7 +583,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.comp-eng-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .comp-eng-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -527,7 +598,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.comp-eng-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .comp-eng-page-greentheme {
   top: 4px;
   left: 105px;
@@ -535,7 +613,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.comp-eng-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .comp-eng-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -543,4 +628,10 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
+}
+
+.comp-eng-page-orangetheme:hover{
+  border-width: 4px;
 }

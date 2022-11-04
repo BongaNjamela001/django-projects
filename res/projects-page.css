@@ -14,8 +14,8 @@
 }
 .projects-page-quickmenuprojects {
   top: 48px;
-  left: 1608px;
-  width: 263px;
+  left: 1512px;
+  width: 359px;
   height: 37px;
   position: absolute;
   border-color: transparent;
@@ -78,6 +78,10 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.projects-page-text02:hover{
+  text-decoration: underline overline;
+}
+
 .projects-page-menubutton {
   top: 45px;
   left: 48px;
@@ -104,6 +108,10 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.projects-page-text04:hover{
+  text-decoration: underline overline;
+}
+
 .projects-page-cscprojectscard {
   top: 192px;
   left: 93px;
@@ -143,6 +151,36 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.projects-page-text06:hover{
+  text-decoration: underline overline;
+}
+
+
+.projects-page-texthome {
+  top: 55px;
+  left: 1548px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.projects-page-texthome:hover{
+  text-decoration: underline overline;
+}
+
+
 .projects-page-engprojectscard {
   top: 687px;
   left: 93px;
@@ -182,6 +220,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+.projects-page-text11:hover{
+  text-decoration: underline overline;
+}
+
 .projects-page-mathprojectscard {
   top: 687px;
   left: 1039px;
@@ -193,6 +236,11 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
+.projects-page-mathprojectscard:hover{
+  text-decoration: underline overline;
+}
+
 .projects-page-mathprojectscard1 {
   top: 0px;
   left: 0px;
@@ -201,6 +249,9 @@
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
+}
+.projects-page-mathprojectscard1:hover{
+  text-decoration: underline overline;
 }
 .projects-page-text13 {
   top: 106px;
@@ -220,6 +271,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.projects-page-text13:hover{
+  text-decoration: underline overline;
 }
 .projects-page-physprojectscard {
   top: 192px;
@@ -258,6 +312,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.projects-page-text15:hover{
+  text-decoration: underline overline;
+}
 .projects-page-themeselector {
   top: 39px;
   left: 876px;
@@ -288,6 +345,12 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
+}
+
+.projects-page-defaulttheme:hover{
+  border-width: 4px;
 }
 .projects-page-bluetheme {
   top: 4px;
@@ -296,7 +359,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.projects-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .projects-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -304,7 +374,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.projects-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .projects-page-greentheme {
   top: 4px;
   left: 105px;
@@ -312,7 +389,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.projects-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .projects-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -320,4 +404,10 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
+}
+
+.projects-page-orangetheme:hover{
+  border-width: 4px;
 }

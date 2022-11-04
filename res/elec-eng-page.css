@@ -48,16 +48,16 @@
   position: absolute;
 }
 .elec-eng-page-quickmenu {
-  top: 45px;
-  left: 1506px;
-  width: 368px;
+  top: 38px;
+  left: 1394px;
+  width: 468px;
   height: 51px;
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
 .elec-eng-page-text02 {
-  top: 59px;
+  top: 52px;
   left: 1531px;
   color: rgba(255, 255, 255, 1);
   width: 58px;
@@ -75,8 +75,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text02:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-text04 {
-  top: 59px;
+  top: 52px;
   left: 1616px;
   color: rgba(255, 255, 255, 1);
   width: 81px;
@@ -94,8 +97,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text04:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-text06 {
-  top: 59px;
+  top: 52px;
   left: 1725px;
   color: rgba(255, 255, 255, 1);
   width: 115px;
@@ -112,6 +118,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.elec-eng-page-text06:hover{
+  text-decoration: underline overline;
 }
 .elec-eng-page-elecengfilescard {
   top: 181px;
@@ -161,6 +170,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text08:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-elecengprojstmcard {
   top: 269px;
   left: 93px;
@@ -202,6 +214,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text10:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-elecengprojpowercard {
   top: 357px;
   left: 93px;
@@ -240,6 +255,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.elec-eng-page-text12:hover{
+  text-decoration: underline overline;
 }
 .elec-eng-page-elecengprojinductorcard {
   top: 445px;
@@ -282,6 +300,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text14:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-elecengproj-d-n-scard {
   top: 534px;
   left: 93px;
@@ -320,6 +341,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.elec-eng-page-text16:hover{
+  text-decoration: underline overline;
 }
 .elec-eng-page-elecengprojenergycard {
   top: 621px;
@@ -362,6 +386,32 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text18:hover{
+  text-decoration: underline overline;
+}
+
+.elec-eng-page-home {
+  top: 52px;
+  left: 1433px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.elec-eng-page-home:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-elecengprojpcscard {
   top: 709px;
   left: 93px;
@@ -401,6 +451,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.elec-eng-page-text20:hover{
+  text-decoration: underline overline;
+}
 .elec-eng-page-themeselector {
   top: 39px;
   left: 884px;
@@ -424,6 +477,7 @@
   border-width: 2px;
   border-radius: 11.326000213623047px;
 }
+
 .elec-eng-page-defaulttheme {
   top: 4px;
   left: 11px;
@@ -431,6 +485,12 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
+}
+
+.elec-eng-page-defaulttheme:hover{
+  border-width: 4px;
 }
 .elec-eng-page-bluetheme {
   top: 4px;
@@ -439,7 +499,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.elec-eng-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .elec-eng-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -447,7 +514,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.elec-eng-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .elec-eng-page-greentheme {
   top: 4px;
   left: 105px;
@@ -455,7 +529,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.elec-eng-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .elec-eng-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -463,4 +544,10 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
+}
+
+.elec-eng-page-orangetheme:hover{
+  border-width: 4px;
 }

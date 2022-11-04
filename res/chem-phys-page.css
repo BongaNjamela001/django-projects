@@ -49,8 +49,8 @@
 }
 .chem-phys-page-quickmenu {
   top: 45px;
-  left: 1506px;
-  width: 368px;
+  left: 1406px;
+  width: 468px;
   height: 51px;
   position: absolute;
   border-color: transparent;
@@ -75,6 +75,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text02:hover{
+  text-decoration: underline overline;
+}
 .chem-phys-page-text04 {
   top: 59px;
   left: 1616px;
@@ -94,6 +97,10 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text04:hover{
+  text-decoration: underline overline;
+}
+
 .chem-phys-page-text06 {
   top: 59px;
   left: 1725px;
@@ -113,6 +120,35 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+.chem-phys-page-text06:hover{
+  text-decoration: underline overline;
+}
+
+.chem-phys-page-home {
+  top: 59px;
+  left: 1445px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.chem-phys-page-home:hover{
+  text-decoration: underline overline;
+}
+
 .chem-phys-page-chemphysfilescard {
   top: 181px;
   left: 93px;
@@ -161,6 +197,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text08:hover{
+  text-decoration: underline overline;
+}
 .chem-phys-page-chemphyprojkundtcard {
   top: 269px;
   left: 93px;
@@ -202,6 +241,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text10:hover{
+  text-decoration: underline overline;
+}
 .chem-phys-page-chemphyprojdpphcard {
   top: 357px;
   left: 93px;
@@ -240,6 +282,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.chem-phys-page-text12:hover{
+  text-decoration: underline overline;
 }
 .chem-phys-page-chemphyprojinfracard {
   top: 445px;
@@ -282,6 +327,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text14:hover{
+  text-decoration: underline overline;
+}
 .chem-phys-page-chemphyprojjoulecard {
   top: 533px;
   left: 93px;
@@ -320,6 +368,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.chem-phys-page-text16:hover{
+  text-decoration: underline overline;
 }
 .chem-phys-page-chemphyprojlasercard {
   top: 621px;
@@ -362,6 +413,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text18:hover{
+  text-decoration: underline overline;
+}
 .chem-phys-page-chemphyprojguoycard {
   top: 709px;
   left: 93px;
@@ -401,6 +455,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.chem-phys-page-text20:hover{
+  text-decoration: underline overline;
+}
 .chem-phys-page-themeselector {
   top: 39px;
   left: 884px;
@@ -431,6 +488,11 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
+}
+.chem-phys-page-defaulttheme:hover{
+  border-width: 4px;
 }
 .chem-phys-page-bluetheme {
   top: 4px;
@@ -439,7 +501,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.chem-phys-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .chem-phys-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -447,7 +516,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.chem-phys-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .chem-phys-page-greentheme {
   top: 4px;
   left: 105px;
@@ -455,7 +531,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.chem-phys-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .chem-phys-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -463,4 +546,10 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
+}
+
+.chem-phys-page-orangetheme:hover{
+  border-width: 4px;
 }

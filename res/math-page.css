@@ -48,16 +48,16 @@
   position: absolute;
 }
 .math-page-quickmenu {
-  top: 45px;
-  left: 1506px;
-  width: 368px;
+  top: 38px;
+  left: 1394px;
+  width: 468px;
   height: 51px;
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
 .math-page-text02 {
-  top: 59px;
+  top: 52px;
   left: 1531px;
   color: rgba(255, 255, 255, 1);
   width: 58px;
@@ -75,8 +75,33 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.math-page-text02:hover{
+  text-decoration: underline overline;
+}
+.math-page-texthome {
+  top: 52px;
+  left: 1445px;
+  color: rgba(255, 255, 255, 1);
+  width: 58px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.math-page-texthome:hover{
+  text-decoration: underline overline;
+}
 .math-page-text04 {
-  top: 59px;
+  top: 52px;
   left: 1616px;
   color: rgba(255, 255, 255, 1);
   width: 81px;
@@ -94,8 +119,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.math-page-text04:hover{
+  text-decoration: underline overline;
+}
 .math-page-text06 {
-  top: 59px;
+  top: 52px;
   left: 1725px;
   color: rgba(255, 255, 255, 1);
   width: 115px;
@@ -112,6 +140,9 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+.math-page-text06:hover{
+  text-decoration: underline overline;
 }
 .math-page-mathfilescard {
   top: 181px;
@@ -161,6 +192,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.math-page-text08:hover{
+  text-decoration: underline overline;
+}
 .math-page-mathprojracard {
   top: 269px;
   left: 93px;
@@ -202,6 +236,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.math-page-text10:hover{
+  text-decoration: underline overline;
+}
 .math-page-mathprojpdecard {
   top: 357px;
   left: 93px;
@@ -241,6 +278,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.math-page-text12:hover{
+  text-decoration: underline overline;
+}
 .math-page-themeselector {
   top: 39px;
   left: 876px;
@@ -271,6 +311,12 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
+}
+
+.math-page-defaulttheme:hover{
+  border-width: 4px;
 }
 .math-page-bluetheme {
   top: 4px;
@@ -279,7 +325,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder); 
+  border-radius: 50%;
 }
+
+.math-page-bluetheme:hover{
+  border-width: 4px;
+}
+
 .math-page-blacktheme {
   top: 4px;
   left: 135px;
@@ -287,7 +340,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.math-page-blacktheme:hover{
+  border-width: 4px;
+}
+
 .math-page-greentheme {
   top: 4px;
   left: 105px;
@@ -295,7 +355,14 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
 }
+
+.math-page-greentheme:hover{
+  border-width: 4px;
+}
+
 .math-page-orangetheme {
   top: 4px;
   left: 75px;
@@ -303,4 +370,10 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
+  border:1px solid var(--themeselectorborder);
+  border-radius: 50%;
+}
+
+.math-page-orangetheme:hover{
+  border-width: 4px;
 }
