@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Bonga Njamela</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}
+      body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}
+      p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}
+      button {  background-color: transparent;}
+      button,input,optgroup,select,textarea{  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}
+      button,select {  text-transform: none;}
+      button,[type="button"],[type="reset"],[type="submit"] 
+      {  -webkit-appearance: button;}
+      button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="{% static 'cssfiles/style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'cssfiles/projects-page.css' %}" rel="stylesheet" />
+
+      <div class="projects-page-container">
+        <div class="projects-page-projects-page">
+          <img
+            src="{% static 'imgsfiles/quickmenuprojects4632-oh2p-200h.png' %}"
+            alt="quickmenuprojects4632"
+            class="projects-page-quickmenuprojects"
+          />
+          <div class="projects-page-projectspageheading">
+            <img
+              src="{% static 'imgsfiles/projectsheadingcard5278-dwq-200h.png'  %}"
+              alt="projectsheadingcard5278"
+              class="projects-page-projectsheadingcard"
+            />
+            <span class="projects-page-text">
+              <span>Portfolio</span>
+            </span>
+          </div>
+          <span class="projects-page-text02"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+         
+          <div class="projects-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton4636-hzgc.svg' %}"
+              alt="menubutton4636"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton4637"
+              class="projects-page-menubuttonhover"
+            />
+          </div>
+         
+          <span class="projects-page-text04"><a href="/about/{{about.id}}">About</a></span>
+          <span class="projects-page-texthome"><a href="/{{home.id}}">Home</a></span>
+          <div class="projects-page-cscprojectscard">
+            <img
+              src="{% static 'imgsfiles/cscprojectscard4640-2up-300h.png' %}"
+              alt="cscprojectscard4640"
+              class="projects-page-cscprojectscard1"
+            />
+            <span class="projects-page-text06">
+              <a href="/compeng/{{compeng.id}}">
+                <span>Computer &amp; Software</span>
+                <br />
+                <span>Engineering</span>
+              </a>
+            </span>
+          </div>
+          <div class="projects-page-engprojectscard">
+            <img
+              src="{% static 'imgsfiles/engprojectscard4641-17-300h.png' %}"
+              alt="engprojectscard4641"
+              class="projects-page-engprojectscard1"
+            />
+            <span class="projects-page-text11">
+              <a href="/eleceng/{{eleceng.id}}">Electrical Engineering</a>
+            </span>
+          </div>
+          <div class="projects-page-mathprojectscard">
+            <img
+              src="{% static 'imgsfiles/mathprojectscard4642-xp6j-300h.png' %}"
+              alt="mathprojectscard4642"
+              class="projects-page-mathprojectscard1"
+            />
+            <span class="projects-page-text13"><a href="/math/{{math.id}}">Mathematics</a></span>
+          </div>
+          <div class="projects-page-physprojectscard">
+            <img
+              src="{% static 'imgsfiles/physprojectscard4744-czr.svg' %}"
+              alt="physprojectscard4744"
+              class="projects-page-physprojectscard1"
+            />
+            <span class="projects-page-text15">
+              <a href="/chemphys/{{chemphys.id}}">Chemistry &amp; Physics</a>
+            </span>
+          </div>
+          <div class="projects-page-themeselector">
+            <img
+              src="{% static 'imgsfiles/themesrectanglei109-sl-200h.png' %}"
+              alt="themesrectangleI109"
+              class="projects-page-themesrectangle"
+            />
+            <img
+              src="{% static 'imgsfiles/defaultthemei109-i3rg-200h.png' %}"
+              alt="defaultthemeI109"
+              class="projects-page-defaulttheme"
+            />
+            <img
+              src="{% static 'imgsfiles/bluethemei109-85ott-200h.png' %}"
+              alt="bluethemeI109"
+              class="projects-page-bluetheme"
+            />
+            <img
+              src="{% static 'imgsfiles/blackthemei109-3yqn-200h.png' %}"
+              alt="blackthemeI109"
+              class="projects-page-blacktheme"
+            />
+            <img
+              src="{% static 'imgsfiles/greenthemei109-wnlh-200h.png' %}"
+              alt="greenthemeI109"
+              class="projects-page-greentheme"
+            />
+            <img
+              src="{% static 'imgsfiles/orangethemei109-e1dn-200h.png' %}"
+              alt="orangethemeI109"
+              class="projects-page-orangetheme"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

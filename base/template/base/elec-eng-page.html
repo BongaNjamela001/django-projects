@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Bonga Njamela: Electrical Engineering Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="{% static 'cssfiles/style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'cssfiles/elec-eng-page.css' %}" rel="stylesheet" />
+
+      <div class="elec-eng-page-container">
+        <div class="elec-eng-page-elec-eng-page">
+          <img
+            src="{% static 'imgsfiles/headingrectangle36640-r42m-200h.png' %}"
+            alt="headingrectangle36640"
+            class="elec-eng-page-headingrectangle3"
+          />
+          <span class="elec-eng-page-text">
+            <span>Portfolio: Electrical Engineering</span>
+          </span>
+          <div class="elec-eng-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton6642-0m9.svg' %}"
+              alt="menubutton6642"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton6641"
+              class="elec-eng-page-menubuttonhover"
+            />
+          </div>
+
+          <img
+            src="{% static 'imgsfiles/quickmenu6643-t25e-200h.png' %}"
+            alt="quickmenu6643"
+            class="elec-eng-page-quickmenu"
+          />
+          <span class="elec-eng-page-text02"><a href="/about/{{about.id}}">About</a></span>
+          <span class="elec-eng-page-text04"><a href="/projects/{{projects.id}}">Portfolio</a></span>
+          <span class="elec-eng-page-home"><a href="/{{home.id}}">Home</a></span>
+          <span class="elec-eng-page-text06"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <img
+            src="{% static 'imgsfiles/elecengfilescard6647-gmmo-1800w.png' %}"
+            alt="elecengfilescard6647"
+            class="elec-eng-page-elecengfilescard"
+          />
+          
+          <div class="elec-eng-page-elecengprojanalogcard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi664-uz5-200h.png' %}"
+              alt="compengfilescardI664"
+              class="elec-eng-page-compengfilescard"
+            />
+            <span class="elec-eng-page-text08">
+              <span>
+                Analogue Systems: Notes on Semiconductors BJTs, JFETs, MOSFETs
+              </span>
+            </span>
+          </div>
+          
+          <div class="elec-eng-page-elecengprojstmcard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi664-md3g-200h.png' %}"
+              alt="compengfilescardI664"
+              class="elec-eng-page-compengfilescard1"
+            />
+            <span class="elec-eng-page-text10">
+              <span>
+                Embedded Systems Engineering: Design and Construction of STM
+                Microcontroller
+              </span>
+            </span>
+          </div>
+          <div class="elec-eng-page-elecengprojpowercard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi665-zwd-200h.png' %}"
+              alt="compengfilescardI665"
+              class="elec-eng-page-compengfilescard2"
+            />
+            <span class="elec-eng-page-text12">
+              <span>
+                Power Engineering: Notes on Electronmagnetism, DC Machines,
+                Transformers
+              </span>
+            </span>
+          </div>
+          <div class="elec-eng-page-elecengprojinductorcard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi665-fx6-200h.png' %}"
+              alt="compengfilescardI665"
+              class="elec-eng-page-compengfilescard3"
+            />
+            <span class="elec-eng-page-text14">
+              <span>
+                Power Engineering: Inductor Design and Construction (Group Work)
+              </span>
+            </span>
+          </div>
+          <div class="elec-eng-page-elecengproj-d-n-scard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi665-n2qs-200h.png' %}"
+              alt="compengfilescardI665"
+              class="elec-eng-page-compengfilescard4"
+            />
+            <span class="elec-eng-page-text16">
+              <span>
+                Communication &amp; Network Engineering: DNS and Package
+                Tracking with Wireshark
+              </span>
+            </span>
+          </div>
+          <div class="elec-eng-page-elecengprojenergycard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi665-zjjd-200h.png' %}"
+              alt="compengfilescardI665"
+              class="elec-eng-page-compengfilescard5"
+            />
+            <span class="elec-eng-page-text18">
+              <span>Energy Saving Measures in a Residential Premise</span>
+            </span>
+          </div>
+          <div class="elec-eng-page-elecengprojpcscard">
+            <img
+              src="{% static 'imgsfiles/compengfilescardi665-z7u-200h.png' %}"
+              alt="compengfilescardI665"
+              class="elec-eng-page-compengfilescard6"
+            />
+            <span class="elec-eng-page-text20">
+              <span>Professional Communication Studies: Capstone Project</span>
+            </span>
+          </div>
+          <div class="elec-eng-page-themeselector">
+            <img
+              src="{% static 'imgsfiles/themesrectanglei109-np1g-200h.png' %}"
+              alt="themesrectangleI109"
+              class="elec-eng-page-themesrectangle"
+            />
+            <img
+              src="{% static 'imgsfiles/defaultthemei109-x3sd-200h.png' %}"
+              alt="defaultthemeI109"
+              class="elec-eng-page-defaulttheme"
+            />
+            <img
+              src="{% static 'imgsfiles/bluethemei109-4qhv-200h.png' %}"
+              alt="bluethemeI109"
+              class="elec-eng-page-bluetheme"
+            />
+            <img
+              src="{% static 'imgsfiles/blackthemei109-x9de-200h.png' %}"
+              alt="blackthemeI109"
+              class="elec-eng-page-blacktheme"
+            />
+            <img
+              src="{% static 'imgsfiles/greenthemei109-esd-200h.png' %}"
+              alt="greenthemeI109"
+              class="elec-eng-page-greentheme"
+            />
+            <img
+              src="{% static 'imgsfiles/orangethemei109-xuxr-200h.png' %}"
+              alt="orangethemeI109"
+              class="elec-eng-page-orangetheme"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

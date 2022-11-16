@@ -1,0 +1,349 @@
+.about-page-container {
+  min-height: 100vh;
+}
+.about-page-about-page {
+  width: 100%;
+  height: 1994px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.about-page-quickmenuabout {
+  top: 48px;
+  left: 1512px;
+  width: 359px;
+  height: 37px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 8.248282432556152px;
+}
+.about-page-text {
+  top: 53px;
+  left: 1637px;
+  color: rgba(255, 255, 255, 1);
+  width: 81px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.about-page-text:hover{
+  text-decoration: underline overline;
+}
+.about-page-home {
+  top: 53px;
+  left: 1540px;
+  color: rgba(255, 255, 255, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.about-page-home:hover{
+  text-decoration: underline overline;
+}
+.about-page-text02 {
+  top: 53px;
+  left: 1744px;
+  color: rgba(255, 255, 255, 1);
+  width: 115px;
+  height: auto;
+  position: absolute;
+  font-size: 21px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.about-page-text02:hover{
+  text-decoration: underline overline;
+}
+
+.about-page-themeselector {
+  top: 53px;
+  left: 876px;
+  width: 167px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.about-page-themesrectangle {
+  top: 0px;
+  left: 0px;
+  width: 167px;
+  height: 30px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(126, 50, 50, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 11.326000213623047px;
+}
+.about-page-defaulttheme {
+  top: 4px;
+  left: 11px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+  
+}
+.about-page-defaulttheme:hover{
+  border-width: 4px;
+}
+.about-page-bluetheme {
+  top: 4px;
+  left: 45px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+  
+}
+
+.about-page-bluetheme:hover{
+  border-width: 4px;
+}
+
+.about-page-blacktheme {
+  top: 4px;
+  left: 135px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+ 
+}
+
+.about-page-blacktheme:hover{
+  border-width: 4px;
+}
+
+.about-page-greentheme {
+  top: 4px;
+  left: 105px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+ 
+}
+
+.about-page-greentheme:hover{
+  border-width: 4px;
+}
+
+.about-page-orangetheme {
+  top: 4px;
+  left: 75px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-color: transparent;
+
+}
+
+.about-page-orangetheme:hover{
+  border-width: 4px;
+}
+.about-page-aboutpageheading {
+  top: 104px;
+  left: 794px;
+  width: 330px;
+  height: 49px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.about-page-aboutmetext {
+  top: 0px;
+  left: 0px;
+  width: 330px;
+  height: 49px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.about-page-text04 {
+  top: 3px;
+  left: 8px;
+  color: rgba(255, 255, 255, 1);
+  width: 315px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.about-page-menubutton {
+  top: 45px;
+  left: 48px;
+  width: 45px;
+  height: 47px;
+  position: absolute;
+}
+
+.about-page-menubuttonhover {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: none;
+}
+
+.about-page-menubutton:hover .about-page-menubuttonhover{
+  display: inline;
+}
+
+.about-page-text06 {
+  top: 1039px;
+  left: 93px;
+  color: rgba(126, 50, 50, 1);
+  width: 1440px;
+  height: auto;
+  position: absolute;
+  font-size: 20.899999618530273px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.about-page-text07 {
+  font-weight: 700;
+}
+.about-page-text08 {
+  font-weight: 700;
+}
+.about-page-text09 {
+  font-weight: 700;
+}
+.about-page-text10 {
+  font-weight: 700;
+}
+.about-page-text11 {
+  font-weight: 700;
+}
+.about-page-text12 {
+  font-weight: 700;
+}
+.about-page-text29 {
+  top: 168px;
+  left: 93px;
+  color: rgba(126, 50, 50, 1);
+  width: 1440px;
+  height: auto;
+  position: absolute;
+  font-size: 20.899999618530273px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.about-page-profilepicturehflip {
+  top: 450px;
+  left: 1572px;
+  width: 317px;
+  height: 571px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.about-page-profilepicturehflip1 {
+  top: 1057px;
+  left: 1572px;
+  width: 317px;
+  height: 600px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.about-page-profilepicturehflip2 {
+  top: 168px;
+  left: 1572px;
+  width: 299px;
+  height: 259px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.about-page-profilepicturehflip3 {
+  top: 1692px;
+  left: 1572px;
+  width: 299px;
+  height: 259px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.about-page-aboutimage01 {
+  top: 450px;
+  left: 93px;
+  width: 1440px;
+  height: 571px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+.about-page-aboutimage011 {
+  top: 1692px;
+  left: 93px;
+  width: 1440px;
+  height: 259px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
