@@ -1,0 +1,638 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,hmargin=2.5cm,vmargin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{pstricks}
+\usepackage{chemformula}
+\usepackage{mathtools}
+\usepackage{modiagram}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newlength\mylenA
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+
+\usepackage[per-mode=fraction]{siunitx}
+    \sisetup{
+     exponent-product = \times   ,
+     per-mode=reciprocal ,
+     fraction-function = \frac{}{},
+     qualifier-mode=subscript,       % (subscript), brackets, space
+        load-configurations={
+           abbreviations,
+        },
+    }
+    \DeclareSIQualifier{\product}{Produkt}
+    \DeclareSIUnit{\degreeHaerte}{\degree dH}
+    \DeclareSIUnit{\atmosphere}{atm}
+    \DeclareSIUnit{\dyn}{dyn}
+    \DeclareSIUnit{\barell}{barell}
+    \DeclareSIUnit{\calorie}{cal}
+    \DeclareSIUnit{\grd}{grd}
+    \DeclareSIUnit{\torr}{torr}
+    \DeclareSIUnit{\oz}{oz}
+    \DeclareSIUnit{\poise}{P}
+    \DeclareSIUnit{\pferdestaerke}{PS}
+	\DeclareSIUnit{\gauss}{G}
+
+\title{Measuring the Total Magnetic Susceptibility of \ch{MnCl2} in Aqueous Solution Using the Gouy Method}
+\author{Lungelo B. Njamela}
+\date{05/10/18}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+An experiment was conducted to measure the total magnetic susceptibility of manganese (II) chloride (\ch{MnCl2}) in an aqueous solution with a concentration of $\SI{2.5693d2}{\kilogram\per\cubic\meter}$ of \ch{Mn^{2+}}. Since \ch{Mn^{2+}} ions have five unpaired electrons in the $3d$-orbital of the outer shell resulting in a permanent magnetic dipole moment, the magnetic susceptibility of \ch{MnCl2} is expected to be approximately equal to the magnetic susceptibility of aqueous \ch{Mn^{2+}} ions. The grand canonical ensemble was applied to calculate values associated with the magnetic properties of the \ch{MnCl2} solution such as the average magnetizability; the total angular momentum and the individual contributions of the paramagnetic and diamagnetic susceptibilities of the molecule. The magnetic susceptibility (denoted by $\chi$) was determined from the slope of the graph of downward force exerted on the sample by an external magnetic field against the square of the intensity of the external magnetic field. This method yielded a value of $\chi = 735.8961$. To calculate the total angular momentum of the sample solution, it was assumed that the measured value of the magnetic susceptibility did not include the value for the mean susceptibility $\alpha$ of the aqueous solution. The experimental value for the total angular momentum was $J = 2.58$ which was rounded of to a half odd integer based quantum theory. The percentage error in the experimental value for the total angular momentum was $3.2\%$ which shows satisfactory agreement between the experimental and theoretical results. The average magnetizability of the sample was $-1.4820 \times 10^{-26}$. Other factors such as the paramagnetic and diamagnetic contributions due to air and water molecules and their effects on the magnetic susceptibility were considered in determining the error in the paramagnetic susceptibility. 
+\end{abstract}
+
+\section{Introduction}
+
+The magnetic susceptibility of a substance indicates how a material will behave in an applied magnetic field The susceptibility is therefore an important physical property that is used to predict the magnetic properties of a material. An experiment was conducted to measure the magnetic susceptibility of manganese (II) chloride in an aqueous solution. The magnetic susceptibility is defined as the ratio between the average magnetization $M$ of a substance containing $N$ atoms per unit volume and the external magnetic field intensity $B$ \cite{marcon2012}. The magnetization $M$ of a substance arises from the intrinsic magnetic dipole moment of the paramagnetic species in the molecules of the substance.\\
+\\
+The intrinsic and coupling components of the angular momentum of electrons in a substance can be determined from the magnetic susceptibility of a substance. Experimental values for the susceptibilities are used in a variety of sciences, for example, the magnetic susceptibility of rock was used to determine climate variations in regions of Europe over a long period of time\cite{rochette1992}. The effective magnetic susceptibility of aqueous salts such as manganese chloride \ch{MnCl2} and nickel chloride \ch{NiCl2} is due to the paramagnetics cations of the salt resulting from intrinsic permanent magnetic dipole moment of the unpaired electrons in the outer shell of the cation.\\
+\\
+Manganese (II) chloride is a pink salt which is used in a number of fields including medical diagnostics whereby the paramagnetic \ch{Mn^{2+}} cations enhance magnetic resonance imaging\cite{aoki2004}. Therefore, the magnetic properties of \ch{MnCl2} can be deduced from the magnetic susceptibility of the salt so that it is possible to improve the applications of the molecule.\\
+\\
+The magnetic susceptibility of a material can be determined from a number of techniques depending on the characteristics of the material. These techniques include Farady's method which is suitable for the measurement of magnetic susceptibility of small amounts of paramagnetic material; the induction method which is used for geological magnetic susceptibility measurement and Gouy's method which is implemented in this experiment. Gouy's method for measuring the magnetic susceptibility of a material uses a homogenous external field to exert a force per unit volume of substance which causes a change in the weight of the substance. The method, discovered by French physicist Louis Gouy, suspends a sample between magnetic poles which cause an apparent change in the mass of a the sample due to an increase in weight. The downward force can be measured from a precision balance from which the sample tube is suspended as shown in Figure 1 below.
+
+\begin{figure}[ht!]
+{\centering{\includegraphics[scale=0.45]{/home/users/p213571679/Documents/"Magnetic Susceptibility"/gouyy.png}}}
+\caption{Schematic illustrating the Gouy balance used to determine the magnetic susceptibility of a substance}
+\label{Fig:1}
+\end{figure}
+
+The following pages include the theoretical background that allows for the measurement of the magnetic susceptibility of a material and also the results obtained from the experiment conducted to measure the magnetic susceptibility of manganese (II) chloride in an aqueous solution. The results are discussed under section 3 followed by a conclusion of the results of the experiment in the final section.\\
+\\
+\section{Theory}
+
+Consider a sample containing $N$ number of a magnetic atoms per unit volume that are placed under an external magnetic field. The Bohr model of an atom proposes that negatively charged electrons occupy the quantized orbitals around the positively charged nucleus of an atom, that is to say that the only possible electronic energy levels of an atom correspond to the integral quantum number $n = 0, 1, 2, 3,...$ \cite{bohr1924}. The orbiting and stationary elementary charged particles have an intrinsic quantized total angular momentum $\mathit{\mathbf{J\hbar}}$ which is the sum of the spin momentum $\mathit{\mathbf{S}}\hbar$ and an orbital angular momentum $\mathit{\mathbf{L}}\hbar$ components, where $\hbar$ is Planck's constant $h = \SI{6.62607004d-34}{\joule\second}$ divided by $2\pi$ (equation (1)). When the spin and orbital momentum couple so that they lie in the same direction, the total angular momentum is given by equation (1) below and the magnetic dipole moments from the electrons will be parallel. This is energetically unfavourable. The more energetically favourable coupling is the anti-parallel  
+orientation of the momenta\cite{Masina2018}. This is known as \textit{LS}-coupling. 
+
+\begin{align}
+\mathbf{J}	& = \mathbf{S} + \mathbf{L}
+\end{align} 
+
+The Bohr model agrees with experimental results from the analysis of the interaction between elementary particles and electromagnetic radiation since the electrons of an atomic species will remain in the quantized orbital without collapsing into the positively charged nucleus whereas the classical description suggests that an electron in a non-quantized orbital would radiate energy due to its circulatory motion around the positively charged electron\cite{coey2010}. The postulate of the Bohr model is endorsed by the eigenvalues of the time-independent Schr\"{o}dinger equation for an electron that is orbiting a nucleus of charge $Z\mathit{e^2}$ in a central Coulomb potential field $V(r) = -\frac{Z\mathit{e}}{4\pi\epsilon_{0}r}$ which implies that the energy of an electron can be separated into angular and radial parts\cite{Masina2018}.
+
+\begin{center}
+\textit{Schr\"{o}dinger Equation for a particle with atomic number $Z$}
+\end{center}
+
+\begin{align}
+\left( -\frac{\hbar^2}{2m}\nabla^2 - \frac{Z\mathit{e^2}}{4\pi\epsilon_{0}r} \right)\phi	& = E\phi\nonumber
+\end{align}
+where $\phi$ is the finite, continuous and differentiable and normalizable wavefunction describing the state of electrons in an orbital.\\
+\\ 
+The permanent magnetic dipole moment $\mu$ of an atomic species given by equation (2) indicates that the magnetic dipole moment arises from the quantization of the total angular momentum of a moving charged elementary particle. All the fermions comprising an atom have an intrinsic angular momentum however the nuclear spin is negligibly small due to the larger nucleon mass\cite{coey2010}. Therefore the permanent magnetic dipole moment arises from the sum of the quantized total angular momenta of moving unpaired electrons of atomic species as shown in equation (2),
+
+\begin{align}
+\mathbf{\mu}	& = g \mu_B \mathbf{J}
+\end{align}
+where $g$ is the Land\'{e} $g$ factor given by equation (3) and $\mu_B = \SI{9.274d-24}{\joule\per\tesla}$ is the Bohr magneton defined as,
+
+\begin{align}
+\mu_B	& = \frac{\mathit{e}\hbar}{2m_\mathit{e}}\nonumber
+\end{align}
+where $\mathit{e} = \SI{-1.6022d-19}{\coulomb}$ is the charge of an electron and $m_\mathit{e} = \SI{9.10938356d-31}{\kilogram}$ the mass of an electron. 
+
+\begin{align}
+g	& = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}
+\end{align}
+
+Hence,
+
+\begin{align}
+g	& = 1 + \frac{\frac{5}{2}(\frac{5}{2}+1)+\frac{5}{2}(\frac{5}{2}+1)-0}{2\frac{5}{2}(\frac{5}{2}+1)}\nonumber\\
+	& = 1 + \frac{37}{37}\nonumber\\
+	& = 2\nonumber 
+\end{align}
+
+The value calculated for $g$ from the angular momenta agrees with the theoretical value of the Land\'{e} $g$ factor which is $2.0023$\cite{mohling1982}.\\
+\\
+The spin angular momentum of an electron $\mathbf{S}$ is quantized in $\hbar$ such that it can only take values of the integral spin quantum number $m_s = \pm \frac{1}{2}$ corresponding to the 'up' or 'down' orientation of the electron along an arbitrary axes\cite{coey2010}. Thus, the components of the spin angular momentum can take only two possible values, namely, $s = \pm\frac{1}{2}\hbar$ along an arbitrary axes. Therefore, the contribution of the spin angular momentum to the $z$-component of the magnetic dipole moment of an electron is given by,
+
+\begin{align}
+\mu_z	& = -g \mu_B S
+\end{align}    
+where $S=\sqrt{s(s+1)}$.\\
+\\
+The contribution of the quantized orbital angular momentum $\mathbf{L}\hbar$ to the magnetic dipole moment in the $z$-direction is given by
+
+\begin{align}
+\mu_z	& = \gamma \mathbf{L}
+\end{align}
+where $\gamma$ is the gyromagnetic ratio. For an electron, the gyromagnetic ratio is negative indicating that the direction of the magnetic dipole moment due to the angular momentum is orientated in the opposite direction to the orbital angular momentum because of the negative charge of the electron.\\
+\\
+Consider an aqueous solution of manganese (II) chloride (\ch{MnCl2}). In solution, the molecule ionizes into \ch{Mn^2+} cations and \ch{2Cl^-} anions. The electronic configurations of \ch{Mn^2+} and \ch{Cl-} ions is $1s^{2}2s^{2}2p^{6}3s^{2}3p^{6}4s^{0}3d^{5}$ and $1s^{2}2s^{2}2p^{6}3s^{2}3p^{6}$ respectively. According to \textit{Pauli's Exclusion Principle}, the fermions of an atom cannot occupy the same state. The corollary of the exclusion principle is that two electrons in the same orbital cannot have the the same set of quantum numbers $l$, $m_l$ and $m_s$. \textit{Hund's rule} states that all the subshells of orbital will be singly filled before any state is doubly occupied. Using these fundamental principles to fill the energy level diagram for atomic orbitals of the anions and cations as shown in Figure 2 and Figure 3 respectively, note that \ch{Mn^2+} ions have an unfilled $3d$ subshell with five unpaired electrons which will contribute to the spin magnetic dipole moment of the electrons whilst all the orbitals of the anion are filled implying that these do not contribute to the spin magnetic dipole momentum of the solution since the net spin angular momentum will be zero. The orbital angular momentum $L$ corresponding to electrons in the outer shell of an electron will also be zero since the angular momentum quantum number $l_l = \pm 1$ add up to zero for each electron. Thus the total angular momentum of the aqueous anions is zero which implies that the chloride atoms do not have a permanent magnetic moment.\\
+\\
+
+\begin{figure}[ht!]
+{\centering{\includegraphics[scale=0.55]{/home/users/p213571679/Documents/"Magnetic Susceptibility"/anionELD.pdf}}}
+\caption{Ionic Energy Level Diagram for \ch{Cl^-} ions}
+\label{Fig:2}
+\end{figure}
+
+Consider the energy level diagram for the \ch{Mn^2+} ions. The $d$ subshell of the $n=3$ orbital contains five unpaired electrons. Since all the lower levels are filled, the only electrons which contribute to the magnetic dipole moment of the ion are those in the outer shell. In this subshell, orbital angular momentum states in which electrons are found correspond to the angular momentum quantum numbers $m_l = -2, -1, 0, 1, 2$. This implies that the total orbital angular momentum in z-direction is zero since 
+
+\begin{align}
+L_z	& = \sum_{m_l=-2}^{2} m_{1} \hbar \nonumber\\
+	& = (-2 -1 +0 +1 +2)\hbar\nonumber\\
+	& = 0
+\end{align}
+
+\begin{figure}
+{\centering{\includegraphics[scale=0.55]{/home/users/p213571679/Documents/"Magnetic Susceptibility"/cationELD.pdf}}}
+\caption{Ionic Energy Level Diagram for \ch{Mn^2+} ions}
+\label{Fig:3}
+\end{figure}
+
+Assume that the orientation of the spin angular momentum in an arbitrary axes is up for each electron in the $d$-orbital as shown in Figure 3 above. Then the spin state of each electron is $m_s = \frac{1}{2}$ which implies that the total spin angular momentum $S$ is given by,
+
+\begin{align}
+S	& = s_1 + s_2 + s_3 + s_4 +s_5\nonumber\\
+	& = (+ \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2})\hbar\nonumber\\
+	& = (\frac{5}{2})\hbar
+\end{align}   
+
+The ions are in solution which implies that the overall magnetic dipole moment should account for the magnetic properties of water molecules. Although the concentration of the ions in the aqueous solution is taken to be very low such that the interaction between ions is negligible, the ions in the solution interact with the surrounding water molecules. Although the interaction is electrostatic due to the polarity of the \ch{H2O} molecule which results in the slightly negatively charged oxygen atom forming weak electric dipole moments with the positively charged \ch{Mn^2+} ions. The orbital arrangement of the water molecules which interact weakly with the cations quenches the overall orbital angular momentum, i.e. $\mathbf{L} = \mathbf{0}$. Using equation (1), note that the total angular momentum $\mathbf{J}$ is equal to the total spin angular momentum given by equation (7). This is to say, since
+
+\begin{align}
+\mathbf{J}				& = \mathbf{S} + \mathbf{L}\nonumber\\
+						& \&\nonumber\\
+\mathbf{L}				& = \mathbf{0}\nonumber\\
+\implies~\mathbf{J}		& = \mathbf{S}\nonumber\\
+\therefore~J			& = \frac{5}{2}\hbar\nonumber
+\end{align}
+
+In the presence of an external magnetic field $B$, the total angular momentum of the \ch{Mn^2+} ions tends to line up parallel to the direction of the applied magnetic field since these ions are paramagnetic\cite{mohling1982}. The solution is assumed to be in thermodynamic equilibrium at an absolute temperature $T$ which implies that the grand canonical ensemble can be applied to the system\cite{pellicane2018}. The permanent magnetic dipole moment of the \ch{Mn^2+} ions is given by equation (1), however, since the total angular momentum is equal to the total spin angular momentum of the ions, the equation for the permanent magnetic dipole moment of the system is equivalent to the equation for the magnetic dipole moment due to the spin as shown in equation (4), i.e. for \ch{Mn^2+} ions, the permanent magnetic moment is 
+
+\begin{align}
+\bar{\mu}	& = 2 \mu_B J\nonumber 
+\end{align}
+
+In the grand canonical distribution, the probability of finding the cation with its magnetic moment $\mu_z$ parallel to the external magnetic field $B_z$ is given by equation (8),
+
+\begin{align}
+P_+	& = Ce^{-\beta \epsilon^{+}}
+\end{align}
+where $\beta = \frac{1}{k_B T}$ is the Boltzmann factor and $k_B$ is the Boltzmann constant and $\epsilon^{+} = - \mu_z \cdot B_z$ is the magnetic energy of the ion when the magnetic moment is parallel to the external field. This is the more energetically favourable orientation for a paramagnetic ion. The probability of finding the ionic magnetic moment anti-parallel to the external magnetic field is given by equation (9)
+
+\begin{align}
+P_-	& = Ce^{-\beta \epsilon^{-}}
+\end{align}
+where $\epsilon^{-} = \mu_z \cdot B_z$ is the magnetic energy when the magnetic dipole moment of the cations are anti-parallel to the external field. Since the probabilities are non-normalized in the canonical distribution, the constant $C$ is given by equation (10) to be
+
+\begin{align}
+C	& = P_+ + P_-
+\end{align}
+
+Note that at room temperature, most of the ions are in their ground state\cite{mohling1982}. Therefore, since the ions are not interacting with one another, their average permanent magnetic moment at temperature T is given by equation (11), 
+
+\begin{align}
+\bar{\mu_z}	& = \frac{\mu_z (P_+ + P_-)}{P_+ + P_-}\nonumber\\
+			& = \mu_z \frac{e^{\beta \mu_z B} + e^{-\beta \mu_z B}}{e^{\beta \mu_z B} + e^{-\beta \mu_z B}}\nonumber\\
+			& = \frac{\sum_{J_z = -J}^{+J} e^{-2 \beta \mu_B B J_z} \cdot \mu_z}{\sum_{J_z = -J}^{J} e^{2 \beta \mu_B B J_z}}
+\end{align}
+where $B$, chosen in the $z$-axis of quantization for the total angular momentum $J_z$, is measured in units of ${10^{4}}\si{\gauss}$. The denominator from the expression of the average magnetic dipole moment in equation (11) is called the magnetic partition function for a single ion denoted by $q$ where,
+
+\begin{align}
+q	& = \sum_{J_z = -J}^{+J} e^{-\beta \epsilon}\nonumber\\
+	& = \sum_{J_z = -J}^{+J} e^{2 \beta \mu_B B J_z}
+\end{align}
+
+Then, the average magnetic dipole moment can be written with respect to the partial derivative of the magnetic partition function $q$ since
+
+\begin{align}
+\ln{q}										& = \ln{\sum_{J_z = -J}^{+J} e^{2 \beta \mu_B B J_z}}\nonumber\\
+											& = \ln{e^{-2 \beta \mu_B B J} + e^{2 \beta \mu_B B J}}\nonumber\\
+\implies~\frac{\partial \ln{q}}{\partial B}	& = \frac{\partial}{\partial B}\left[ \ln{e^{-2 \beta \mu_B B J} + e^{2 \beta \mu_B 												    B J}} \right]\nonumber\\
+											& = \frac{1}{e^{-2 \beta \mu_B B J} + e^{2 \beta \mu_B B J}} \cdot 
+											    (-2 \beta \mu_B J)e^{-2 \beta \mu_B B J} + 
+											    (2 \beta \mu_B J) e^{2 \beta \mu_B B J}\nonumber\\
+											& = \frac{1}{q} \beta \sum_{J_z = -J}^{+J} e^{-2 \beta \mu_B B J_z} 
+												\cdot \mu_z
+\end{align}
+
+Therefore, by multiplying equation (13) by the inverse of $\beta$ we obtain the equation (14) for the average magnetic dipole moment,
+
+\begin{align}
+\bar{\mu_z}	& = \frac{\sum_{J_z = -J}^{+J} e^{-2 \beta \mu_B B J_z} \cdot \mu_z}{\sum_{J_z = -J}^{J} e^{2 \beta \mu_B B J_z}} 						\times \frac{\beta}{\beta}\nonumber\\
+\therefore~\bar{\mu}_z	& = \frac{1}{\beta}\frac{\partial \ln{q}}{\partial B}
+\end{align}
+
+Since there are $N$ \ch{Mn^2+} ions, the magnetization of \ch{MnCl2} is expressed as the product of the average magnetic dipole moment times $N$ as in equation (15). Similarly, the energy per unit volume can be written as the product of $N$ times the average energy of one \ch{Mn^{2+}} ion as shown in equation (16). The energy is negative however since the ions are paramagnetic, that is to say that in the presence of an external applied magnetic field, the permanent magnetic dipole moments due to the ions will line up with the magnetic field\cite{pellicane2018}.\\
+
+\begin{align}
+M_z	& = N \bar{\mu}_z\\
+\bar{E}		& = - N \bar{\mu}_z B
+\end{align}
+
+The thermal energy at room temperature is calculated in equation (17) below and is shown by equation (19) that at rooom temperature, the thermal energy is greater than the magnetic energy, i.e. $k_B T \gg 2 \mu_B B$. 
+
+\begin{align}
+k_B T	& = \SI{8.617d-5}{\electronvolt\per\kelvin} \times \SI{297}{\kelvin}\nonumber\\
+		& = \SI{2.559d-2}{\electronvolt}
+\end{align}
+
+Equation (18) shows how the magnetic energy is of the order of ${10^{-5}}\si{\electronvolt}$ since the Bohr magneton $\mu_B$ is very small ($\mu_B \cong (10^{-5}\si{\electronvolt\per\tesla})$) and the magnetic field strength is of the order of $10^{-1}\si{\tesla}$. 
+
+\begin{align}
+2 \mu_B B	& \cong 2 \times \SI{5.7884d-5}{\electronvolt\per\tesla} \times 10^{-1}\si{\tesla}\nonumber\\
+            & \cong 10^{-5}\si{\electronvolt}
+\end{align}
+
+By comparing equations (17) snd (18), the thermal energy at room temperature is expected to be a thousand times greater than the thermal energy,
+
+\begin{align}
+k_B T ~ \cong 10^{-2}\si{\electronvolt}	& \gg 10^{-5}\si{\electronvolt}\nonumber\\
+\therefore ~ k_B T	& \gg 2 \mu_ B
+\end{align}
+
+The Boltzmann factor $\beta$ is the inverse of the thermal energy given by $k_B T$. Therefore, by dividing both sides of the inequality in equation (20) by the thermal energy, it was shown that at room temperature, 
+\begin{align}
+\frac{k_B T}{k_B T}	& \gg \frac{2 \mu_B B}{k_B T}\nonumber\\
+\iff~1	\gg \frac{2 \mu_B B}{k_B T}	& = 2 \beta \mu_B B
+\end{align} 
+
+Therefore at room temperature, the average energy ratio of a paramagnetic \ch{Mn^{2+}} ion was expected to be very small when compared to unity.\\
+\\
+The $n^{\text{th}}$ order Taylor polynomial for exponential function shown in equation (21) is a useful approximation for the case when the thermal energy is significantly greater than the magnetic energy of the ions.
+
+\begin{center}
+$n^{\text{th}}$ \textit{Taylor Polynomial Formula} for $e^{x}$
+\end{center}   
+
+\begin{align}
+e^x	& = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots
+\end{align}
+
+Equation (22) was used to approximate the magnetic partition function given by equation (11) by noting that since the average energy ratio is significantly small compared to unity, i.e. since 
+
+\begin{align}
+2 \beta \mu_B B	\gg 1,\nonumber
+\end{align}
+the exponential function from expression of the magnetic energy partition function is expected to be given by a second order Taylor polynomial as shown in equation (22),
+
+\begin{align}
+q	& = \sum_{J_z = - J}^{+J} e^{2 \beta \mu_B B J_z}\nonumber\\
+	& \approx \sum_{J_z = -J}^{+J} [1 + (2 \mu_B B J_z) + \frac{(2 \beta \mu_B J_z)^2}{2} + O^{(3)}(2 \beta \mu B J_z)] 
+\end{align}
+
+where $O^{(3)}(2 \beta \mu_B B J_z) \approx 0$. The values given by $2 \beta \mu_B B$ are significantly smaller than 1 which allows for the Taylor truncation for approximating the limiting value for the magnetic partition function at room temperature. The energy ratio corresponds to the paramagnetic alignment of the total angular momentum $J_z$ with the external magnetic field, hence the energy partition function can be approximated to a value given by equation (23) below,
+
+\begin{align}
+q	& \approx [1 + 2 \mu_B B (J + J) + (2 \beta \mu_B B)^2 \sum_{J_z = -J}^{+J} J_{z}^2]\nonumber\\
+\implies~q	& \rightarrow (2J +1) + (2 \beta \mu_B B)^2\frac{J(J+1)(2J+1)}{6}
+\end{align}
+since the sum of squares is given by,
+
+\begin{align}
+\sum_{i=1}^{n} i^2	& = \frac{n(n+1)(2n+1)}{6}
+\end{align}
+
+The expression for the average magnetic dipole moment given by equation (14) was used to find an expression for the average magnetic dipole moment as a function of the external magnetic field $B$ and angular momentum $J$ at a temperature $T$ as shown by the equation below,
+
+\begin{align}
+\bar{\mu}_z	& = \frac{1}{\beta} \frac{\partial \ln{q}}{\partial B}\nonumber\\
+			& = k_B T \cdot \frac{\partial}{\partial B}\left[ \ln{(2J+1) \left(1 + \frac{4}{6}\frac{{\mu_B}^2 B^2}{{k_B}^2 T^2}						J(J+1) \right)}\right]\nonumber\\
+			& = \left( \frac{4 {\mu_B}^2 B}{3 k_B T} \right) J(J+1)
+\end{align}
+
+The magnetization density can be expressed by substituting equation (24) in equation (14) to obtain,
+
+\begin{align}
+M_z	& = N \bar{\mu}_z\nonumber\\
+	& = N \left( \frac{4 {\mu_B}^2 B}{3 k_B T} \right) J(J+1)
+\end{align} 
+
+The magnetic susceptibility is defined as the ratio of the magnetization density divided by the external magnetic field\cite{blundell2003}. The paramagnetic susceptibility $\chi^{\textit{para}}$ is given by the partial derivative of magentization with respect to the applied magnetic field. The param,
+
+\begin{align}
+\chi^{\textit{para}}	& = \frac{\partial M_z}{\partial B}\\
+						& = \frac{\partial}{\partial B} \left[ N \left( \frac{4 {\mu_B}^2 B}{3 k_B T} \right) J(J+1) \right]\nonumber\\
+						& = N \left( \frac{4 {\mu_B}^2}{3 k_B T} \right) J(J+1)\nonumber
+\end{align}    
+
+Equation (27) is known as \textit{Curie's Law} which is achieved in hte\cite{coey2010}. Therefore, the paramagnetic susceptibility depends on the temperature of the solution,i.e.
+
+\begin{align}
+\chi^{\textit{para}}	& \propto \beta\nonumber\\
+\therefore~\chi^{\textit{para}}	& \propto T^{-1} 
+\end{align}  
+
+The diamagnetic susceptibility $\chi^{\textit{dia}}$ shown in equation (29) is a measure of the change in the induced magnetization of the diamagnetic ions in the solution as the applied magnetic field changes. When molecules and ions with filled orbitals experience an external magnetic field, the induced magnetization ${M_z}^{\textit{induced}}$ is orientated in the opposite direction to the applied magnetic field by \textit{Lenz's Law}. The induced dipole moment $\overline{\mu}^{\textit{induced}}$ is proportional to the applied magnetic field $B$  by the average magnetizability $\alpha$ as seen in equation equation (27). Therefore, for $N$ diamagnetic molecules, the induced magnetization density ${M_z}^{texit{induced}}$ is expressed as the product of $N$ times the induced dipole moment $\overline{\mu}^{\textit{induced}}$.
+
+\begin{align}
+\overline{\mu}^{\textit{induced}}	& = \alpha B\\
+{M_z}^{\textit{induced}}				& = N \overline{\mu}^{\textit{induced}}\\
+\chi^{\textit{dia}}					& = \frac{\partial {M_z}^{\textit{induced}}}{\partial B}\\
+									& = \frac{\partial}{\partial B} \left[ N \alpha B\right]\nonumber\\
+									& = N \alpha\nonumber
+\end{align}
+
+The diamagnetic susceptibility is independent of the temperature as seen in equation (29). Since the induced magnetic dipole moment opposes the external magnetic field by $Lenz's Law$, the induced magnetization is negative which implies that the average magnetization $\alpha$ is also negative. Hence,
+
+\begin{align}
+\alpha	& < 0\nonumber\\
+\implies~\chi^{\textit{dia}}	& < 0
+\end{align}  
+
+Therefore, the desired total magnetic susceptibility which is the sum of the diamagnetic and paramagnetic contributions is given by,
+
+\begin{align}
+\chi	& = \chi^{\textit{para}} + \chi^{\textit{dia}}\nonumber\\
+		& = N \left( \alpha + \frac{4 {\mu^2}_B}{3 k_B T} J(J+1) \right)
+\end{align} 
+
+The total magnetic susceptibility $\chi$ of the manganese (II) chloride solution was measured using the \textit{Gouy Method} which implements an applied magnetic field to give an apparent change in the mass of a suspended liquid column containing ionized \ch{MnCl2}. A glass column of length $L$ and cross-sectional area $A$ containing the ionized \ch{MnCl2} is suspended from a precision balance. An homogeneous magnetic field between the poles of two magnets was applied to the lower end of the glass column. The concentration of the solution is low so that there are virtually no interactions between the molecules. Since the \ch{Mn^2+} ions are paramagnetic, the total angular momentum of lines up parallel to the external magnetic field\cite{mohling1982}. The permanent magnetic dipole moment resulting from the total angular momentum of the ions interacts with the applied magnetic field resulting in an infintitesimal displacement of the sample in the direction of the magentic field.
+
+\begin{figure}
+{\centering{\includegraphics[scale=0.55]{/home/users/p213571679/Documents/"Magnetic Susceptibility"/gouy2.pdf}}}
+\caption{Schematic illustrating the apparatus and chosen axes}
+\label{Fig:4}
+\end{figure}
+
+The interaction between the external magnetic field and the permanent magnetic dipole moments results in an infinitesimal displacement $dx$ of the solution in the $\mathbf{x}$ direction as shown in Figure 5 below. The formula for the magnetic susceptibility given by equation (7) shows that the magnetic energy of the sample can be calculated from the average magneization of the solution as the applied magnetic field is changed. Therefore, the magnetic energy $U(x)$ of volume $V$ of the sample is proportional to the square of the applied magnetic field in the positive $\mathbf{x}$ direction by the magnetic susceptibility of the sample, i.e.
+
+\begin{align}
+dU	& = - \chi B dB\nonumber\\
+\implies~U(x)	& = -\frac{1}{2} \chi B^2(x)\nonumber
+\end{align}
+where $B^2(x)$ is the square of the $x$-component of the homogeneous applied magnetic field. The change in magnetic energy of the sample is given by the differential in equation (30). Since the work done by the magnetic field is defined as force times displacement, the force in the vertical axis of the column can be expressed as the derivative of the energy with respect to the displacement as shown by equation (31).
+
+\begin{align}
+dE	& = [U_L - U_0]Adx\\
+\implies~F_x	& = -\frac{dE}{dx}\\
+				& = -\frac{1}{2}A \chi [{B^2}_0 - {B^2}_L]\nonumber
+\end{align}   
+where $U_L$ and $U_0$ are, respectively, the magnetic energy of the solution at a point close to the end of the magnetic which is furthest from the magnetic field and the magnetic energy of the ions in between the magnetic poles along the $\mathbf{z}$-axis. Since the magnitude of the applied magnetic field is relatively small, for a sufficient length $L$, the magnetic energy $U_L$ corresponding to the magnetic field $B_L$ is expected to be negligibly small compared to the magnetic field $B_0$. experienced by the particles at the lower end of the glass column. Therefore, given the dimensions of the glass column and the magnetic field strength $B_0$, the magnetic susceptibility can be calculated from the equation of the downward vertical component of the force experience by the ions as in (33) below,
+
+\begin{align}
+F_x	& = -\frac{1}{2} A \chi {B_0}^2
+\end{align}
+
+The force $F_x$ is parallel to the weight of the column which implies that in the presence of the magnetic field $B_0$, there will be an apparent change in the mass $m_0$ of the field-free sample, i.e.
+
+\begin{align}
+F_x	& = mg - m_0 g
+\end{align}
+
+The magnetic susceptibility in equation (28) was determined from the slope of the graph of the force $F_x$ of the field against the square of the magnetic field between the magnetic poles by exploiting the relationship expressed in equation (33). To determine the total angular momentum of the solution, the average magnetization $\alpha$ from equation (28) was assumed to be zero. The calculated value for the total angular momentum was used to determine the average magnetization of the solution. The diamagnetic and paramagnetic susceptibility of the ions was calculated using experimental values of the total angular momentum and the average magnetizability. To cancel the paramagnetic and diamagnetic effects of air and \ch{H2O} molecules as described above, the volume of the column is bisected into an upper compartment containing the desired sample solution and a lower compartment containing \ch{H2O}\cite{marcon2012}. 
+
+\clearpage
+
+\section{Results and Calculations}
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Variable	& Value (units)	\\
+\hline
+$T$			& $\SI{294.84}{\kelvin}$	\\
+$T_{final}$	& $\SI{294.98}{\kelvin}$	\\
+$A$			& $\SI{6.277d-5}{\square\meter}$	\\
+$C$			& $\SI{2.5693d2}{\kilogram\per\cubic\meter}$	\\
+$MW$		& $\SI{54.94d-3}{\kilogram\per\mole}$		\\
+\hline
+\end{tabular}
+\caption{Showing independent variables in the experiment where $T$ is the temperature of the cell, $C$ is the concentration of \ch{Mn^2+} ion in the solution, $A$ is the cross-sectional area and $MW$ is the atomic mass of \ch{Mn}}
+\end{table}
+
+Table 2 shows the mass $m$ of the solution when a magnetic field is applied. These values were then used to calculate the force  $F_x$ experienced by the sample and the square of the magnetic field so that the magnetic susceptibility of the solution could be calculated. Values for the magnetic field $B_0$ in $\si{\kilo\gauss}$ were chosen so that the square of the magnetic field ${B_0}^2$ yielded intervals of size. 
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Applied Magnetic Field $B_0$ ($\si{\kilo\gauss}$)	& Mass $m$ ($\si{\gram}$)	\\
+\hline
+1.000		& 0.0229	\\
+1.4142		& 0.0415	\\
+1.7321		& 0.0693	\\
+2.0000		& 0.0916	\\
+2.2361		& 0.1152	\\
+2.4495		& 0.1375	\\
+2.6458		& 0.1636	\\
+2.8284		& 0.1829	\\
+3.0000		& 0.2056	\\
+3.1623		& 0.2327	\\
+\hline
+\end{tabular}
+\caption{Showing the measured values for the mass $m$ in the applied magnetic field $B_0$ }
+\end{table}
+
+\begin{center}
+\textit{Sample calculations to determine the force $F_x$}
+\end{center}
+
+By taking the field-free mass $m_0$ to be zero, the downward force experienced by the sample in equation (34) was determined from the field mass $m$ in $\si{\kilogram}$.
+
+\begin{align}
+F_x	& = mg\nonumber
+\end{align}
+
+When the magnetic field was chosen to be $\SI{1.4142}{\kilo\gauss}$:
+
+\begin{align}
+F_x	& = (\SI{0.0415d-3}{\kilogram}) \times (\SI{9.8}{\meter\per\square\second})\nonumber\\
+	& = \SI{40.67d-3}{\newton}\nonumber
+\end{align} 
+
+\begin{align}
+10^4 \si{\gauss}	& = \SI{1}{\tesla}\nonumber\\
+\implies~\SI{1}{\kilo\gauss}	& = 10^{-1} \si{\tesla}\nonumber\\
+\therefore~(\SI{1.4142}{\kilo\gauss})^2	& = (\SI{1.4142d-1}{\tesla})^2
+\end{align}
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+${B_0}^2$ ($\si{\square\tesla}$)	& $F_x$ ($\si{\newton}$)	\\
+\hline
+1		& $22.44\times10^-3$	\\
+2		& $40.67\times10^-3$	\\
+3		& $67.91\times10^-3$	\\
+4		& $89.77\times10^-3$	\\
+5		& $112.9\times10^-3$	\\
+6		& $134.8\times10^-3$	\\
+7		& $160.3\times10^-3$	\\
+8		& $179.2\times10^-3$	\\
+9		& $201.5\times10^-3$	\\
+10		& $228.0\times10^-3$	\\
+\hline
+\end{tabular}
+\caption{Showing the values for ${B_0}^2$ and the force downward force $F_x$ of the sample}
+\end{table}
+
+\begin{figure}[ht!]
+{\centering{\includegraphics[scale=1.25]{/home/users/p213571679/Documents/"Magnetic Susceptibility"/fvsB.pdf}}}
+\caption{Graph of the force $F_x$ vs $B_0$ to determine the magnetic susceptibility $\chi$ of the \ch{MnCl2} aqueous solution from the slope}
+\label{Fig:5}
+\end{figure}
+
+\begin{center}
+\textit{Using the relationship given in equation (33) to determine the paramagnetic susceptibility of \ch{MnCl2} in aqueous solution:}
+\end{center}
+
+The slope of the graph in Figure 5. was $0.0230961 \pm 0.000203$ ($0.8746\%$). Thus,
+
+\begin{align}
+y	& = mx\nonumber\\
+	& \&\nonumber\\
+F_x	& = -\frac{1}{2} A \chi {B_0}^2\nonumber\\
+\implies~m	& \equiv -\frac{A \chi}{2} \nonumber\\
+\therefore~\chi	& = -\frac{2 \times 0.0230961}{6.277 \times 10^{-5}}\nonumber\\
+				& = 735.8961
+\end{align} 
+
+\begin{center}
+\textit{Using equation (30) to calculate the total angular momentum $J$ from the magnetic susceptibility assuming that the average magnetizability is zero:}
+\end{center}
+
+First, the total angular momentum was approximated by assuming that $\alpha = 0$, 
+
+\begin{align}
+\chi	& = N \left( \frac{4 {\mu_B}^2}{k_B T} J(J+1)\right)\nonumber\\
+\iff~J(J+1)	& = \frac{3 k_B \chi T}{4 N {\mu_B}^2}\nonumber
+\end{align}
+where the total number $N$ of \ch{Mn^2+} ions per unit volume was calculated from the concentration $C$ as shown below,
+
+\begin{align}
+\frac{\SI{2.5693d-5}{\kilogram\per\cubic\meter}}{\SI{54.94d-3}{\kilogram\per\mole}}	& = \SI{4.6766d3}{\mole\per\cubic\meter}\nonumber\\
+\SI{4.6766d3}{\mol\per\cubic\meter} \times \SI{6.022d23}{\per\mole}					& = 2.8162 \times 10^{27}~\text{ions per cubic meter of solution}\nonumber\\
+\end{align}
+
+The appropriate units for the Boltzmann constant and the Bohr magneton were chosen (using the $\si{\joule}$ instead of the $\si{electronvolt}$) by considering the units used for the force and magnetic field. The total angular momentum was calculated from the experimental value of the magnetic susceptibility where,
+
+\begin{align}
+J^2 + J	& = \frac{3 (1.3807 \times 10^{-23}) (735.8961) (294.84)}{4 (9.274 \times 10^{-24})^2 (2.8162 \times 10^{27})}\nonumber\\
+J^2 + J - 9.2715	& = 0\nonumber\\
+\end{align}
+
+Using the quadratic formula,
+
+\begin{align}
+x	& = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\nonumber\\
+\implies~|J^{\textit{experimental}}|	& = \frac{-1 + \sqrt{1^2-4(1)(-9.2715)}}{2(1)}\nonumber\\
+				& = 2.58
+\end{align}
+
+Since the total angular momentum is equal to the quantized spin angular moment angular momentum of the paramagnetic ions, the only values allowed for the total angular momentum are the values allowed for the spin angular momentum which is the sum of quantized half odd integers, i.e.
+
+\begin{align}
+J = S \in \{0,~\frac{1}{2}\hbar,~1\hbar,~\frac{3}{2}\hbar,~2\hbar, ...\}\nonumber\\
+\therefore~J = 2.58 \approx \frac{5}{2}\hbar
+\end{align}
+
+Therefore the experimental value for total angular momentum agrees with theory in within a $90\%$ confidence interval.
+
+\begin{center}
+\textit{Using the total angular momentum from (41) to calculate the average magnetizability $\alpha$ contributing to the diamagnetic susceptibility of \ch{MnCl2}:}
+\end{center}
+
+\begin{align}
+\alpha	& = \frac{\chi}{N} - \frac{4 {\mu_B}^2}{3 k_B T} J(J+1)\nonumber\\
+\therefore~\alpha	& = \frac{(735.8961)}{(2.8162\times10^{27})} \cdot \frac{4 (9.274 \times 10^{-24})^2}{3 (1.3807 \times 10^{-23}) (294.84)} 2.5(2.5+1)\nonumber\\
+|\alpha|	& = 1.4820 \times 10^{-26} 
+\end{align}
+
+\clearpage
+
+\begin{center}
+\textit{Calculating the individual diamagnetic and paramagnetic susceptibility contributions to the total magnetic susceptibility of \ch{MnCl2}:}
+\end{center}
+
+\begin{align}
+\chi					& = 735.8961\nonumber\\
+\chi^{\textit{dia}}		& = (2.8162 \times 10^{27}) (-1.4820 \times 10^{-26})\nonumber\\
+						& = -41.7361\\
+\therefore~\chi^{\textit{para}}	& \approx 735.8961 + 41.7361\nonumber\\
+								& = 777.6322
+\end{align}
+
+\begin{center}
+\textit{Error Analysis of Experimental Values:}
+\end{center}
+
+The expected value for $\chi^{\textit{para}}$ was calculated substituting the theoretical value for the total angular momentum $J = \frac{5}{2}\hbar$ into equation (27), 
+
+\begin{align}
+{\chi^{\textit{para}}}_{\textit{expected}}	& = \frac{4 (9.274 \times 10^{-24})^2 (2.8162 \times 10^{27})}{3 (1.3807 \times 														10^{-23}) (294.84)}(2.5)(2.5+1)\nonumber\\
+											& = 794.5098\nonumber
+\end{align}
+
+\textit{Percentage Error in Experimental Value for the paramagnetic susceptibility} $\chi^{\textit{para}}$:
+
+\begin{align}
+\%~\text{Error in}~\chi^{\textit{para}}	& = \left| \frac{\chi^{\textit{para}}_{\textit{expected}} - \chi^{\textit{para}}}														{\chi^{\textit{para}}_{\textit{expected}}} \right| \times 100\%\nonumber\\
+										& = \left| \frac{794.5098 - 777.6322}{794.5098} \right| \times 100\%\nonumber\\
+										& = 2.12\%
+\end{align}
+
+\textit{Percentage Error in Experimental Value for total angular momentum} $J$:
+
+\begin{align}
+\%~\text{Error in}~J	& = \left| \frac{J^{\textit{expected}} - J^{\textit{experimental}}}{J^{\textit{expected}}} \right| \times 100\% \nonumber\\
+					& = \left| \frac{2.5 - 2.58}{2.5} \right| \times 100\%\nonumber\\
+					& = 3.20\%
+\end{align}
+
+\textit{Expressing} $\alpha$ \textit{as a percentage of the paramagnetic term}:
+
+\begin{align}
+\frac{\alpha}{\left( \frac{4 {\mu_B}^2}{3 k_B} \right)} \times 100	& = \frac{1.4820 \times 10^{-26}}{8.3056 \times 10^{-24}} \times 100\nonumber\\
+																	& = 0.18\%
+\end{align}
+
+\clearpage
+\section{Discussion}
+
+The initial temperature $T$ of the \ch{MnCl2}aqueous solution in the glass column was found to be $\SI{21.84}{\degree\celsius}$ or $\SI{294.84}{\kelvin}$ (as shown in Table 1.) which is close to room temperature. This allowed for the application of the grand canonical distribution to measure the magnetic susceptibility of the sample. The gradual increase in the temperature to a final value of $\SI{21.98}{\degree\celsius}$ or $\SI{294.84}{\kelvin}$ could be accounted for by the dependence of the magnetic dipole moment on temperature as shown in equation (11). When the magnetic field strength was increased, the average energy of the system also increased and was observed as thermal fluctuations since the thermal energy is greater than the magnetic energy for values near room temperature.\\
+\\
+Values for the magnetic field were chosen as the square roots of values from 1 to 10 so that the spacing between magnetic field values was unity when measuring the magnetic susceptibility from the graph of the force against the magnetic field square. As the magnetic field strength increased, the mass of the sample also appeared to increase as seen in Table 2. This is due to the relationship between the weight of the sample and the magnetic field  as shown in equations (36) and (37). Since the field free mass was taken to be zero, the change in weight is directly proportional to the magnetic field squared, i.e.
+
+\begin{align}
+mg	& = -\frac{1}{2} A \chi {B^2}_0\nonumber 
+\end{align} 
+
+The force experienced by the sample was taken to be negative because the total angular momentum (and therefore the permanent magnetic dipole moments) of \ch{Mn^2+} aligns with the applied magnetic field. The magnetic susceptibility was measured from the straight line graph of the force vs the applied magnetic field squared (see Figure 3). The slope of the straight line graph was $\SI{0.0230961}{\kilogram\meter\per\square\second\per\kilo\gauss}$ which yielded a total magnetic susceptibility of $735.8961$ reported in equation (39).\\
+\\
+To calculate the diamagnetic and paramagnetic contributions to the total magnetic susceptibility of the sample, the average magnetizability was assumed to be zero. This assumption was justified because the contribution of the paramagnetic effects to the total magnetic susceptibility was greater than the diamagnetic contributions. Equation (49) shows that the average magnetization of the sample was only $0.18\%$ of the paramagnetic term. The negative value for the average magnetization is accounted for by Lenz's Law which gave a negative diamagnetic susceptibility of $-41.7361$. The experimental paramagnetic susceptibility was $777.6322$ which deviated from the theoretical value of $794.5098$ by $2.12\%$. The theoretical value for the paramagnetic susceptibility does not take into account the susceptibility of the glass tube and the water molecules in the solution which may account for the small error in the paramagnetic susceptibility. Therefore, since the apparatus accounts for the paramagnetism of oxygen and water and the temperature fluctuations were not significant, it may be concluded that the small error in the paramagnetic susceptibility were caused by other factors that could cause the mass to change more than expected.\\
+\\
+The experimental value for the total angular momentum in equation (43) agreed with the theoretical value for the total angular momentum which was deduced from the theoretical analysis of the angular momenta of electrons in the $d$-orbital of the \ch{Mn^2+} ions. The experimental value $J=2.58$ deviated from the actual value of the total angular momentum of the electrons by $3.2\%$ which is very low. It can be deduced from the experimental value for the total angular momentum that the orbital angular momentum of the sample was effectively zero since the total angular momentum is equal to the spin angular momentum of the five unpaired electrons in the $d$-orbital of the \ch{Mn^2+} ions. 
+
+\section{Conclusion}
+
+The Gouy method was used to measure the total magnetic susceptibility of manganese (II) chloride solution. The experimental value for the total magnetic susceptibility was $735.8961$ which had a paramagnetic contribution of $777.6322$ and a diamagnetic contribution of $-41.7361$. The value obtained for the paramagnetic susceptibility was shown to deviate from the expected value of $794.5098$ by $2.12\%$ since the apparatus accounted for the paramagnetism of the oxygen in the air and the water molecules in the sample solution. The total angular momentum of the electrons in the half-filled $d$-orbital contributing to the paramagnetism of the \ch{Mn^2+} ions was theoretical deduced to be equal to the spin angular momentum of the \ch{Mn^2+} ions in the sample cell. The experimental value of the magnetic susceptibility yielded a total angular momentum with a value corresponding to $J=\frac{5}{2}$. At temperatures near room temperature, the thermal energy is greater than the magnetic energy of the sample and the magnetic susceptibility is dependent on the temperature of the sample as seen by the increase in the temperature of the sample cell.
+
+\bibliographystyle{unsrt}
+\bibliography{References9.bib}
+\end{document}

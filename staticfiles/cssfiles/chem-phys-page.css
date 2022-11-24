@@ -1,6 +1,7 @@
 .chem-phys-page-container {
   min-height: 100vh;
 }
+
 .chem-phys-page-chem-phys-page {
   width: 100%;
   height: 1080px;
@@ -12,6 +13,7 @@
   border-color: transparent;
   background-color: rgba(255, 255, 255, 1);
 }
+
 .chem-phys-page-headingrectangle {
   top: 92px;
   left: 635px;
@@ -21,6 +23,7 @@
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
+
 .chem-phys-page-text {
   top: 92px;
   left: 710px;
@@ -40,6 +43,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-menubutton {
   top: 45px;
   left: 48px;
@@ -53,6 +57,14 @@
   left: 0px;
   position: absolute;
   display: none;
+}
+
+.chem-phys-page-dropdownmenu {
+  display: none;
+}
+
+.chem-phys-page-menubutton:hover .chem-phys-page-dropdownmenu{
+  display: block;
 }
 
 .chem-phys-page-menubutton:hover .chem-phys-page-menubuttonhover{
@@ -76,6 +88,7 @@
   height: auto;
   position: absolute;
   font-size: 21px;
+  cursor: pointer;
   align-self: auto;
   font-style: Regular;
   text-align: left;
@@ -89,7 +102,30 @@
 }
 .chem-phys-page-text02:hover{
   text-decoration: underline overline;
+  cursor: pointer;
 }
+
+.chem-phys-page-popup {
+  display:none;
+}
+
+/* .chem-phys-page-popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+} */
+
+/* Add animation for download popup */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 .chem-phys-page-text04 {
   top: 55px;
   left: 1622px;
@@ -109,6 +145,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text04:hover{
   text-decoration: underline overline;
 }
@@ -295,9 +332,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text12:hover{
   text-decoration: underline overline;
 }
+
 .chem-phys-page-chemphyprojinfracard {
   top: 445px;
   left: 93px;
@@ -309,6 +348,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .chem-phys-page-compengfilescard3 {
   top: 0px;
   left: 0px;
@@ -320,6 +360,7 @@
   border-width: 1px;
   border-radius: 11.326000213623047px;
 }
+
 .chem-phys-page-text14 {
   top: 22px;
   left: 28px;
@@ -339,9 +380,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text14:hover{
   text-decoration: underline overline;
 }
+
 .chem-phys-page-chemphyprojjoulecard {
   top: 533px;
   left: 93px;
@@ -353,6 +396,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .chem-phys-page-compengfilescard4 {
   top: 0px;
   left: 0px;
@@ -362,6 +406,7 @@
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
+
 .chem-phys-page-text16 {
   top: 27px;
   left: 29px;
@@ -381,9 +426,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text16:hover{
   text-decoration: underline overline;
 }
+
 .chem-phys-page-chemphyprojlasercard {
   top: 621px;
   left: 93px;
@@ -395,6 +442,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .chem-phys-page-compengfilescard5 {
   top: 0px;
   left: 0px;
@@ -406,6 +454,7 @@
   border-width: 1px;
   border-radius: 11.326000213623047px;
 }
+
 .chem-phys-page-text18 {
   top: 28px;
   left: 30px;
@@ -425,9 +474,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text18:hover{
   text-decoration: underline overline;
 }
+
 .chem-phys-page-chemphyprojguoycard {
   top: 709px;
   left: 93px;
@@ -467,9 +518,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text20:hover{
   text-decoration: underline overline;
 }
+
 .chem-phys-page-themeselector {
   top: 39px;
   left: 884px;

@@ -58,6 +58,14 @@
   display: none;
 }
 
+.comp-eng-page-dropdownmenu {
+  display: none;
+}
+
+.comp-eng-page-menubutton:hover .comp-eng-page-dropdownmenu{
+  display: block;
+}
+
 .comp-eng-page-menubutton:hover .comp-eng-page-menubuttonhover{
   display: inline;
 }

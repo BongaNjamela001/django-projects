@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Bonga Njamela</title>
+    <title>Bonga Njamela: Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -69,7 +69,7 @@
               <span>Portfolio</span>
             </span>
           </div>
-          <span class="projects-page-text02"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <span class="projects-page-text02"><a href="{% url 'base:contact' %}">Contact Me</a></span>
          
           <div class="projects-page-menubutton">
             <img
@@ -83,8 +83,8 @@
             />
           </div>
          
-          <span class="projects-page-text04"><a href="/about/{{about.id}}">About</a></span>
-          <span class="projects-page-texthome"><a href="/{{home.id}}">Home</a></span>
+          <span class="projects-page-text04"><a href="{% url 'base:about' %}">About</a></span>
+          <span class="projects-page-texthome"><a href="{% url 'base:home' %}">Home</a></span>
           <div class="projects-page-cscprojectscard">
             <img
               src="{% static 'imgsfiles/cscprojectscard4640-2up-300h.png' %}"
@@ -92,7 +92,7 @@
               class="projects-page-cscprojectscard1"
             />
             <span class="projects-page-text06">
-              <a href="/compeng/{{compeng.id}}">
+              <a href="{% url 'base:compeng' %}">
                 <span>Computer &amp; Software</span>
                 <br />
                 <span>Engineering</span>
@@ -106,7 +106,7 @@
               class="projects-page-engprojectscard1"
             />
             <span class="projects-page-text11">
-              <a href="/eleceng/{{eleceng.id}}">Electrical Engineering</a>
+              <a href="{% url 'base:eleceng' %}">Electrical Engineering</a>
             </span>
           </div>
           <div class="projects-page-mathprojectscard">
@@ -115,7 +115,7 @@
               alt="mathprojectscard4642"
               class="projects-page-mathprojectscard1"
             />
-            <span class="projects-page-text13"><a href="/math/{{math.id}}">Mathematics</a></span>
+            <span class="projects-page-text13"><a href="{% url 'base:math' %}">Mathematics</a></span>
           </div>
           <div class="projects-page-physprojectscard">
             <img
@@ -124,7 +124,7 @@
               class="projects-page-physprojectscard1"
             />
             <span class="projects-page-text15">
-              <a href="/chemphys/{{chemphys.id}}">Chemistry &amp; Physics</a>
+              <a href="{% url 'base:chemphy' %}">Chemistry &amp; Physics</a>
             </span>
           </div>
           <div class="projects-page-themeselector">
@@ -158,6 +158,20 @@
               alt="orangethemeI109"
               class="projects-page-orangetheme"
             />
+          </div>
+          <div class="projects-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
+              alt="menubutton3319"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton3320"
+              class="projects-page-menubuttonhover"
+            />
+            <div class="projects-page-dropdownmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
           </div>
         </div>
       </div>

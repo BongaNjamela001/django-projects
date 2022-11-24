@@ -1,6 +1,26 @@
 from django.shortcuts import render
+from django.contrib import messages #allows toast messages
+from .models import (
+        Contact,
+        Resume,
+        Portfolio
+    )
+from .forms import ContactForm
+from django.views import generic
+from pathlib import Path
+import os
 
 # Create your views here.
+
+class ContactView(generic.FormView):
+    template_name = "contact-page.html"
+    form_class = ContactForm
+    success_url = "/"
+
+    def form_valid(self, form):
+        form.save()
+        messages.success(self.request, "Thank you. Message received. Bonga will get back to you promptly.")
+        return super().form_valid(form)
 
 def home(request):
     return render(request, "home-page.html")
@@ -11,17 +31,50 @@ def about(request):
 def projects(request):
     return render(request, "projects-page.html")
 
-def math(request):
-    return render(request, "math-page.html")
+# generate view for Math Portfolio/Projects 
+class MathPortfolioView(generic.ListView):
+    model = Portfolio
+    template_name = "math-page.html"
 
-def contact(request):
-    return render(request, "contact-page.html")
+    def get_queryset(self):
+        return super().get_queryset()
 
-def chemphys(request):
-    return render(request, "chem-phys-page.html")
+# math portfolio view
+class MathPortfolioDetailView(generic.DetailView):
+    model = Portfolio
+    template_name = "math-page.html"
 
-def compeng(request):
-    return render(request, "comp-eng-page.html")
+# chem phy portfolio
+class ChemPhysPortfolioView(generic.ListView):
+    model = Portfolio
+    template_name = "chem-phys-page.html"
 
-def eleceng(request):
-    return render(request, "elec-eng-page.html")
+    def get_queryset(self):
+        return super().get_queryset()
+
+# chem phy portfolio    
+class ChemPhysPortfolioDetailView(generic.DetailView):
+    model = Portfolio
+    template_name = "chem-phys-page.html"
+
+class CompEngPortfolioView(generic.ListView):
+    model = Portfolio
+    template_name = "comp-eng-page.html"
+
+    def get_queryset(self):
+        return super().get_queryset()
+
+class CompEngPortfolioDetailView(generic.DetailView):
+    model = Portfolio
+    template_name = "comp-eng-page.html"
+
+class ElecEngPortfolioView(generic.ListView):
+    model = Portfolio
+    template_name = "elec-eng-page.html"
+
+    def get_queryset(self):
+        return super().get_queryset()
+
+class ElecEngPortfolioDetailView(generic.DetailView):
+    model = Portfolio
+    template_name = "elec-eng-page.html"

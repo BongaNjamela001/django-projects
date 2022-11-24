@@ -1,0 +1,186 @@
+.projectpopup-container {
+  min-height: 100vh;
+}
+
+.projectpopup-projectpopup {
+  width: 546px;
+  height: 266px;
+  position: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.projectpopup-popupdownload {
+  top: 280px;
+  left: 640px;
+  width: 546px;
+  height: 266px;
+  position: absolute;
+  border-color: rgba(126, 50, 50, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 11.326000213623047px;
+}
+
+.projectpopup-vectorclose {
+  top: 294px;
+  left: 1150px;
+  width: 25px;
+  height: 22px;
+  position: absolute;
+}
+
+.projectpopup-text {
+  top: 321px;
+  left: 640px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.projectpopup-btnzipdownload {
+  top: 464px;
+  left: 683px;
+  width: 145px;
+  height: 41px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.projectpopup-buttonzip {
+  top: 10px;
+  left: 20px;
+  width: 115px;
+  height: 41px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+
+.projectpopup-buttonziphover {
+  top: 10px;
+  left: 20px;
+  width: 115px;
+  height: 41px;
+  position: absolute;
+  display: none;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+
+.projectpopup-text05 {
+  top: 14px;
+  color: rgba(255, 255, 255, 1);
+  right: 0px;
+  width: 145px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.projectpopup-btntardownload {
+  top: 464px;
+  left: 998px;
+  width: 145px;
+  height: 71px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.projectpopup-buttontar {
+  top: 10px;
+  left: 15px;
+  width: 115px;
+  height: 41px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.326000213623047px;
+}
+
+.projectpopup-text07 {
+  top: 14px;
+  left: 0px;
+  color: rgba(255, 255, 255, 1);
+  width: 145px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.projectpopup-text09 {
+  top: 406px;
+  left: 642px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.projectpopup-text11 {
+  top: 317px;
+  left: 890px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}

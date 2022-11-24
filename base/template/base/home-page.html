@@ -79,7 +79,7 @@
                 ...
             </span>
           </span>
-          <span class="home-page-text08"><span>About</span></span>
+          <span class="home-page-text08"><span>Bio</span></span>
           <img
             src="{% static 'imgsfiles/quickmenu2214-vi2f-200h.png' %}"
             alt="quickmenu2214"
@@ -93,9 +93,9 @@
               <span>Bonga Njamela.</span>
             </span>
           </span>
-          <span class="home-page-text17"><a href="/about/{{about.id}}">About</a></span>
-          <span class="home-page-text19"><a href="/projects/{{projects.id}}">Portfolio</a></span>
-          <span class="home-page-text21"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <span class="home-page-text17"><a href="{% url 'base:about' %}">About</a></span>
+          <span class="home-page-text19"><a href="{% url 'base:projects' %}">Portfolios</a></span>
+          <span class="home-page-text21"><a href="{% url 'base:contact' %}">Contact Me</a></span>
           <img
             src="{% static 'imgsfiles/profilepicture105-wach-400w.png' %}"
             alt="profilepicture105"
@@ -118,36 +118,48 @@
                 alt="menudropdownmain2007"
                 class="home-page-menudropdownmain"
               />
+              <a href="/{{home.id}}">
               <img
                 src="{% static 'imgsfiles/dropdownhome2007-4sh-200h.png' %}"
                 alt="dropdownhome2007"
                 class="home-page-dropdownhome"
               />
+              </a>
+              <a href="/projects/{{projects.id}}">
               <img
                 src=" {% static 'imgsfiles/dropdownportfolio2008-jihe-200h.png' %}"
                 alt="dropdownportfolio2008"
                 class="home-page-dropdownportfolio"
               />
+              </a>
+              <a href="/contact/{{contact.id}}">
               <img
                 src=" {% static 'imgsfiles/dropdowncontact2008-z3be-200h.png' %}"
                 alt="dropdowncontact2008"
                 class="home-page-dropdowncontact"
               />
+              </a>
+              <a href="/about/{{about.id}}">
               <img
                 src=" {% static 'imgsfiles/dropdownabout2008-iqkb-200h.png' %}"
                 alt="dropdownabout2008"
                 class="home-page-dropdownabout"
               />
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">
               <img
                 src=" {% static 'imgsfiles/dropdownlinkedin2008-7qxr-200h.png' %}"
                 alt="dropdownlinkedin2008"
                 class="home-page-dropdownlinkedin"
               />
+              </a>
+              <a target="_blank" href="https://github.com/BongaNjamela001/">
               <img
                 src=" {% static 'imgsfiles/dropdowngit2008-uuz9-200h.png' %}"
                 alt="dropdowngit2008"
                 class="home-page-dropdowngit"
               />
+              </a>
               <img
                 src=" {% static 'imgsfiles/icongithub2009-wln.svg' %}"
                 alt="icongithub2009"
@@ -168,12 +180,12 @@
                 alt="vectoremail2028"
                 class="home-page-vectoremail"
               />
-              <span class="home-page-text36"><span>Home</span></span>
-              <span class="home-page-text38"><span>Portfolio</span></span>
-              <span class="home-page-text28"><span>Github</span></span>
-              <span class="home-page-text30"><span>LinkedIn</span></span>
-              <span class="home-page-text32"><span>Contact Me</span></span>
-              <span class="home-page-text34"><span>About Bonga</span></span>
+              <span class="home-page-text36"><a href="{% url 'base:home' %}">Home</a></span>
+              <span class="home-page-text38"><a href="{% url 'base:projects' %}">Portfolio</a></span>
+              <span class="home-page-text28"><a target="_blank" href="https://github.com/BongaNjamela001/">Github</a></span>
+              <span class="home-page-text30"><a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">LinkedIn</a></span>
+              <span class="home-page-text32"><a href="{% url 'base:contact'%}">Contact Me</a></span>
+              <span class="home-page-text34"><a href="{% url 'base:about' %}">About Bonga</a></span>
               <img
                 src=" {% static 'imgsfiles/vectorportfolio2009-2nqn.svg' %}"
                 alt="vectorportfolio2009"

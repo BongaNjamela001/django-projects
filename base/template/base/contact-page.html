@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Bonga Njamela: Contact</title>
+    <title>Bonga Njamela: Contact Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -53,7 +53,6 @@
             class="contact-page-headingrectangle4"
           />
           <span class="contact-page-text"><span>Contact</span></span>
-          
           <div class="contact-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton6964-712h.svg' %}"
@@ -65,7 +64,6 @@
               class="contact-page-menubuttonhover"
             />
           </div>
-
           <div class="contact-page-themeselector">
             <img
               src="{% static 'imgsfiles/themesrectanglei109-5nsk-200h.png' %}"
@@ -104,44 +102,65 @@
             alt="quickmenu1249"
             class="contact-page-quickmenu"
           />
-          <span class="contact-page-text04"><a href="/about/{{about.id}}">About</a></span>
-          <span class="contact-page-text06"><a href="/{{home.id}}">Home</a></span>
-          <span class="contact-page-text08"><a href="/projects/{{protects.id}}">Portfolio</a></span>
-          <img
-            src="{% static 'imgsfiles/cardname1617-6t99-1300w.png' %}"
-            alt="cardname1617"
-            class="contact-page-cardname"
-          />
-          <span class="contact-page-text10"><span>Name</span></span>
-          <span class="contact-page-text12"><span>Brief</span></span>
-          <span class="contact-page-text14"><span>Email</span></span>
-          <img
-            src="{% static  'imgsfiles/boxnamefield1618-x1d6-200h.png' %}"
-            alt="boxnamefield1618"
-            class="contact-page-boxnamefield"
-          />
-          <img
-            src="{% static  'imgsfiles/boxnamefield1618-x1d6-200h.png' %}"
-            alt="boxnamefield1616"
-            class="contact-page-sendbutton"
-          />
-          <span class="contact-page-text16"><span>Send</span></span>
-          <img
-            src="{% static 'imgsfiles/boxemailfield1618-aj3f-200h.png' %}"
-            alt="boxemailfield1618"
-            class="contact-page-boxemailfield"
-          />
+          <span class="contact-page-text04"><a href="{% url 'base:about'%}">About</a></span>
+          <span class="contact-page-text06"><a href="{% url 'base:home' %}">Home</a></span>
+          <span class="contact-page-text08"><a href="{% url 'base:projects' %}">Portfolios</a></span>
+          
+          <div id="contactformcard">
+            
+            <img
+              src="{% static 'imgsfiles/cardname1617-6t99-1300w.png' %}"
+              alt="cardname1617"
+              class="contact-page-cardname"
+            />
+            <form id="contactform" action="/contact/" method="post">          
+                {% csrf_token %}
+                  <span class="contact-page-text10"><span>Name</span></span>
+                  <div class="contact-page-boxnamefield">
+                    {{form.name}}
+                  </div>
+                  <span class="contact-page-text12"><span>Brief</span></span>
+                  <div class="contact-page-boxemailfield">
+                    {{form.email}}
+                  </div>
+                  <span class="contact-page-text14"><span>Email</span></span>  
+                  <div class="contact-page-boxbrieffield">
+                    {{form.brief}}
+                  </div>
+                  <input class="contact-page-sendbutton" type="submit" value="Send">
+                  <img
+                    src="{% static  'imgsfiles/boxsendbuttonwhite2197-k67n-200h.png' %}"
+                    alt="boxnamefield1616"
+                  />
+                  <img
+                    src="{% static  'imgsfiles/boxsendbuttongray2197-kg6-200h.png' %}"
+                    alt="boxnamefield1617"
+                    class="contact-page-sendbuttonhover"
+                  />
+              </button>
+            </form>
+          </div>
           <img
             src="{% static 'imgsfiles/vectordownload1628-18t.svg' %}"
             alt="vectordownload1628"
             class="contact-page-vectordownload"
           />
-          <img
-            src="{% static 'imgsfiles/boxbrieffield1618-ufoh-200h.png' %}"
-            alt="boxbrieffield1618"
-            class="contact-page-boxbrieffield"
-          />
+          
+          <div class="contact-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
+              alt="menubutton3319"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton3320"
+              class="contact-page-menubuttonhover"
+            />
+            <div class="contact-page-dropdownmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
         </div>
+       </div>
       </div>
     </div>
   </body>

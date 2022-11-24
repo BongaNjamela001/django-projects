@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Dropdown Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+      </style>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+    <link rel="stylesheet" href="{% static 'cssfiles/style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'cssfiles/dropdownmenu.css' %}" rel="stylesheet" />
+        <div class="dropdownmenu-dropdownmenu">
+          <img
+            src="{% static 'imgsfiles/menudropdownmain2007-26e-500h.png' %}"
+            alt="menudropdownmain2007"
+            class="dropdownmenu-menudropdownmain"
+          />
+          <a href="{% url 'base:home' %}">
+            <img
+              src="{% static 'imgsfiles/dropdownhome2007-4sh-200h.png' %}"
+              alt="dropdownhome2007"
+              class="dropdownmenu-dropdownhome"
+            />
+          </a>
+          <a href="{% url 'base:projects' %}">
+            <img
+              src="{% static 'imgsfiles/dropdownportfolio2008-jihe-200h.png' %}"
+              alt="dropdownportfolio2008"
+              class="dropdownmenu-dropdownportfolio"
+            />
+          </a>
+          <a href="{% url 'base:contact' %}">
+          <img
+            src="{% static 'imgsfiles/dropdowncontact2008-z3be-200h.png' %}"
+            alt="dropdowncontact2008"
+            class="dropdownmenu-dropdowncontact"
+          />
+          </a>
+          <a href="{% url 'base:about' %}">
+            <img
+              src="{% static 'imgsfiles/dropdownabout2008-iqkb-200h.png' %}"
+              alt="dropdownabout2008"
+              class="dropdownmenu-dropdownabout"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/bonga-njamela-982873200/">
+            <img
+              src="{% static 'imgsfiles/dropdownlinkedin2008-7qxr-200h.png' %}"
+              alt="dropdownlinkedin2008"
+              class="dropdownmenu-dropdownlinkedin"
+            />
+          </a>
+          <a href="https://github.com/BongaNjamela001/">
+            <img
+              src="{% static 'imgsfiles/dropdowngit2008-uuz9-200h.png' %}"
+              alt="dropdowngit2008"
+              class="dropdownmenu-dropdowngit"
+            />
+          </a>
+          <img
+            src="{% static 'imgsfiles/icongithub2009-wln.svg' %}"
+            alt="icongithub2009"
+            class="dropdownmenu-icongithub"
+          />
+          <img
+            src="{% static 'imgsfiles/iconlinkedin2009-uq1r.svg' %}"
+            alt="iconlinkedin2009"
+            class="dropdownmenu-iconlinkedin"
+          />
+          <img
+            src="{% static 'imgsfiles/vectorinfo2028-y9d5.svg' %}"
+            alt="vectorinfo2028"
+            class="dropdownmenu-vectorinfo"
+          />
+          <img
+            src="{% static 'imgsfiles/vectoremail2028-wxo.svg' %}"
+            alt="vectoremail2028"
+            class="dropdownmenu-vectoremail"
+          />
+          <span class="dropdownmenu-text-home"><a href="{% url 'base:home'%}">Home</a></span>
+          <span class="dropdownmenu-text-projects"><a href="{% url 'base:projects'%}">Portfolios</a></span>
+          <span class="dropdownmenu-text-github"><a target="_blank" href="https://github.com/BongaNjamela001/">Github</a></span>
+          <span class="dropdownmenu-text-linkedin"><a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">LinkedIn</a></span>
+          <span class="dropdownmenu-text-contact"><a href="{% url 'base:contact' %}">Contact Me</a></span>
+          <span class="dropdownmenu-text-about"><a href="{% url 'base:about'%}">About Bonga</a></span>
+          <img
+            src="{% static 'imgsfiles/vectorportfolio2009-2nqn.svg' %}"
+            alt="vectorportfolio2009"
+            class="dropdownmenu-vectorportfolio"
+          />
+          <img
+            src="{% static 'imgsfiles/vectorhome2008-a.svg' %}"
+            alt="vectorhome2008"
+            class="dropdownmenu-vectorhome"
+          />
+        </div>
+    </div>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Bonga : About Page</title>
+    <title>Bonga Njamela: About Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -51,7 +51,7 @@
             alt="quickmenuabout3311"
             class="about-page-quickmenuabout"
           />
-          <span class="about-page-text"><a href="/projects/{{projects.id}}">Portfolio</a></span>
+          <span class="about-page-text"><a href="/projects/{{projects.id}}">Portfolios</a></span>
           <span class="about-page-home"><a href="/{{home.id}}">Home</a></span>
           <span class="about-page-text02"><a href="/contact/{{contact.id}}">Contact Me</a></span>
           <div class="about-page-themeselector">
@@ -96,11 +96,6 @@
               <span>About Bonga Njamela</span>
             </span>
           </div>
-          <img
-            src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
-            alt="menubutton3319"
-            class="about-page-menubutton"
-          />
           <span class="about-page-text06">
             <span class="about-page-text07">
               The love for nature grew through his South African schooling
@@ -250,6 +245,20 @@
             alt="aboutimage011091"
             class="about-page-aboutimage011"
           />
+          <div class="about-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
+              alt="menubutton3319"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton3320"
+              class="about-page-menubuttonhover"
+            />
+            <div class="about-page-dropdownmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
+          </div>
         </div>
       </div>
     </div>

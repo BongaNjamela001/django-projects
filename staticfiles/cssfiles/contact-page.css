@@ -18,6 +18,7 @@
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
+
 .contact-page-text {
   top: 92px;
   left: 898px;
@@ -53,8 +54,16 @@
   display: none;
 }
 
+.contact-page-dropdownmenu {
+  display: none;
+}
+
 .contact-page-menubutton:hover .contact-page-menubuttonhover{
   display: inline;
+}
+
+.contact-page-menubutton:hover .contact-page-dropdownmenu{
+  display: block;
 }
 
 .contact-page-themeselector {
@@ -116,7 +125,6 @@
   position: absolute;
   border-color: transparent;
 }
-
 
 .contact-page-blacktheme:hover{
   border-width: 4px;
@@ -264,6 +272,7 @@
   border-color: transparent;
   border-radius: 11.329999923706055px;
 }
+
 .contact-page-text10 {
   top: 270px;
   left: 370px;
@@ -283,6 +292,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .contact-page-text12 {
   top: 457px;
   left: 365px;
@@ -302,6 +312,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .contact-page-text14 {
   top: 363px;
   left: 370px;
@@ -333,7 +344,7 @@
 }
 
 .contact-page-text16 {
-  top: 615px;
+  top: 617px;
   left: 929px;
   color: rgba(166, 64, 96, 1);
   width: 48px;
@@ -353,13 +364,42 @@
 }
 
 .contact-page-sendbutton {
-  top: 607px;
-  left: 900px;
+  top: 614px;
+  left: 919px;
   width: 117px;
   height: 44px;
   position: absolute;
   border-color: transparent;
   border-radius: 11.329999923706055px;
+}
+
+.contact-page-sendbuttonhover {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 11.329999923706055px;
+  display: none;
+}
+
+.contact-page-sendbutton:hover .contact-page-sendbuttonhover {
+  display: inline;
+}
+
+.contact-page-sendbutton:hover .contact-page-text16 {
+  text-decoration: underline overline;
+}
+
+.contact-page-text16:hover .contact-page-sendbuttonhover{
+  display: inline;
+}
+
+.contact-page-text16:hover .contact-page-sendbutton {
+  display: none;
+}
+
+.contact-page-text16:hover{
+  text-decoration: underline overline;
 }
 
 .contact-page-boxemailfield {

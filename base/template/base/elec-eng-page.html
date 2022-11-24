@@ -71,16 +71,18 @@
             alt="quickmenu6643"
             class="elec-eng-page-quickmenu"
           />
-          <span class="elec-eng-page-text02"><a href="/about/{{about.id}}">About</a></span>
-          <span class="elec-eng-page-text04"><a href="/projects/{{projects.id}}">Portfolio</a></span>
-          <span class="elec-eng-page-home"><a href="/{{home.id}}">Home</a></span>
-          <span class="elec-eng-page-text06"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <span class="elec-eng-page-text02"><a href="{% url 'base:about'%}">About</a></span>
+          <span class="elec-eng-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
+          <span class="elec-eng-page-home"><a href="{% url 'base:home' %}">Home</a></span>
+          <span class="elec-eng-page-text06"><a href="{% url 'base:contact' %}">Contact Me</a></span>
           <img
             src="{% static 'imgsfiles/elecengfilescard6647-gmmo-1800w.png' %}"
             alt="elecengfilescard6647"
             class="elec-eng-page-elecengfilescard"
           />
           
+          {% for p in portfolio %}
+          {% if p.id == 20 %}
           <div class="elec-eng-page-elecengprojanalogcard">
             <img
               src="{% static 'imgsfiles/compengfilescardi664-uz5-200h.png' %}"
@@ -89,11 +91,12 @@
             />
             <span class="elec-eng-page-text08">
               <span>
-                Analogue Systems: Notes on Semiconductors BJTs, JFETs, MOSFETs
+              {{p.name}}  
               </span>
             </span>
           </div>
           
+          {% elif p.id == 21 %}
           <div class="elec-eng-page-elecengprojstmcard">
             <img
               src="{% static 'imgsfiles/compengfilescardi664-md3g-200h.png' %}"
@@ -102,11 +105,11 @@
             />
             <span class="elec-eng-page-text10">
               <span>
-                Embedded Systems Engineering: Design and Construction of STM
-                Microcontroller
+                {{p.name}}
               </span>
             </span>
           </div>
+          {% elif p.id == 22 %}
           <div class="elec-eng-page-elecengprojpowercard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-zwd-200h.png' %}"
@@ -115,11 +118,11 @@
             />
             <span class="elec-eng-page-text12">
               <span>
-                Power Engineering: Notes on Electronmagnetism, DC Machines,
-                Transformers
+                {{p.name}}
               </span>
             </span>
           </div>
+          {% elif p.id == 23 %}
           <div class="elec-eng-page-elecengprojinductorcard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-fx6-200h.png' %}"
@@ -128,10 +131,11 @@
             />
             <span class="elec-eng-page-text14">
               <span>
-                Power Engineering: Inductor Design and Construction (Group Work)
+                {{p.name}}
               </span>
             </span>
           </div>
+          {% elif p.id == 24 %}
           <div class="elec-eng-page-elecengproj-d-n-scard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-n2qs-200h.png' %}"
@@ -140,11 +144,11 @@
             />
             <span class="elec-eng-page-text16">
               <span>
-                Communication &amp; Network Engineering: DNS and Package
-                Tracking with Wireshark
+                {{p.name}}
               </span>
             </span>
           </div>
+          {% elif p.id == 25 %}
           <div class="elec-eng-page-elecengprojenergycard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-zjjd-200h.png' %}"
@@ -152,9 +156,12 @@
               class="elec-eng-page-compengfilescard5"
             />
             <span class="elec-eng-page-text18">
-              <span>Energy Saving Measures in a Residential Premise</span>
+              <span>
+                {{p.name}}
+              </span>
             </span>
           </div>
+          {% elif p.id == 26 %}
           <div class="elec-eng-page-elecengprojpcscard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-z7u-200h.png' %}"
@@ -162,9 +169,11 @@
               class="elec-eng-page-compengfilescard6"
             />
             <span class="elec-eng-page-text20">
-              <span>Professional Communication Studies: Capstone Project</span>
+              <span>{{p.name}}</span>
             </span>
           </div>
+          {% endif %}
+          {% endfor %}
           <div class="elec-eng-page-themeselector">
             <img
               src="{% static 'imgsfiles/themesrectanglei109-np1g-200h.png' %}"
@@ -196,6 +205,20 @@
               alt="orangethemeI109"
               class="elec-eng-page-orangetheme"
             />
+          </div>
+          <div class="elec-eng-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
+              alt="menubutton3319"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton3320"
+              class="elec-eng-page-menubuttonhover"
+            />
+            <div class="elec-eng-page-dropdownmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
           </div>
         </div>
       </div>

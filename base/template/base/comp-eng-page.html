@@ -42,7 +42,7 @@
   </head>
   <body>
     <div>
-      <link href="{%static 'cssfiles/comp-eng-page.css' %}" rel="stylesheet" />
+      <link href="{% static 'cssfiles/comp-eng-page.css' %}" rel="stylesheet" />
 
       <div class="comp-eng-page-container">
         <div class="comp-eng-page-comp-eng-page">
@@ -68,14 +68,14 @@
           </div>
 
           <img
-            src="{%static 'imgsfiles/quickmenu5271-r02c-200h.png' %}"
+            src="{% static 'imgsfiles/quickmenu5271-r02c-200h.png' %}"
             alt="quickmenu5271"
             class="comp-eng-page-quickmenu"
           />
-          <span class="comp-eng-page-text02"><a href="/about/{{about.id}}">About</a></span>
-          <span class="comp-eng-page-home"><a href="/{{home.id}}">Home</a></span>
-          <span class="comp-eng-page-text04"><a href="/projects/{{projects.id}}">Portfolio</a></span>
-          <span class="comp-eng-page-text06"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <span class="comp-eng-page-text02"><a href="{% url 'base:about' %}">About</a></span>
+          <span class="comp-eng-page-home"><a href="{% url 'base:home' %}">Home</a></span>
+          <span class="comp-eng-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
+          <span class="comp-eng-page-text06"><a href="{% url 'base:contact'%}">Contact Me</a></span>
           <img
             src="{%static 'imgsfiles/compengfilescard5281-swgg-1800w.png' %}"
             alt="compengfilescard5281"
@@ -87,18 +87,21 @@
               alt="compengfilescard5282"
               class="comp-eng-page-compengfilescard01"
             />
+            {% for p in portfolio  %}
+            {% if p.id == 1 %}
             <span class="comp-eng-page-text08">
-              <span>Data Structures: AVL Trees in Java</span>
+              <span>{{p.name}}</span>
             </span>
           </div>
           <div class="comp-eng-page-cengprojbstreescard">
             <img
-              src="{%static 'imgsfiles/compengfilescard5283-b68g-200h.png' %}"
+              src="{% static 'imgsfiles/compengfilescard5283-b68g-200h.png' %}"
               alt="compengfilescard5283"
               class="comp-eng-page-compengfilescard02"
             />
+            {% elif p.id == 2 %}
             <span class="comp-eng-page-text10">
-              <span>Data Structures: Binary Search Trees in Java</span>
+              <span>{{p.name}}</span>
             </span>
           </div>
           <div class="comp-eng-page-cengprojparallelcard">
@@ -107,38 +110,42 @@
               alt="compengfilescard5284"
               class="comp-eng-page-compengfilescard03"
             />
+            {% elif p.id == 3 %}
             <span class="comp-eng-page-text12">
-              <span>Notes on Parallel Programming in Java</span>
+              <span>{{p.name}}</span>
             </span>
           </div>
           <div class="comp-eng-page-cengprojdijkstracard">
             <img
-              src="{%static 'imgsfiles/compengfilescard5285-yxdl-200h.png' %}"
+              src="{% static 'imgsfiles/compengfilescard5285-yxdl-200h.png' %}"
               alt="compengfilescard5285"
               class="comp-eng-page-compengfilescard04"
             />
+            {% elif p.id == 4 %}
             <span class="comp-eng-page-text14">
               <span>
-                Data Structures: Dikjstra’s Algorithm and Graphs in Java
+                {{p.name}}
               </span>
             </span>
           </div>
           <div class="comp-eng-page-cengprojmobilecard">
             <img
-              src="{%static 'imgsfiles/compengfilescard5286-h7fp-200h.png' %}"
+              src="{% static 'imgsfiles/compengfilescard5286-h7fp-200h.png' %}"
               alt="compengfilescard5286"
               class="comp-eng-page-compengfilescard05"
             />
+            {% elif p.id == 5 %}
             <span class="comp-eng-page-text16">
-              <span>Mobile App Design: Alphabet Book in Kotlin</span>
+              <span>{{p.name}}</span>
             </span>
           </div>
           <div class="comp-eng-page-cengprojbenchmarkcard">
             <img
-              src="{%static 'imgsfiles/compengfilescard5287-9vvs-200h.png' %}"
+              src="{% static 'imgsfiles/compengfilescard5287-9vvs-200h.png' %}"
               alt="compengfilescard5287"
               class="comp-eng-page-compengfilescard06"
             />
+            {% elif p.id == 6 %}
             <span class="comp-eng-page-text18">
               <span>Benchmarking: Python Program vs C Program</span>
             </span>
@@ -149,9 +156,10 @@
               alt="compengfilescard5288"
               class="comp-eng-page-compengfilescard07"
             />
+            {% elif p.id == 7 %}
             <span class="comp-eng-page-text20">
               <span>
-                Embedded Systems Design: Implementing I2C on STM32 in C
+                {{p.name}}  
               </span>
             </span>
           </div>
@@ -161,53 +169,71 @@
               alt="compengfilescard5289"
               class="comp-eng-page-compengfilescard08"
             />
+            {% elif p.id == 8 %}
             <span class="comp-eng-page-text22">
               <span>
-                Embedded Systems Design: ADCs, Interrupts &amp; Exceptions
+                {{p.name}}  
               </span>
             </span>
           </div>
           <div class="comp-eng-page-cengprojlotcard">
             <img
-              src="{%static 'imgsfiles/compengfilescard5290-ej18-200h.png' %}"
+              src="{% static 'imgsfiles/compengfilescard5290-ej18-200h.png' %}"
               alt="compengfilescard5290"
               class="comp-eng-page-compengfilescard09"
             />
+            {% elif p.id == 9 %}
             <span class="comp-eng-page-text24">
               <span>Embedded Systems Design: Light of Things Mini Project</span>
             </span>
           </div>
+          {% endif %}
+          {% endfor  %}
           <div class="comp-eng-page-themeselector">
             <img
-              src="{%static 'imgsfiles/themesrectanglei109-ppj-200h.png' %}"
+              src="{% static 'imgsfiles/themesrectanglei109-ppj-200h.png' %}"
               alt="themesrectangleI109"
               class="comp-eng-page-themesrectangle"
             />
             <img
-              src="{%static 'imgsfiles/defaultthemei109-kxja-200h.png' %}"
+              src="{% static 'imgsfiles/defaultthemei109-kxja-200h.png' %}"
               alt="defaultthemeI109"
               class="comp-eng-page-defaulttheme"
             />
             <img
-              src="{%static 'imgsfiles/bluethemei109-yxl-200h.png' %}"
+              src="{% static 'imgsfiles/bluethemei109-yxl-200h.png' %}"
               alt="bluethemeI109"
               class="comp-eng-page-bluetheme"
             />
             <img
-              src="{%static 'imgsfiles/blackthemei109-exbt-200h.png' %}"
+              src="{% static 'imgsfiles/blackthemei109-exbt-200h.png' %}"
               alt="blackthemeI109"
               class="comp-eng-page-blacktheme"
             />
             <img
-              src="{%static 'imgsfiles/greenthemei109-esrm-200h.png' %}"
+              src="{% static 'imgsfiles/greenthemei109-esrm-200h.png' %}"
               alt="greenthemeI109"
               class="comp-eng-page-greentheme"
             />
             <img
-              src="{%static 'imgsfiles/orangethemei109-9wwm-200h.png' %}"
+              src="{% static 'imgsfiles/orangethemei109-9wwm-200h.png' %}"
               alt="orangethemeI109"
               class="comp-eng-page-orangetheme"
             />
+          </div>
+          <div class="comp-eng-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
+              alt="menubutton3319"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton3320"
+              class="comp-eng-page-menubuttonhover"
+            />
+            <div class="comp-eng-page-dropdownmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
           </div>
         </div>
       </div>

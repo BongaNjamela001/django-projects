@@ -23,7 +23,7 @@
 }
 .math-page-text {
   top: 92px;
-  left: 660px;
+  left: 790px;
   color: rgba(255, 255, 255, 1);
   width: 599px;
   height: auto;
@@ -56,9 +56,18 @@
   display: none;
 }
 
+.math-page-dropdownmenu {
+  display: none;
+}
+
 .math-page-menubutton:hover .math-page-menubuttonhover{
   display: inline;
 }
+
+.math-page-menubutton:hover .math-page-dropdownmenu{
+  display: block;
+}
+
 .math-page-quickmenu {
   top: 48px;
   left: 1395px;

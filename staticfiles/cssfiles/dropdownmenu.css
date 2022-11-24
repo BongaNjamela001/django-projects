@@ -1,0 +1,247 @@
+.dropdownmenu-container {
+  min-height: 100vh;
+}
+.dropdownmenu-dropdownmenu {
+  width: 471px;
+  height: 408px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.dropdownmenu-menudropdownmain {
+  top: 0px;
+  left: 0px;
+  width: 471px;
+  height: 408px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-dropdownhome {
+  top: 0px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-dropdownportfolio {
+  top: 68px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-dropdowncontact {
+  top: 340px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-dropdownabout {
+  top: 272px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-dropdownlinkedin {
+  top: 204px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-dropdowngit {
+  top: 136px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+}
+.dropdownmenu-icongithub {
+  top: 154px;
+  left: 294px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+.dropdownmenu-iconlinkedin {
+  top: 224px;
+  left: 310px;
+  width: 30px;
+  height: 28px;
+  position: absolute;
+}
+.dropdownmenu-vectorinfo {
+  top: 292px;
+  left: 340px;
+  width: 29px;
+  height: 28px;
+  position: absolute;
+}
+.dropdownmenu-vectoremail {
+  top: 363px;
+  left: 330px;
+  width: 39px;
+  height: 23px;
+  position: absolute;
+}
+.dropdownmenu-text-home {
+  top: 16px;
+  color: rgba(126, 50, 50, 1);
+  right: 0px;
+  width: 471px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.dropdownmenu-text-projects {
+  top: 82px;
+  color: rgba(126, 50, 50, 1);
+  right: 0px;
+  width: 471px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.dropdownmenu-text-github {
+  top: 150px;
+  left: 0px;
+  color: rgba(126, 50, 50, 1);
+  width: 471px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.dropdownmenu-text-linkedin {
+  top: 220px;
+  left: 0px;
+  color: rgba(126, 50, 50, 1);
+  width: 471px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.dropdownmenu-text-contact {
+  left: 0px;
+  color: rgba(126, 50, 50, 1);
+  width: 471px;
+  bottom: 13px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.dropdownmenu-text-about {
+  top: 286px;
+  color: rgba(126, 50, 50, 1);
+  right: 0px;
+  width: 471px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.dropdownmenu-vectorportfolio {
+  top: 89px;
+  left: 308px;
+  width: 26px;
+  height: 25px;
+  position: absolute;
+}
+.dropdownmenu-vectorhome {
+  top: 23px;
+  left: 287px;
+  width: 28px;
+  height: 23px;
+  position: absolute;
+}

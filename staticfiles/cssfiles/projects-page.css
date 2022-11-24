@@ -42,7 +42,7 @@
   border-radius: 11.326000213623047px;
 }
 .projects-page-text {
-  left: 100px;
+  left: 90px;
   color: rgba(255, 255, 255, 1);
   width: 255px;
   height: auto;
@@ -97,8 +97,16 @@
   display: none;
 }
 
+.projects-page-dropdownmenu {
+  display: none;
+}
+
 .projects-page-menubutton:hover .projects-page-menubuttonhover{
   display: inline;
+}
+
+.projects-page-menubutton:hover .projects-page-dropdownmenu{
+  display: block;
 }
 
 .projects-page-text04 {

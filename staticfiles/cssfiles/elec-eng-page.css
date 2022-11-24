@@ -56,6 +56,14 @@
   display: none;
 }
 
+.elec-eng-page-dropdownmenu {
+  display: none;
+}
+
+.elec-eng-page-menubutton:hover .elec-eng-page-dropdownmenu{
+  display: block;
+}
+
 .elec-eng-page-menubutton:hover .elec-eng-page-menubuttonhover{
   display: inline;
 }
@@ -228,9 +236,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .elec-eng-page-text10:hover{
   text-decoration: underline overline;
 }
+
 .elec-eng-page-elecengprojpowercard {
   top: 357px;
   left: 93px;
@@ -242,6 +252,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .elec-eng-page-compengfilescard2 {
   top: 0px;
   left: 0px;

@@ -53,7 +53,7 @@
             class="math-page-headingrectangle4"
           />
           <span class="math-page-text">
-            <span>Projects &amp; Works: Mathematics</span>
+            <span>Portfolio: Mathematics</span>
           </span>
           <div class="math-page-menubutton">
             <img
@@ -71,10 +71,10 @@
             alt="quickmenu6935"
             class="math-page-quickmenu"
           />
-          <span class="math-page-text02"><a href="/about/{{about.id}}">About</a></span>
-          <span class="math-page-texthome"><a href="/{{home.id}}">Home</a></span>
-          <span class="math-page-text04"><a href="/projects/{{projects.id}}">Portfolio</a></span>
-          <span class="math-page-text06"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <span class="math-page-text02"><a href="{% url 'base:about' %}">About</a></span>
+          <span class="math-page-texthome"><a href="{% url 'base:home' %}">Home</a></span>
+          <span class="math-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
+          <span class="math-page-text06"><a href="{% url 'base:contact' %}">Contact Me</a></span>
           <img
             src="{% static 'imgsfiles/mathfilescard6939-32b-1800w.png' %}"
             alt="mathfilescard6939"
@@ -86,10 +86,11 @@
               alt="compengfilescardI694"
               class="math-page-compengfilescard"
             />
+            {% for p in portfolio%}
+            {% if p.id == 18%}
             <span class="math-page-text08">
               <span>
-                Operations Research: Reducing Cost in Prototype Transportation
-                Problem
+                {{p.name}}
               </span>
             </span>
           </div>
@@ -99,8 +100,9 @@
               alt="compengfilescardI694"
               class="math-page-compengfilescard1"
             />
+            {% elif p.id == 19 %}
             <span class="math-page-text10">
-              <span>Real Analysis: Notes</span>
+              <span>{{p.name}}</span>
             </span>
           </div>
           <div class="math-page-mathprojpdecard">
@@ -109,13 +111,15 @@
               alt="compengfilescardI694"
               class="math-page-compengfilescard2"
             />
+            {% elif p.id == 27 %}
             <span class="math-page-text12">
               <span>
-                Advanced Differential Equations: Bifurcations, Lottka-Volterra
-                Equations
+                {{p.name}}
               </span>
             </span>
           </div>
+          {% endif %}
+          {% endfor %}
           <div class="math-page-themeselector">
             <img
               src="{% static 'imgsfiles/themesrectanglei109-sf3r-200h.png' %}"
@@ -147,6 +151,20 @@
               alt="orangethemeI109"
               class="math-page-orangetheme"
             />
+          </div>
+          <div class="math-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
+              alt="menubutton3319"
+            />
+            <img
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton3320"
+              class="math-page-menubuttonhover"
+            />
+            <div class="math-page-dropdownmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
           </div>
         </div>
       </div>

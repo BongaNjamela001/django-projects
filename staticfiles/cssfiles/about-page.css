@@ -1,3 +1,5 @@
+@import url("/staticfiles/cssfiles/dropdownmenu.css");
+
 .about-page-container {
   min-height: 100vh;
 }
@@ -233,8 +235,16 @@
   display: none;
 }
 
+.about-page-dropdownmenu {
+  display: none;
+}
+
 .about-page-menubutton:hover .about-page-menubuttonhover{
   display: inline;
+}
+
+.about-page-menubutton:hover .about-page-dropdownmenu {
+  display: block;
 }
 
 .about-page-text06 {
