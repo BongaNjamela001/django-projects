@@ -1,5 +1,9 @@
 from django import forms
 from .models import Contact
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
 
 class ContactForm(forms.ModelForm):
 
@@ -22,6 +26,37 @@ class ContactForm(forms.ModelForm):
             'style': 'border-color:darkgoldenrod; border-radius: 11.33px; width: 1182px; height: 120px',
             'rows': 6
             }))
+  
+    def get_info(self):
+        """
+        Returns formatted information
+        """
+        cl_data = super().clean()
+
+        name = cl_data.get('name').strip()
+        user_email = cl_data.get('email')
+        message = cl_data.get('brief')
+
+        mail = {
+                'name': name,
+                'email': user_email,
+                'brief': message,
+            }
+        template = render_to_string('email-template.html', mail)
+
+        return template
+    
+    def send(self):
+        template = self.get_info()
+        subject = "Contact Form"
+        messag = "New email from portfolio website"
+        send_mail(
+            subject=subject, 
+            message=messag, 
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[settings.RECIPIENT_ADDRESS],
+            html_message=template
+        )
 
     class Meta:
         model = Contact

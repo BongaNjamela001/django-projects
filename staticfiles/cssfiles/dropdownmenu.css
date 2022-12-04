@@ -1,7 +1,19 @@
 .dropdownmenu-container {
   min-height: 100vh;
 }
-.dropdownmenu-dropdownmenu {
+
+/* Add animation for main menu*/
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* .dropdownmenu-dropdownmenu {
   width: 471px;
   height: 408px;
   display: flex;
@@ -9,8 +21,9 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
-}
-.dropdownmenu-menudropdownmain {
+} */
+
+/* .dropdownmenu-menudropdownmain {
   top: 0px;
   left: 0px;
   width: 471px;
@@ -20,7 +33,8 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 11.326000213623047px;
-}
+} */
+
 .dropdownmenu-dropdownhome {
   top: 0px;
   left: 0px;
@@ -31,7 +45,63 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
 }
+
+.dropdownmenu-dropdownhomehover {
+  top: 0px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+  display: none;
+}
+
+.dropdownmenu-vectorhome {
+  top: 23px;
+  left: 280px;
+  width: 28px;/*28/471px*100%*/
+  height: 23px;
+  position: absolute;
+  display: block;
+}
+
+.dropdownmenu-vectorhomehover {
+  display: none;
+}
+
+/* menu home bar hover actions */
+.dropdownmenu-dropdownhome:hover .dropdownmenu-dropdownhomehover {
+  display: inline;
+  border-color: white;
+}
+.dropdownmenu-dropdownhome:hover .dropdownmenu-text-home {
+  color: white;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+.dropdownmenu-dropdownhome:hover .dropdownmenu-vectorhomehover {
+  top: 23px;
+  left: 284px;
+  width: 28px;
+  height: 23px;
+  position: absolute;
+  display: block;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+.dropdownmenu-dropdownhome:hover .dropdownmenu-vectorhome {
+  display: none;
+}
+
+/* menu portfolio bar  */
 .dropdownmenu-dropdownportfolio {
   top: 68px;
   left: 0px;
@@ -41,8 +111,64 @@
   border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
+  -webkit-animation: fadeIn 0.90s;
+  animation: fadeIn 0.90s;
   border-radius: 11.326000213623047px;
 }
+
+.dropdownmenu-dropdownportfoliohover {
+  top: 0px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+  border-radius: 11.326000213623047px;
+  display: none;
+}
+
+.dropdownmenu-vectorportfolio {
+  top: 21px;
+  left: 308px;
+  width: 26px;
+  height: 25px;
+  position: absolute;
+  -webkit-animation: fadeIn 2.0s;
+  animation: fadeIn 2.0s;
+}
+
+.dropdownmenu-vectorportfoliohover {
+  display: none;
+}
+
+.dropdownmenu-dropdownportfolio:hover .dropdownmenu-dropdownportfoliohover {
+  display: inline;
+  border-color: white;
+}
+
+.dropdownmenu-dropdownportfolio:hover .dropdownmenu-text-projects {
+  color: white;
+}
+
+.dropdownmenu-dropdownportfolio:hover .dropdownmenu-vectorportfoliohover {
+  top: 21px;
+  left: 308px;
+  width: 26px;
+  height: 25px;
+  position: absolute;
+  display:block;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+.dropdownmenu-dropdownportfolio:hover .dropdownmenu-vectorportfolio {
+  display:none;
+}
+
+/* menu contact bar */
 .dropdownmenu-dropdowncontact {
   top: 340px;
   left: 0px;
@@ -53,29 +179,65 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 1.4s;
+  animation: fadeIn 1.4s;
 }
-.dropdownmenu-dropdownabout {
-  top: 272px;
+
+.dropdownmenu-dropdowncontacthover {
+  top: 0px;
   left: 0px;
   width: 471px;
   height: 68px;
   position: absolute;
-  border-color: rgba(0, 0, 0, 1);
   border-style: solid;
   border-width: 1px;
   border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+  display: none;
 }
-.dropdownmenu-dropdownlinkedin {
-  top: 204px;
-  left: 0px;
-  width: 471px;
-  height: 68px;
+.dropdownmenu-vectoremail {
+  top: 22px;
+  left: 330px;
+  width: 39px;
+  height: 23px;
   position: absolute;
-  border-color: rgba(0, 0, 0, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 2.0s;
+  animation: fadeIn 2.0s;
 }
+
+.dropdownmenu-vectoremailhover {
+  display: none;
+}
+
+/*menu contact bar hover actions*/
+.dropdownmenu-dropdowncontact:hover .dropdownmenu-dropdowncontacthover {
+  display: inline;
+  border-color: white;
+}
+
+.dropdownmenu-dropdowncontact:hover .dropdownmenu-text-contact {
+  color: white;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+.dropdownmenu-dropdowncontact:hover .dropdownmenu-vectoremail {
+  display: none;
+}
+
+.dropdownmenu-dropdowncontact:hover .dropdownmenu-vectoremailhover {
+  top: 22px;
+  left: 330px;
+  width: 39px;
+  height: 23px;
+  position: absolute;
+  display: block;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+/* menu github bar */
 .dropdownmenu-dropdowngit {
   top: 136px;
   left: 0px;
@@ -86,37 +248,209 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 1.1s;
+  animation: fadeIn 1.1s;
 }
+
+.dropdownmenu-dropdowngithover {
+  top: 0px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+  display: none;
+}
+
 .dropdownmenu-icongithub {
-  top: 154px;
-  left: 294px;
+  top: 15px;
+  left: 289px;
   width: 32px;
   height: 32px;
   position: absolute;
+  -webkit-animation: fadeIn 1.6s;
+  animation: fadeIn 1.6s;
 }
+
+/* menu github bar hover actions */
+
+.dropdownmenu-dropdowngit:hover .dropdownmenu-dropdowngithover {
+  display: inline;
+  border-color:white;
+}
+
+.dropdownmenu-dropdowngit:hover .dropdownmenu-text-github {
+  color: white;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+.dropdownmenu-icongithubhover {
+  display: none;
+}
+
+.dropdownmenu-dropdowngit:hover .dropdownmenu-icongithub {
+  display: none;
+}
+
+.dropdownmenu-dropdowngit:hover .dropdownmenu-icongithubhover {
+  top: 15px;
+  left: 289px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  display: block;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+/* menu linkedin bar*/
+.dropdownmenu-dropdownlinkedin {
+  top: 204px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 1.2s;
+  animation: fadeIn 1.2s;
+}
+
+.dropdownmenu-dropdownlinkedinhover {
+  top: 0px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  display: none;
+  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
 .dropdownmenu-iconlinkedin {
-  top: 224px;
-  left: 310px;
+  top: 18px;
+  left: 304px;
   width: 30px;
   height: 28px;
   position: absolute;
+  -webkit-animation: fadeIn 1.6s;
+  animation: fadeIn 1.6s;
 }
+
+.dropdownmenu-iconlinkedinhover {
+  display: none;
+}
+/* menu linkedin bar hover actions */
+
+.dropdownmenu-dropdownlinkedin:hover .dropdownmenu-dropdownlinkedinhover{
+  display: inline;
+  border-color: white;
+}
+
+.dropdownmenu-dropdownlinkedin:hover .dropdownmenu-text-linkedin{
+  color: white;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+.dropdownmenu-dropdownlinkedin:hover .dropdownmenu-iconlinkedin{
+  display: none;
+}
+
+.dropdownmenu-dropdownlinkedin:hover .dropdownmenu-iconlinkedinhover {
+  top: 18px;
+  left: 304px;
+  width: 30px;
+  height: 28px;
+  position: absolute;
+  display: block;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
+/* menu information/about bar */
+.dropdownmenu-dropdownabout {
+  top: 272px;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 1.3s;
+  animation: fadeIn 1.3s;
+}
+
+.dropdownmenu-dropdownabouthover {
+  top: 0px;
+  display: none;
+  left: 0px;
+  width: 471px;
+  height: 68px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 11.326000213623047px;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
+}
+
 .dropdownmenu-vectorinfo {
-  top: 292px;
-  left: 340px;
+  top: 21px;
+  left: 295px;
   width: 29px;
   height: 28px;
   position: absolute;
+  -webkit-animation: fadeIn 1.6s;
+  animation: fadeIn 1.6s;
 }
-.dropdownmenu-vectoremail {
-  top: 363px;
-  left: 330px;
-  width: 39px;
-  height: 23px;
+
+.dropdownmenu-vectorinfohover {
+  display: none;
+}
+/* menu info bar hover actions */
+
+.dropdownmenu-dropdownabout:hover .dropdownmenu-dropdownabouthover {
+  display: inline;
+  border-color: white;
+}
+
+.dropdownmenu-dropdownabout:hover .dropdownmenu-text-about {
+  color: white;
+}
+
+.dropdownmenu-dropdownabout:hover .dropdownmenu-vectorinfo {
+  display: none;
+  
+}
+
+.dropdownmenu-dropdownabout:hover .dropdownmenu-vectorinfohover {
+  display: block;
+  top: 21px;
+  left: 295px;
+  width: 29px;
+  height: 28px;
   position: absolute;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
 }
+
+/* text fields */
 .dropdownmenu-text-home {
-  top: 16px;
+  top: 15px;
   color: rgba(126, 50, 50, 1);
   right: 0px;
   width: 471px;
@@ -134,8 +468,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .dropdownmenu-text-projects {
-  top: 82px;
+  top: 15px;
   color: rgba(126, 50, 50, 1);
   right: 0px;
   width: 471px;
@@ -153,8 +488,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .dropdownmenu-text-github {
-  top: 150px;
+  top: 15px;
   left: 0px;
   color: rgba(126, 50, 50, 1);
   width: 471px;
@@ -172,8 +508,9 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .dropdownmenu-text-linkedin {
-  top: 220px;
+  top: 15px;
   left: 0px;
   color: rgba(126, 50, 50, 1);
   width: 471px;
@@ -193,6 +530,7 @@
 }
 
 .dropdownmenu-text-contact {
+  top:15px;
   left: 0px;
   color: rgba(126, 50, 50, 1);
   width: 471px;
@@ -213,9 +551,9 @@
 }
 
 .dropdownmenu-text-about {
-  top: 286px;
+  top: 15px;
   color: rgba(126, 50, 50, 1);
-  right: 0px;
+  left: 10px;
   width: 471px;
   height: auto;
   position: absolute;
@@ -231,17 +569,4 @@
   margin-bottom: 0;
   text-decoration: none;
 }
-.dropdownmenu-vectorportfolio {
-  top: 89px;
-  left: 308px;
-  width: 26px;
-  height: 25px;
-  position: absolute;
-}
-.dropdownmenu-vectorhome {
-  top: 23px;
-  left: 287px;
-  width: 28px;
-  height: 23px;
-  position: absolute;
-}
+

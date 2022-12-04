@@ -15,12 +15,49 @@
 
 .comp-eng-page-headingrectangle2 {
   top: 92px;
-  left: 635px;
+  left: 640px;
   width: 624px;
   height: 40px;
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
+}
+
+.comp-eng-page-dev {
+  left: 4px;
+  top: 1060px;
+  position: absolute;
+  width: 258px;
+  height: auto;
+  color: rgb(126, 50, 50);
+  font-size: 12px;
+  font-style: normal;
+  font-family: Roboto;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.comp-eng-page-portfoliotext {
+  top: 150px;
+  left: 690px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
 }
 
 .comp-eng-page-text {
@@ -60,14 +97,37 @@
 
 .comp-eng-page-dropdownmenu {
   display: none;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
 .comp-eng-page-menubutton:hover .comp-eng-page-dropdownmenu{
   display: block;
+  -webkit-animation: fadeIn 0.8s;
+  animation: fadeIn 0.8s;
 }
 
 .comp-eng-page-menubutton:hover .comp-eng-page-menubuttonhover{
   display: inline;
+}
+
+.comp-eng-page-popup {
+  display:none;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+/* Add animation for download popup */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .comp-eng-page-quickmenu {
@@ -535,7 +595,7 @@
   top: 0px;
   left: 0px;
   width: 1747px;
-  height: 88px;
+  height: 100px;
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
@@ -544,7 +604,7 @@
   top: 20px;
   left: 30px;
   color: rgba(255, 255, 255, 1);
-  width: 821px;
+  width: 900px;
   height: auto;
   position: absolute;
   font-size: 32px;
@@ -559,12 +619,14 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .comp-eng-page-text24:hover{
   text-decoration: underline overline;
 }
+
 .comp-eng-page-themeselector {
   top: 39px;
-  left: 916px;
+  left: 878px;
   width: 167px;
   height: 30px;
   display: flex;
@@ -572,82 +634,4 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
-}
-.comp-eng-page-themesrectangle {
-  top: 0px;
-  left: 0px;
-  width: 167px;
-  height: 30px;
-  position: absolute;
-  box-sizing: content-box;
-  border-color: rgba(126, 50, 50, 1);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 11.326000213623047px;
-}
-.comp-eng-page-defaulttheme {
-  top: 4px;
-  left: 11px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-
-}
-.comp-eng-page-defaulttheme:hover{
-  border-width: 4px;
-}
-.comp-eng-page-bluetheme {
-  top: 4px;
-  left: 45px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-
-}
-
-.comp-eng-page-bluetheme:hover{
-  border-width: 4px;
-}
-
-.comp-eng-page-blacktheme {
-  top: 4px;
-  left: 135px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-
-}
-
-.comp-eng-page-blacktheme:hover{
-  border-width: 4px;
-}
-
-.comp-eng-page-greentheme {
-  top: 4px;
-  left: 105px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-
-}
-
-.comp-eng-page-greentheme:hover{
-  border-width: 4px;
-}
-
-.comp-eng-page-orangetheme {
-  top: 4px;
-  left: 75px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.comp-eng-page-orangetheme:hover{
-  border-width: 4px;
 }

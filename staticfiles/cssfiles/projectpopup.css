@@ -5,7 +5,7 @@
 .projectpopup-projectpopup {
   width: 546px;
   height: 266px;
-  position: center;
+  position: fixed;
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
@@ -13,7 +13,7 @@
 
 .projectpopup-popupdownload {
   top: 280px;
-  left: 640px;
+  left: 670px;
   width: 546px;
   height: 266px;
   position: absolute;
@@ -25,7 +25,7 @@
 
 .projectpopup-vectorclose {
   top: 294px;
-  left: 1150px;
+  left: 1180px;
   width: 25px;
   height: 22px;
   position: absolute;
@@ -33,7 +33,7 @@
 
 .projectpopup-text {
   top: 321px;
-  left: 640px;
+  left: 670px;
   color: rgba(126, 50, 50, 1);
   width: 544px;
   height: auto;
@@ -53,7 +53,7 @@
 
 .projectpopup-btnzipdownload {
   top: 464px;
-  left: 683px;
+  left: 713px;
   width: 145px;
   height: 41px;
   display: flex;
@@ -105,7 +105,7 @@
 }
 .projectpopup-btntardownload {
   top: 464px;
-  left: 998px;
+  left: 1028px;
   width: 145px;
   height: 71px;
   display: flex;
@@ -147,7 +147,7 @@
 
 .projectpopup-text09 {
   top: 406px;
-  left: 642px;
+  left: 672px;
   color: rgba(126, 50, 50, 1);
   width: 544px;
   height: auto;
@@ -167,7 +167,7 @@
 
 .projectpopup-text11 {
   top: 317px;
-  left: 890px;
+  left: 920px;
   color: rgba(126, 50, 50, 1);
   width: 544px;
   height: auto;

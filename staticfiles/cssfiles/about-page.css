@@ -1,8 +1,7 @@
-@import url("/staticfiles/cssfiles/dropdownmenu.css");
-
 .about-page-container {
   min-height: 100vh;
 }
+
 .about-page-about-page {
   width: 100%;
   height: 1994px;
@@ -14,6 +13,7 @@
   border-color: transparent;
   background-color: rgba(255, 255, 255, 1);
 }
+
 .about-page-quickmenuabout {
   top: 48px;
   left: 1512px;
@@ -23,6 +23,24 @@
   border-color: transparent;
   border-radius: 8.248282432556152px;
 }
+
+.about-page-dev {
+  left: 4px;
+  top: 1974px;
+  position: absolute;
+  width: 258px;
+  height: auto;
+  color: rgb(126, 50, 50);
+  font-size: 12px;
+  font-style: normal;
+  font-family: Roboto;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
 .about-page-text {
   top: 53px;
   left: 1637px;
@@ -92,7 +110,7 @@
 }
 
 .about-page-themeselector {
-  top: 53px;
+  top: 38px;
   left: 876px;
   width: 167px;
   height: 30px;
@@ -102,85 +120,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
-.about-page-themesrectangle {
-  top: 0px;
-  left: 0px;
-  width: 167px;
-  height: 30px;
-  position: absolute;
-  box-sizing: content-box;
-  border-color: rgba(126, 50, 50, 1);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 11.326000213623047px;
-}
-.about-page-defaulttheme {
-  top: 4px;
-  left: 11px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-  
-}
-.about-page-defaulttheme:hover{
-  border-width: 4px;
-}
-.about-page-bluetheme {
-  top: 4px;
-  left: 45px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-  
-}
 
-.about-page-bluetheme:hover{
-  border-width: 4px;
-}
-
-.about-page-blacktheme {
-  top: 4px;
-  left: 135px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
- 
-}
-
-.about-page-blacktheme:hover{
-  border-width: 4px;
-}
-
-.about-page-greentheme {
-  top: 4px;
-  left: 105px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
- 
-}
-
-.about-page-greentheme:hover{
-  border-width: 4px;
-}
-
-.about-page-orangetheme {
-  top: 4px;
-  left: 75px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-
-}
-
-.about-page-orangetheme:hover{
-  border-width: 4px;
-}
 .about-page-aboutpageheading {
   top: 104px;
   left: 794px;
@@ -237,6 +177,10 @@
 
 .about-page-dropdownmenu {
   display: none;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
 .about-page-menubutton:hover .about-page-menubuttonhover{

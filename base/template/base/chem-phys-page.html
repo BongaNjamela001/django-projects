@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Bonga Njamela: Chemistry &amp; Physics</title>
+    <title>Bonga Njamela: Chemistry &amp; Physics Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -54,6 +54,9 @@
           <span class="chem-phys-page-text">
             <span>Portfolio: Chemistry &amp; Physics</span>
           </span>
+          <div class="chem-phys-page-portfoliotext">
+             <span>Click on a project name to download file.</span>
+          </div>
           <div class="chem-phys-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton665-pd9f.svg' %}"
@@ -88,7 +91,7 @@
             />
             {% for p in portfolio  %}    
             {% if p.id == 11 %}
-            <div class="chem-phys-page-text08" onclick="openPopUp()">              
+            <div class="chem-phys-page-text08" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">              
                 {{p.name}}
             </div>
             {% endif %}
@@ -102,11 +105,9 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 12 %}
-            <span class="chem-phys-page-text10">
-              <span>
+            <div class="chem-phys-page-text10" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">
                {{p.name}}
-              </span>
-            </span>
+            </div>
             {% endif %}
             {% endfor %}
           </div>
@@ -118,11 +119,9 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 13 %}
-            <span class="chem-phys-page-text12">
-              <span>
-                {{p.name}}
-              </span>
-            </span>
+            <div class="chem-phys-page-text12" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">
+              {{p.name}}
+            </div>
             {% endif %}
             {% endfor %}
           </div>
@@ -134,9 +133,9 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 14 %}
-            <span class="chem-phys-page-text14">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="chem-phys-page-text14" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">
+              {{p.name}}
+            </div>
             {% endif %}
             {% endfor %}
           </div>
@@ -148,9 +147,9 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 15 %}
-            <span class="chem-phys-page-text16">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="chem-phys-page-text16" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">
+              {{p.name}}
+            </div>
             {% endif %}
             {% endfor %}
           </div>
@@ -162,9 +161,9 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 16 %}
-            <span class="chem-phys-page-text18">
+            <div class="chem-phys-page-text18" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">
               <span>{{p.name}}</span>
-            </span>
+            </div>
             {% endif %}
             {% endfor %}
           </div>
@@ -176,46 +175,16 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 17 %}
-            <span class="chem-phys-page-text20">
-              <span>
+            <div class="chem-phys-page-text20" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}', '{{p.tarproject.url}}')">
                 {{p.name}}
-              </span>
-            </span>
+            </div>
             {% endif %}
             {% endfor %}
           </div>
           <div class="chem-phys-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectanglei109-m7jg-200h.png' %}"
-              alt="themesrectangleI109"
-              class="chem-phys-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaultthemei109-x1ws-200h.png' %}"
-              alt="defaultthemeI109"
-              class="chem-phys-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluethemei109-hzep-200h.png' %}"
-              alt="bluethemeI109"
-              class="chem-phys-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blackthemei109-ivqp-200h.png' %}"
-              alt="blackthemeI109"
-              class="chem-phys-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greenthemei109-bmke-200h.png' %}"
-              alt="greenthemeI109"
-              class="chem-phys-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangethemei109-5yuu-200h.png' %}"
-              alt="orangethemeI109"
-              class="chem-phys-page-orangetheme"
-            />
+            {% include './themeselector.html' %}
           </div>
+
           <div class="chem-phys-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
@@ -230,22 +199,13 @@
               {% include './dropdownmenu.html' %}
             </div>
           </div>
+          <span class="chem-phys-page-dev">Developed by Bonga Njamela</span>
           <div class="chem-phys-page-popup" id="popup">
             {% include './projectpopup.html' %}
           </div>
         </div>
       </div>
     </div>
-    <script>
-      function openPopUp() {
-          var popup = document.getElementById("popup"); 
-          if (popup.style.display === "none") {
-                  popup.style.display = "block";
-          }
-          else {
-                  popup.style.display = "none";
-          }
-      }
-  </script>
+    <script src="{% static 'jsfiles/popupload.js' %}"></script>
   </body>
 </html>

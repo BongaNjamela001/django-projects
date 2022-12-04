@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from django.core.mail import EmailMessage
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
+from django.shortcuts import render
 # Create your models here.
 
 # contact model for any visitors who wish to get in touch via the website
@@ -30,8 +35,8 @@ class Portfolio(models.Model):
         verbose_name = "Portfolio"
 
     name = models.CharField(max_length=200)
-    zipproject = models.FileField(blank=True, null=True, upload_to="portfolio")
-    tarproject = models.FileField(blank=True, null=True, upload_to="portfolio")
+    zipproject = models.FileField(blank=True, null=True, upload_to="staticfiles/portfolio")
+    tarproject = models.FileField(blank=True, null=True, upload_to="staticfiles/portfolio")
     created = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(null=True, blank=True)
 

@@ -75,6 +75,9 @@
           <span class="math-page-texthome"><a href="{% url 'base:home' %}">Home</a></span>
           <span class="math-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
           <span class="math-page-text06"><a href="{% url 'base:contact' %}">Contact Me</a></span>
+          <div class="math-page-portfoliotext">
+            <span>Click on a project name to download file.</span>
+         </div>
           <img
             src="{% static 'imgsfiles/mathfilescard6939-32b-1800w.png' %}"
             alt="mathfilescard6939"
@@ -88,11 +91,9 @@
             />
             {% for p in portfolio%}
             {% if p.id == 18%}
-            <span class="math-page-text08">
-              <span>
+            <div class="math-page-text08" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
-              </span>
-            </span>
+            </div>
           </div>
           <div class="math-page-mathprojracard">
             <img
@@ -101,9 +102,9 @@
               class="math-page-compengfilescard1"
             />
             {% elif p.id == 19 %}
-            <span class="math-page-text10">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="math-page-text10" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           <div class="math-page-mathprojpdecard">
             <img
@@ -112,45 +113,17 @@
               class="math-page-compengfilescard2"
             />
             {% elif p.id == 27 %}
-            <span class="math-page-text12">
-              <span>
+            <div class="math-page-text12" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
-              </span>
-            </span>
+            </div>
           </div>
           {% endif %}
           {% endfor %}
+          <span class="math-page-dev">
+            <span>Developed by Bonga Njamela</span>
+          </span>
           <div class="math-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectanglei109-sf3r-200h.png' %}"
-              alt="themesrectangleI109"
-              class="math-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaultthemei109-i3rg-200h.png' %}"
-              alt="defaultthemeI109"
-              class="math-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluethemei109-glec-200h.png' %}"
-              alt="bluethemeI109"
-              class="math-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blackthemei109-wg9-200h.png' %}"
-              alt="blackthemeI109"
-              class="math-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greenthemei109-x0a8-200h.png' %}"
-              alt="greenthemeI109"
-              class="math-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangethemei109-9ys4-200h.png' %}"
-              alt="orangethemeI109"
-              class="math-page-orangetheme"
-            />
+           {% include './themeselector.html' %}
           </div>
           <div class="math-page-menubutton">
             <img
@@ -166,8 +139,12 @@
               {% include './dropdownmenu.html' %}
             </div>
           </div>
+          <div class="math-page-popup" id="popup">
+            {% include './projectpopup.html' %}
+          </div>
         </div>
       </div>
     </div>
+    <script src="{% static 'jsfiles/popupload.js' %}"></script>
   </body>
 </html>

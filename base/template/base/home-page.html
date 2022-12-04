@@ -6,7 +6,7 @@
     <title>Bonga Njamela: Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0; 
@@ -21,7 +21,6 @@
         font-family: Inter;
         font-size: 16px;
       }
-
       body {
         font-weight: 400;
         font-style:normal;
@@ -31,7 +30,6 @@
         line-height: 1.15;
         color: var(--dl-color-gray-black);
         background-color: var(--dl-color-gray-white);
-
       }
     </style>
     <link
@@ -51,26 +49,32 @@
       <link href="{% static 'cssfiles/home-page.css' %}" rel="stylesheet" />
       <div class="home-page-container">
         <div class="home-page-home-page">
-          <div class="home-page-homepagecard">
-            <img
-              src="{% static 'imgsfiles/burgandycard2718-w619-1900w.png' %}"
-              alt="burgandycard2718"
-              class="home-page-burgandycard"
-            />
-            <img
+          <!-- <img
+            src="{% static 'imgsfiles/nelsonmandela12719-1026-200h.png' %}"
+            alt="nelsonmandela12719"
+            class="home-page-nelsonmandela1"
+          /> -->
+          <img
+            src="{% static 'imgsfiles/burgandycard2718-w619-1900w.png' %}"
+            alt="burgandycard2718"
+            class="home-page-burgandycard"
+          />
+          <img
               src="{% static 'imgsfiles/intersect2717-rrq.svg' %}"
-              alt="Intersect2717"
-              class="home-page-intersect"
-            />
-            <span class="home-page-text">
-              <a target="_blank" href="https://www.google.com/maps/@-34.2969541,18.2479026,5z">Cape Town, Western Cape</a>
-            </span>
-            <span class="home-page-text02"><a target="_blank" href="{% static 'documents/Bonga_Njamela_Resume.pdf' %}">Download Resume</a></span>
-          </div>
+              alt="deco"
+              class="home-page-decopicture"
+          />
+          <img
+              src="{% static 'imgsfiles/table_mountain_waterfront.png' %}"
+              alt="decomedlar"
+              class="home-page-decopicture-medlar"
+          />
+          <a class="home-page-text" target="_blank" href="https://www.google.com/maps/@-34.2969541,18.2479026,5z">Cape Town, Western Cape</a>
+          <a class="home-page-text02" target="_blank" href="{% static 'documents/Bonga_Njamela_Resume.pdf' %}">Download Resume</a>
           <span class="home-page-text04"><a href="/about/{{about.id}}">read more</a></span>
           <span class="home-page-text06">
             <span>
-                The Philosophy of Nature, or science as is commonly known, has
+                Science, or the Philosophy of Nature as it was once known, has
                 principles rooted in the understanding of the elegance and
                 intricacies of matter, space and time. With a Bachelor of
                 Science in Applied Mathematics and Physics and pursuing a
@@ -85,7 +89,7 @@
             alt="quickmenu2214"
             class="home-page-quickmenu"
           />
-          <span class="home-page-text10"><span>Welcome!</span></span>
+          <span class="home-page-text10">Welcome!</span>
           <span class="home-page-text12">
             <span>
               <span>I am,</span>
@@ -93,7 +97,21 @@
               <span>Bonga Njamela.</span>
             </span>
           </span>
-          <span class="home-page-text17"><a href="{% url 'base:about' %}">About</a></span>
+          <img
+              src="{% static 'imgsfiles/icongithub333-cgdl.svg' %}"
+              alt="icongithub333"
+              id="githubvector"
+              onclick= "window.open('https://github.com/BongaNjamela001/', '_blank')"
+              class="home-page-icongithub"
+          />
+          <img
+              src="{% static 'imgsfiles/iconlinkedin335-nvl.svg' %}"
+              alt="iconlinkedin335"
+              onclick= "window.open('https://www.linkedin.com/in/bonga-njamela-982873200/', '_blank')"
+              id="linkedinvector"
+              class="home-page-iconlinkedin"
+          />
+          <a class="home-page-text17" href="{% url 'base:about' %}">About</a>
           <span class="home-page-text19"><a href="{% url 'base:projects' %}">Portfolios</a></span>
           <span class="home-page-text21"><a href="{% url 'base:contact' %}">Contact Me</a></span>
           <img
@@ -101,7 +119,7 @@
             alt="profilepicture105"
             class="home-page-profilepicture"
           />
-          <span class="home-page-text23"><span>Bonga Njamela</span></span>
+          <span class="home-page-text23"><span>Home</span></span>
           <div class="home-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton228-58wj.svg' %}"
@@ -113,149 +131,20 @@
               class="home-page-menubuttonhover"
             />
             <div class="home-page-dropdownmenu">
-              <img
-                src="{% static 'imgsfiles/menudropdownmain2007-26e-500h.png' %}"
-                alt="menudropdownmain2007"
-                class="home-page-menudropdownmain"
-              />
-              <a href="/{{home.id}}">
-              <img
-                src="{% static 'imgsfiles/dropdownhome2007-4sh-200h.png' %}"
-                alt="dropdownhome2007"
-                class="home-page-dropdownhome"
-              />
-              </a>
-              <a href="/projects/{{projects.id}}">
-              <img
-                src=" {% static 'imgsfiles/dropdownportfolio2008-jihe-200h.png' %}"
-                alt="dropdownportfolio2008"
-                class="home-page-dropdownportfolio"
-              />
-              </a>
-              <a href="/contact/{{contact.id}}">
-              <img
-                src=" {% static 'imgsfiles/dropdowncontact2008-z3be-200h.png' %}"
-                alt="dropdowncontact2008"
-                class="home-page-dropdowncontact"
-              />
-              </a>
-              <a href="/about/{{about.id}}">
-              <img
-                src=" {% static 'imgsfiles/dropdownabout2008-iqkb-200h.png' %}"
-                alt="dropdownabout2008"
-                class="home-page-dropdownabout"
-              />
-              </a>
-              <a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">
-              <img
-                src=" {% static 'imgsfiles/dropdownlinkedin2008-7qxr-200h.png' %}"
-                alt="dropdownlinkedin2008"
-                class="home-page-dropdownlinkedin"
-              />
-              </a>
-              <a target="_blank" href="https://github.com/BongaNjamela001/">
-              <img
-                src=" {% static 'imgsfiles/dropdowngit2008-uuz9-200h.png' %}"
-                alt="dropdowngit2008"
-                class="home-page-dropdowngit"
-              />
-              </a>
-              <img
-                src=" {% static 'imgsfiles/icongithub2009-wln.svg' %}"
-                alt="icongithub2009"
-                class="home-page-icongithub2"
-              />
-              <img
-                src=" {% static 'imgsfiles/iconlinkedin2009-uq1r.svg' %}"
-                alt="iconlinkedin2009"
-                class="home-page-iconlinkedin2"
-              />
-              <img
-                src=" {% static 'imgsfiles/vectorinfo2028-y9d5.svg' %}"
-                alt="vectorinfo2028"
-                class="home-page-vectorinfo"
-              />
-              <img
-                src=" {% static 'imgsfiles/vectoremail2028-wxo.svg' %}"
-                alt="vectoremail2028"
-                class="home-page-vectoremail"
-              />
-              <span class="home-page-text36"><a href="{% url 'base:home' %}">Home</a></span>
-              <span class="home-page-text38"><a href="{% url 'base:projects' %}">Portfolio</a></span>
-              <span class="home-page-text28"><a target="_blank" href="https://github.com/BongaNjamela001/">Github</a></span>
-              <span class="home-page-text30"><a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">LinkedIn</a></span>
-              <span class="home-page-text32"><a href="{% url 'base:contact'%}">Contact Me</a></span>
-              <span class="home-page-text34"><a href="{% url 'base:about' %}">About Bonga</a></span>
-              <img
-                src=" {% static 'imgsfiles/vectorportfolio2009-2nqn.svg' %}"
-                alt="vectorportfolio2009"
-                class="home-page-vectorportfolio"
-              />
-              <img
-                src=" {% static 'imgsfiles/vectorhome2008-a.svg' %}"
-                alt="vectorhome2008"
-                class="home-page-vectorhome"
-              />
+              {% include './dropdownmenu.html' %}
             </div>
-          </div>
-          <img
-            src="{% static 'imgsfiles/nelsonmandela12719-1026-200h.png' %}"
-            alt="nelsonmandela12719"
-            class="home-page-nelsonmandela1"
-          />
-          <a target="_blank" href="https://github.com/BongaNjamela001/">
-          <img 
-            src="{% static 'imgsfiles/icongithub333-cgdl.svg' %}"
-            alt="icongithub333"
-            class="home-page-icongithub"
-          />
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">
-          <img
-            src="{% static 'imgsfiles/iconlinkedin335-nvl.svg' %}"
-            alt="iconlinkedin335"
-            class="home-page-iconlinkedin"
-          />
-          </a>
-          <div class="home-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectangle1094-i7rt-200h.png' %}"
-              alt="themesrectangle1094"
-              class="home-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaulttheme1093-di-200h.png' %}"
-              alt="defaulttheme1093"
-              class="home-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluetheme1093-ii2-200h.png' %}"
-              alt="bluetheme1093"
-              class="home-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blacktheme1093-asgj-200h.png' %}"
-              alt="blacktheme1093"
-              class="home-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greentheme1094-8rum-200h.png' %}"
-              alt="greentheme1094"
-              class="home-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangetheme1094-n29k-200h.png' %}"
-              alt="orangetheme1094"
-              class="home-page-orangetheme"
-            />
           </div>
           <img href="https://www.google.com/maps/@-34.2969541,18.2479026,5z"
               src="{% static 'imgsfiles/vectorlocation1099-n625.svg' %}"
               alt="vectorlocation1099"
               class="home-page-vectorlocation"
           />
-        </div>
+          <div class="home-page-themeselector">
+            {% include './themeselector.html' %}
+          </div>
+        <span class="home-page-dev">Developed by Bonga Njamela</span>
       </div>
     </div>
+    <script scr="{% static 'jsfiles/vectorlinks.js' %}"></script>
   </body>
 </html>

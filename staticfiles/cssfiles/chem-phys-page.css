@@ -1,5 +1,7 @@
 .chem-phys-page-container {
-  min-height: 100vh;
+  min-height: auto;
+  height: auto;
+  width: auto;
 }
 
 .chem-phys-page-chem-phys-page {
@@ -52,6 +54,23 @@
   position: absolute;
 }
 
+.chem-phys-page-dev {
+  left: 4px;
+  top: 1060px;
+  position: absolute;
+  width: 258px;
+  height: auto;
+  color: rgb(126, 50, 50);
+  font-size: 12px;
+  font-style: normal;
+  font-family: Roboto;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
 .chem-phys-page-menubuttonhover {
   top: 0px;
   left: 0px;
@@ -61,13 +80,17 @@
 
 .chem-phys-page-dropdownmenu {
   display: none;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
-.chem-phys-page-menubutton:hover .chem-phys-page-dropdownmenu{
+.chem-phys-page-menubutton:hover .chem-phys-page-dropdownmenu {
   display: block;
 }
 
-.chem-phys-page-menubutton:hover .chem-phys-page-menubuttonhover{
+.chem-phys-page-menubutton:hover .chem-phys-page-menubuttonhover {
   display: inline;
 }
 
@@ -80,6 +103,7 @@
   border-color: transparent;
   border-radius: 8.248282432556152px;
 }
+
 .chem-phys-page-text02 {
   top: 55px;
   left: 1531px;
@@ -100,6 +124,7 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text02:hover{
   text-decoration: underline overline;
   cursor: pointer;
@@ -107,13 +132,9 @@
 
 .chem-phys-page-popup {
   display:none;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
 }
-
-/* .chem-phys-page-popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-} */
 
 /* Add animation for download popup */
 @-webkit-keyframes fadeIn {
@@ -124,6 +145,26 @@
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+.chem-phys-page-portfoliotext {
+  top: 150px;
+  left: 680px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
 }
 
 .chem-phys-page-text04 {
@@ -246,9 +287,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .chem-phys-page-text08:hover{
   text-decoration: underline overline;
 }
+
 .chem-phys-page-chemphyprojkundtcard {
   top: 269px;
   left: 93px;
@@ -260,6 +303,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .chem-phys-page-compengfilescard1 {
   top: 0px;
   left: 0px;
@@ -525,7 +569,7 @@
 
 .chem-phys-page-themeselector {
   top: 39px;
-  left: 884px;
+  left: 870px;
   width: 167px;
   height: 30px;
   display: flex;
@@ -534,6 +578,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .chem-phys-page-themesrectangle {
   top: 0px;
   left: 0px;
@@ -546,6 +591,7 @@
   border-width: 2px;
   border-radius: 11.326000213623047px;
 }
+
 .chem-phys-page-defaulttheme {
   top: 4px;
   left: 11px;
@@ -554,9 +600,11 @@
   position: absolute;
   border-color: transparent;
  }
+
 .chem-phys-page-defaulttheme:hover{
   border-width: 4px;
 }
+
 .chem-phys-page-bluetheme {
   top: 4px;
   left: 45px;
@@ -564,7 +612,7 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
- }
+}
 
 .chem-phys-page-bluetheme:hover{
   border-width: 4px;
@@ -577,7 +625,7 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
- }
+}
 
 .chem-phys-page-blacktheme:hover{
   border-width: 4px;
@@ -590,7 +638,7 @@
   height: 21px;
   position: absolute;
   border-color: transparent;
- }
+}
 
 .chem-phys-page-greentheme:hover{
   border-width: 4px;

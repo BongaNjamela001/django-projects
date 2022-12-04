@@ -65,36 +65,7 @@
             />
           </div>
           <div class="contact-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectanglei109-5nsk-200h.png' %}"
-              alt="themesrectangleI109"
-              class="contact-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaultthemei109-rew-200h.png' %}"
-              alt="defaultthemeI109"
-              class="contact-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluethemei109-obgj-200h.png' %}"
-              alt="bluethemeI109"
-              class="contact-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blackthemei109-tmbo-200h.png' %}"
-              alt="blackthemeI109"
-              class="contact-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greenthemei109-0ce4-200h.png' %}"
-              alt="greenthemeI109"
-              class="contact-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangethemei109-9up-200h.png' %}"
-              alt="orangethemeI109"
-              class="contact-page-orangetheme"
-            />
+            {% include './themeselector.html' %}
           </div>
           <span class="contact-page-text02"><a target="_blank" href="{% static 'documents/Bonga_Njamela_Resume.pdf' %}">Download Resume</a></span>
           <img
@@ -105,7 +76,9 @@
           <span class="contact-page-text04"><a href="{% url 'base:about'%}">About</a></span>
           <span class="contact-page-text06"><a href="{% url 'base:home' %}">Home</a></span>
           <span class="contact-page-text08"><a href="{% url 'base:projects' %}">Portfolios</a></span>
-          
+          <div class="contact-page-instructions">
+            <span>Fill in the form and click Send to get in touch with Bonga.</span>
+          </div>
           <div id="contactformcard">
             
             <img
@@ -115,15 +88,21 @@
             />
             <form id="contactform" action="/contact/" method="post">          
                 {% csrf_token %}
-                  <span class="contact-page-text10"><span>Name</span></span>
+                  <span class="contact-page-text10">
+                    <span name="name">Name</span>
+                  </span>
                   <div class="contact-page-boxnamefield">
                     {{form.name}}
                   </div>
-                  <span class="contact-page-text12"><span>Brief</span></span>
+                  <span class="contact-page-text12">
+                    <span name="message">Brief</span>
+                  </span>
                   <div class="contact-page-boxemailfield">
                     {{form.email}}
                   </div>
-                  <span class="contact-page-text14"><span>Email</span></span>  
+                  <span class="contact-page-text14">
+                    <span name="email">Email</span>
+                  </span>  
                   <div class="contact-page-boxbrieffield">
                     {{form.brief}}
                   </div>
@@ -159,7 +138,8 @@
             <div class="contact-page-dropdownmenu">
               {% include './dropdownmenu.html' %}
             </div>
-        </div>
+          </div>
+        <span class="contact-page-dev">Developed by Bonga Njamela</span>
        </div>
       </div>
     </div>

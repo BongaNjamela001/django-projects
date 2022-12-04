@@ -76,6 +76,9 @@
           <span class="comp-eng-page-home"><a href="{% url 'base:home' %}">Home</a></span>
           <span class="comp-eng-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
           <span class="comp-eng-page-text06"><a href="{% url 'base:contact'%}">Contact Me</a></span>
+          <div class="comp-eng-page-portfoliotext">
+            <span>Click on a project name to download file.</span>
+          </div>
           <img
             src="{%static 'imgsfiles/compengfilescard5281-swgg-1800w.png' %}"
             alt="compengfilescard5281"
@@ -89,9 +92,9 @@
             />
             {% for p in portfolio  %}
             {% if p.id == 1 %}
-            <span class="comp-eng-page-text08">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="comp-eng-page-text08" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           <div class="comp-eng-page-cengprojbstreescard">
             <img
@@ -100,9 +103,9 @@
               class="comp-eng-page-compengfilescard02"
             />
             {% elif p.id == 2 %}
-            <span class="comp-eng-page-text10">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="comp-eng-page-text10" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           <div class="comp-eng-page-cengprojparallelcard">
             <img
@@ -111,9 +114,9 @@
               class="comp-eng-page-compengfilescard03"
             />
             {% elif p.id == 3 %}
-            <span class="comp-eng-page-text12">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="comp-eng-page-text12" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           <div class="comp-eng-page-cengprojdijkstracard">
             <img
@@ -122,11 +125,9 @@
               class="comp-eng-page-compengfilescard04"
             />
             {% elif p.id == 4 %}
-            <span class="comp-eng-page-text14">
-              <span>
-                {{p.name}}
-              </span>
-            </span>
+            <div class="comp-eng-page-text14" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+               {{p.name}}
+            </div>
           </div>
           <div class="comp-eng-page-cengprojmobilecard">
             <img
@@ -135,9 +136,9 @@
               class="comp-eng-page-compengfilescard05"
             />
             {% elif p.id == 5 %}
-            <span class="comp-eng-page-text16">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="comp-eng-page-text16" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           <div class="comp-eng-page-cengprojbenchmarkcard">
             <img
@@ -146,9 +147,9 @@
               class="comp-eng-page-compengfilescard06"
             />
             {% elif p.id == 6 %}
-            <span class="comp-eng-page-text18">
-              <span>Benchmarking: Python Program vs C Program</span>
-            </span>
+            <div class="comp-eng-page-text18" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           <div class="comp-eng-page-cengproji2ccard">
             <img
@@ -157,11 +158,9 @@
               class="comp-eng-page-compengfilescard07"
             />
             {% elif p.id == 7 %}
-            <span class="comp-eng-page-text20">
-              <span>
+            <div class="comp-eng-page-text20" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}  
-              </span>
-            </span>
+            </div>
           </div>
           <div class="comp-eng-page-cengprojadcscard">
             <img
@@ -170,10 +169,9 @@
               class="comp-eng-page-compengfilescard08"
             />
             {% elif p.id == 8 %}
-            <span class="comp-eng-page-text22">
-              <span>
-                {{p.name}}  
-              </span>
+            <div class="comp-eng-page-text22" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+              {{p.name}}  
+            </div>
             </span>
           </div>
           <div class="comp-eng-page-cengprojlotcard">
@@ -182,45 +180,18 @@
               alt="compengfilescard5290"
               class="comp-eng-page-compengfilescard09"
             />
-            {% elif p.id == 9 %}
-            <span class="comp-eng-page-text24">
-              <span>Embedded Systems Design: Light of Things Mini Project</span>
-            </span>
+            {% elif p.id == 10 %}
+            <div class="comp-eng-page-text24" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           {% endif %}
           {% endfor  %}
+          <!-- themeselector -->
           <div class="comp-eng-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectanglei109-ppj-200h.png' %}"
-              alt="themesrectangleI109"
-              class="comp-eng-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaultthemei109-kxja-200h.png' %}"
-              alt="defaultthemeI109"
-              class="comp-eng-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluethemei109-yxl-200h.png' %}"
-              alt="bluethemeI109"
-              class="comp-eng-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blackthemei109-exbt-200h.png' %}"
-              alt="blackthemeI109"
-              class="comp-eng-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greenthemei109-esrm-200h.png' %}"
-              alt="greenthemeI109"
-              class="comp-eng-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangethemei109-9wwm-200h.png' %}"
-              alt="orangethemeI109"
-              class="comp-eng-page-orangetheme"
-            />
+            {% include './themeselector.html' %}
           </div>
+          <!-- menu button -->
           <div class="comp-eng-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
@@ -235,8 +206,17 @@
               {% include './dropdownmenu.html' %}
             </div>
           </div>
+          <!-- Bottom left corner developer name -->
+          <span class="comp-eng-page-dev">
+            <span>Developed by Bonga Njamela</span>
+          </span>
+
+          <div class="comp-eng-page-popup" id="popup">
+            {% include './projectpopup.html' %}
+          </div>
         </div>
       </div>
     </div>
+    <script src="{% static 'jsfiles/popupload.js'%}"></script>
   </body>
 </html>

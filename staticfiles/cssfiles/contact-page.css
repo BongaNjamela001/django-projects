@@ -9,6 +9,7 @@
   border-color: transparent;
   background-color: rgba(255, 255, 255, 1);
 }
+
 .contact-page-headingrectangle4 {
   top: 92px;
   left: 635px;
@@ -17,6 +18,26 @@
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
+}
+
+.contact-page-instructions {
+  top: 150px;
+  left: 680px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
 }
 
 .contact-page-text {
@@ -39,6 +60,24 @@
   text-decoration: none;
 }
 
+.contact-page-dev {
+  left: 4px;
+  top: 1060px;
+  position: absolute;
+  width: 258px;
+  height: auto;
+  color: rgb(126, 50, 50);
+  font-size: 12px;
+  font-style: normal;
+  font-family: Roboto;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+
 .contact-page-menubutton {
   top: 45px;
   left: 48px;
@@ -56,6 +95,10 @@
 
 .contact-page-dropdownmenu {
   display: none;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
 .contact-page-menubutton:hover .contact-page-menubuttonhover{
@@ -76,85 +119,6 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
-}
-
-.contact-page-themesrectangle {
-  top: 0px;
-  left: 0px;
-  width: 167px;
-  height: 30px;
-  position: absolute;
-  box-sizing: content-box;
-  border-color: rgba(126, 50, 50, 1);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 11.326000213623047px;
-}
-
-.contact-page-defaulttheme {
-  top: 4px;
-  left: 11px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.contact-page-defaulttheme:hover{
-  border-width: 4px;
-}
-
-.contact-page-bluetheme {
-  top: 4px;
-  left: 45px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.contact-page-bluetheme:hover{
-  border-width: 4px;
-}
-
-.contact-page-blacktheme {
-  top: 4px;
-  left: 135px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.contact-page-blacktheme:hover{
-  border-width: 4px;
-}
-
-
-.contact-page-greentheme {
-  top: 4px;
-  left: 105px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.contact-page-greentheme:hover{
-  border-width: 4px;
-}
-
-.contact-page-orangetheme {
-  top: 4px;
-  left: 75px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.contact-page-orangetheme:hover{
-  border-width: 4px;
 }
 
 .contact-page-text02 {

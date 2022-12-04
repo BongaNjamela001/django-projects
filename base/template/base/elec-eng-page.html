@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Bonga Njamela: Electrical Engineering Portfolio</title>
+    <title>Bonga Njamela: Electrical Engineering</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -80,7 +80,9 @@
             alt="elecengfilescard6647"
             class="elec-eng-page-elecengfilescard"
           />
-          
+          <div class="elec-eng-page-portfoliotext">
+            <span>Click on a project name to download file.</span>
+          </div>
           {% for p in portfolio %}
           {% if p.id == 20 %}
           <div class="elec-eng-page-elecengprojanalogcard">
@@ -89,25 +91,21 @@
               alt="compengfilescardI664"
               class="elec-eng-page-compengfilescard"
             />
-            <span class="elec-eng-page-text08">
-              <span>
-              {{p.name}}  
-              </span>
-            </span>
+            <div class="elec-eng-page-text08" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}  
+            </div>
           </div>
           
           {% elif p.id == 21 %}
-          <div class="elec-eng-page-elecengprojstmcard">
+          <div class="elec-eng-page-elecengprojstmcard" >
             <img
               src="{% static 'imgsfiles/compengfilescardi664-md3g-200h.png' %}"
               alt="compengfilescardI664"
               class="elec-eng-page-compengfilescard1"
             />
-            <span class="elec-eng-page-text10">
-              <span>
+            <div class="elec-eng-page-text10" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
-              </span>
-            </span>
+            </div>
           </div>
           {% elif p.id == 22 %}
           <div class="elec-eng-page-elecengprojpowercard">
@@ -116,11 +114,9 @@
               alt="compengfilescardI665"
               class="elec-eng-page-compengfilescard2"
             />
-            <span class="elec-eng-page-text12">
-              <span>
-                {{p.name}}
-              </span>
-            </span>
+            <div class="elec-eng-page-text12" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+              {{p.name}}
+            </div>
           </div>
           {% elif p.id == 23 %}
           <div class="elec-eng-page-elecengprojinductorcard">
@@ -129,11 +125,9 @@
               alt="compengfilescardI665"
               class="elec-eng-page-compengfilescard3"
             />
-            <span class="elec-eng-page-text14">
-              <span>
+            <div class="elec-eng-page-text14" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
-              </span>
-            </span>
+            </div>
           </div>
           {% elif p.id == 24 %}
           <div class="elec-eng-page-elecengproj-d-n-scard">
@@ -142,11 +136,9 @@
               alt="compengfilescardI665"
               class="elec-eng-page-compengfilescard4"
             />
-            <span class="elec-eng-page-text16">
-              <span>
+            <div class="elec-eng-page-text16" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
-              </span>
-            </span>
+            </div>
           </div>
           {% elif p.id == 25 %}
           <div class="elec-eng-page-elecengprojenergycard">
@@ -155,11 +147,9 @@
               alt="compengfilescardI665"
               class="elec-eng-page-compengfilescard5"
             />
-            <span class="elec-eng-page-text18">
-              <span>
-                {{p.name}}
-              </span>
-            </span>
+            <div class="elec-eng-page-text18" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+              {{p.name}}
+            </div>
           </div>
           {% elif p.id == 26 %}
           <div class="elec-eng-page-elecengprojpcscard">
@@ -168,43 +158,14 @@
               alt="compengfilescardI665"
               class="elec-eng-page-compengfilescard6"
             />
-            <span class="elec-eng-page-text20">
-              <span>{{p.name}}</span>
-            </span>
+            <div class="elec-eng-page-text20" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
+                {{p.name}}
+            </div>
           </div>
           {% endif %}
           {% endfor %}
           <div class="elec-eng-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectanglei109-np1g-200h.png' %}"
-              alt="themesrectangleI109"
-              class="elec-eng-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaultthemei109-x3sd-200h.png' %}"
-              alt="defaultthemeI109"
-              class="elec-eng-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluethemei109-4qhv-200h.png' %}"
-              alt="bluethemeI109"
-              class="elec-eng-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blackthemei109-x9de-200h.png' %}"
-              alt="blackthemeI109"
-              class="elec-eng-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greenthemei109-esd-200h.png' %}"
-              alt="greenthemeI109"
-              class="elec-eng-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangethemei109-xuxr-200h.png' %}"
-              alt="orangethemeI109"
-              class="elec-eng-page-orangetheme"
-            />
+            {% include './themeselector.html' %}
           </div>
           <div class="elec-eng-page-menubutton">
             <img
@@ -220,8 +181,15 @@
               {% include './dropdownmenu.html' %}
             </div>
           </div>
+          <span class="elec-eng-page-dev">
+              Developed by Bonga Njamela
+          </span>
+          <div class="elec-eng-page-popup" id="popup">
+            {%include './projectpopup.html'%}
+          </div>
         </div>
       </div>
     </div>
+    <script src="{% static 'jsfiles/popupload.js' %}"></script>
   </body>
 </html>

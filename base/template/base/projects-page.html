@@ -66,11 +66,10 @@
               class="projects-page-projectsheadingcard"
             />
             <span class="projects-page-text">
-              <span>Portfolio</span>
+              <span>Portfolios</span>
             </span>
           </div>
           <span class="projects-page-text02"><a href="{% url 'base:contact' %}">Contact Me</a></span>
-         
           <div class="projects-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton4636-hzgc.svg' %}"
@@ -82,9 +81,11 @@
               class="projects-page-menubuttonhover"
             />
           </div>
-         
           <span class="projects-page-text04"><a href="{% url 'base:about' %}">About</a></span>
           <span class="projects-page-texthome"><a href="{% url 'base:home' %}">Home</a></span>
+          <div class="projects-page-descriptext">
+            <span>Click on a portfolio to view some of the projects completed by Bonga.</span>
+          </div>
           <div class="projects-page-cscprojectscard">
             <img
               src="{% static 'imgsfiles/cscprojectscard4640-2up-300h.png' %}"
@@ -128,36 +129,7 @@
             </span>
           </div>
           <div class="projects-page-themeselector">
-            <img
-              src="{% static 'imgsfiles/themesrectanglei109-sl-200h.png' %}"
-              alt="themesrectangleI109"
-              class="projects-page-themesrectangle"
-            />
-            <img
-              src="{% static 'imgsfiles/defaultthemei109-i3rg-200h.png' %}"
-              alt="defaultthemeI109"
-              class="projects-page-defaulttheme"
-            />
-            <img
-              src="{% static 'imgsfiles/bluethemei109-85ott-200h.png' %}"
-              alt="bluethemeI109"
-              class="projects-page-bluetheme"
-            />
-            <img
-              src="{% static 'imgsfiles/blackthemei109-3yqn-200h.png' %}"
-              alt="blackthemeI109"
-              class="projects-page-blacktheme"
-            />
-            <img
-              src="{% static 'imgsfiles/greenthemei109-wnlh-200h.png' %}"
-              alt="greenthemeI109"
-              class="projects-page-greentheme"
-            />
-            <img
-              src="{% static 'imgsfiles/orangethemei109-e1dn-200h.png' %}"
-              alt="orangethemeI109"
-              class="projects-page-orangetheme"
-            />
+            {% include './themeselector.html' %}
           </div>
           <div class="projects-page-menubutton">
             <img
@@ -173,6 +145,7 @@
               {% include './dropdownmenu.html' %}
             </div>
           </div>
+          <span class="projects-page-dev">Developed by Bonga Njamela</span>
         </div>
       </div>
     </div>

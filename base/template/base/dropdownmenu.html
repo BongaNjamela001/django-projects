@@ -37,91 +37,170 @@
   <body>
     <div>
       <link href="{% static 'cssfiles/dropdownmenu.css' %}" rel="stylesheet" />
-        <div class="dropdownmenu-dropdownmenu">
-          <img
+        <!-- dropdown menu container -->
+          <!-- menu background png -->
+          <!-- <img
             src="{% static 'imgsfiles/menudropdownmain2007-26e-500h.png' %}"
             alt="menudropdownmain2007"
             class="dropdownmenu-menudropdownmain"
-          />
-          <a href="{% url 'base:home' %}">
+          /> -->
+
+          <div class="dropdownmenu-dropdownhome">
+            <a href="{% url 'base:home' %}">
+              <img
+                src="{% static 'imgsfiles/dropdownhome2007-4sh-200h.png' %}"
+                alt="dropdownhome2007"
+              />
+              <img
+                src="{% static 'imgsfiles/dropdown-bar-active.png' %}"
+                class="dropdownmenu-dropdownhomehover"
+                alt="dropdownhome2007hover"
+              />
+            </a>
             <img
-              src="{% static 'imgsfiles/dropdownhome2007-4sh-200h.png' %}"
-              alt="dropdownhome2007"
-              class="dropdownmenu-dropdownhome"
+              src="{% static 'imgsfiles/vectorhome2008-a.svg' %}"
+              alt="vectorhome2008"
+              class="dropdownmenu-vectorhome"
             />
-          </a>
-          <a href="{% url 'base:projects' %}">
             <img
-              src="{% static 'imgsfiles/dropdownportfolio2008-jihe-200h.png' %}"
-              alt="dropdownportfolio2008"
-              class="dropdownmenu-dropdownportfolio"
+              src="{% static 'imgsfiles/dropdown-home-active.svg' %}"
+              alt="vectorhome2002"
+              class="dropdownmenu-vectorhomehover"
             />
-          </a>
-          <a href="{% url 'base:contact' %}">
-          <img
-            src="{% static 'imgsfiles/dropdowncontact2008-z3be-200h.png' %}"
-            alt="dropdowncontact2008"
-            class="dropdownmenu-dropdowncontact"
-          />
-          </a>
-          <a href="{% url 'base:about' %}">
+            <span class="dropdownmenu-text-home">
+                <a href="{% url 'base:home'%}">Home</a>
+            </span>
+          </div>
+          <div class="dropdownmenu-dropdownportfolio"> 
+            <a href="{% url 'base:projects' %}">
+              <img
+                src="{% static 'imgsfiles/dropdownportfolio2008-jihe-200h.png' %}"
+                alt="dropdownportfolio2008"
+              />
+              <img
+                src="{% static 'imgsfiles/dropdown-bar-active.png' %}"
+                alt="dropdownportfolio2008hover"
+                class="dropdownmenu-dropdownportfoliohover"
+              />
+            </a>
             <img
-              src="{% static 'imgsfiles/dropdownabout2008-iqkb-200h.png' %}"
-              alt="dropdownabout2008"
-              class="dropdownmenu-dropdownabout"
+              src="{% static 'imgsfiles/vectorportfolio2009-2nqn.svg' %}"
+              alt="vectorportfolio2009"
+              class="dropdownmenu-vectorportfolio"
             />
-          </a>
-          <a href="https://www.linkedin.com/in/bonga-njamela-982873200/">
             <img
-              src="{% static 'imgsfiles/dropdownlinkedin2008-7qxr-200h.png' %}"
-              alt="dropdownlinkedin2008"
-              class="dropdownmenu-dropdownlinkedin"
+              src="{% static 'imgsfiles/dropdown-portfolio-active.svg' %}"
+              alt="vectorportfolio2002"
+              class="dropdownmenu-vectorportfoliohover"
             />
-          </a>
-          <a href="https://github.com/BongaNjamela001/">
+            <span class="dropdownmenu-text-projects">
+              <a href="{% url 'base:projects'%}">Portfolios</a>
+            </span>
+          </div>
+          <div class="dropdownmenu-dropdowngit">
+            <a href="https://github.com/BongaNjamela001/">
+              <img
+                src="{% static 'imgsfiles/dropdowngit2008-uuz9-200h.png' %}"
+                alt="dropdowngit2008"
+              />
+              <img
+                src="{% static 'imgsfiles/dropdown-bar-active.png' %}"
+                alt="dropdowngit2008"
+                class="dropdownmenu-dropdowngithover"
+              />
+            </a>
             <img
-              src="{% static 'imgsfiles/dropdowngit2008-uuz9-200h.png' %}"
-              alt="dropdowngit2008"
-              class="dropdownmenu-dropdowngit"
+              src="{% static 'imgsfiles/icongithub2009-wln.svg' %}"
+              alt="icongithub2009"
+              class="dropdownmenu-icongithub"
             />
-          </a>
-          <img
-            src="{% static 'imgsfiles/icongithub2009-wln.svg' %}"
-            alt="icongithub2009"
-            class="dropdownmenu-icongithub"
-          />
-          <img
-            src="{% static 'imgsfiles/iconlinkedin2009-uq1r.svg' %}"
-            alt="iconlinkedin2009"
-            class="dropdownmenu-iconlinkedin"
-          />
-          <img
-            src="{% static 'imgsfiles/vectorinfo2028-y9d5.svg' %}"
-            alt="vectorinfo2028"
-            class="dropdownmenu-vectorinfo"
-          />
-          <img
-            src="{% static 'imgsfiles/vectoremail2028-wxo.svg' %}"
-            alt="vectoremail2028"
-            class="dropdownmenu-vectoremail"
-          />
-          <span class="dropdownmenu-text-home"><a href="{% url 'base:home'%}">Home</a></span>
-          <span class="dropdownmenu-text-projects"><a href="{% url 'base:projects'%}">Portfolios</a></span>
-          <span class="dropdownmenu-text-github"><a target="_blank" href="https://github.com/BongaNjamela001/">Github</a></span>
-          <span class="dropdownmenu-text-linkedin"><a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">LinkedIn</a></span>
-          <span class="dropdownmenu-text-contact"><a href="{% url 'base:contact' %}">Contact Me</a></span>
-          <span class="dropdownmenu-text-about"><a href="{% url 'base:about'%}">About Bonga</a></span>
-          <img
-            src="{% static 'imgsfiles/vectorportfolio2009-2nqn.svg' %}"
-            alt="vectorportfolio2009"
-            class="dropdownmenu-vectorportfolio"
-          />
-          <img
-            src="{% static 'imgsfiles/vectorhome2008-a.svg' %}"
-            alt="vectorhome2008"
-            class="dropdownmenu-vectorhome"
-          />
-        </div>
+            <img
+              src="{% static 'imgsfiles/dropdown-github-active.svg' %}"
+              alt="icongithub2019"
+              class="dropdownmenu-icongithubhover"
+            />
+            <span class="dropdownmenu-text-github">
+              <a target="_blank" href="https://github.com/BongaNjamela001/">Github</a>
+            </span>
+          </div>
+          <div class="dropdownmenu-dropdownlinkedin">
+            <a href="https://www.linkedin.com/in/bonga-njamela-982873200/">
+              <img
+                src="{% static 'imgsfiles/dropdownlinkedin2008-7qxr-200h.png' %}"
+                alt="dropdownlinkedin2008"
+              />
+              <img
+                src="{% static 'imgsfiles/dropdown-bar-active.png' %}"
+                alt="dropdownlinkedin2018"
+                class="dropdownmenu-dropdownlinkedinhover"
+              />
+            </a>
+            <img
+              src="{% static 'imgsfiles/iconlinkedin2009-uq1r.svg' %}"
+              alt="iconlinkedin2009"
+              class="dropdownmenu-iconlinkedin"
+            />
+            <img
+              src="{% static 'imgsfiles/dropdown-linkedin-active.svg' %}"
+              alt="iconlinkedin2019"
+              class="dropdownmenu-iconlinkedinhover"
+            />
+            <span class="dropdownmenu-text-linkedin">
+              <a target="_blank" href="https://www.linkedin.com/in/bonga-njamela-982873200/">LinkedIn</a>
+            </span>
+          </div>
+          <div class="dropdownmenu-dropdownabout">
+            <a href="{% url 'base:about' %}">
+              <img
+                src="{% static 'imgsfiles/dropdownabout2008-iqkb-200h.png' %}"
+                alt="dropdownabout2008"
+              />
+              <img
+                src="{% static 'imgsfiles/dropdown-bar-active.png' %}"
+                alt="dropdownabout2018"
+                class="dropdownmenu-dropdownabouthover"
+              />
+            </a>
+            <img
+              src="{% static 'imgsfiles/vectorinfo2028-y9d5.svg' %}"
+              alt="vectorinfo2028"
+              class="dropdownmenu-vectorinfo"
+            />
+            <img
+              src="{% static 'imgsfiles/dropdown-info-active.svg' %}"
+              alt="vectorinfo2038"
+              class="dropdownmenu-vectorinfohover"
+            />
+            <span class="dropdownmenu-text-about">
+              <a href="{% url 'base:about'%}">About</a>
+            </span>
+          </div>
+          <div class="dropdownmenu-dropdowncontact" >
+            <a href="{% url 'base:contact' %}">
+              <img
+                src="{% static 'imgsfiles/dropdowncontact2008-z3be-200h.png' %}"
+                alt="dropdowncontact2008"
+              />
+              <img
+                src="{% static 'imgsfiles/dropdown-bar-active.png' %}"
+                alt="dropdowncontact20078"
+                class="dropdownmenu-dropdowncontacthover"
+              />
+            </a>
+            <img
+              src="{% static 'imgsfiles/vectoremail2028-wxo.svg' %}"
+              alt="vectoremail2028"
+              class="dropdownmenu-vectoremail"
+            />
+            <img
+              src="{% static 'imgsfiles/dropdown-email-active.svg' %}"
+              alt="vectoremail2038"
+              class="dropdownmenu-vectoremailhover"
+            />
+            <span class="dropdownmenu-text-contact">
+              <a href="{% url 'base:contact' %}">Contact Me</a>
+            </span>
+          </div>
     </div>
   </body>
 </html>

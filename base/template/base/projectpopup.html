@@ -46,7 +46,7 @@
             alt="popupdownload2247"
             class="projectpopup-popupdownload"
           />
-          <div class="projectpopup-vectorclose" onclick="openPopUp()">
+          <div class="projectpopup-vectorclose" onclick="closePopUp()">
             <img
                 src="{% static 'imgsfiles/vectorclose2242-9t1s.svg' %}"
                 alt="vectorclose2242"
@@ -56,42 +56,32 @@
             <span>
               <span></span>
               <br />
-                <span>{% block name %}{% endblock %}</span>
+                <span id="projectTitle"></span>
             </span>
           </span>
           <span class="projectpopup-text11"><span>Close</span></span>
-          <div class="projectpopup-btnzipdownload">
+          <div class="projectpopup-btnzipdownload" onclick="downloadZip()">
             <img
               src="{% static 'imgsfiles/buttonzipi224-lk7-200h.png' %}"
               alt="buttonzipI224"
               class="projectpopup-buttonzip"
             />
-            <span class="projectpopup-text05"><span>.zip</span></span>
+            <span class="projectpopup-text05"><a id="downloadzip" onclick="downloadZip()" download>.zip</a></span>
           </div>
-          <div class="projectpopup-btntardownload">
+          <div class="projectpopup-btntardownload" onclick="downloadTar()">
             <img
               src="{% static 'imgsfiles/buttontari224-v3n9-200h.png' %}"
               alt="buttontarI224"
               class="projectpopup-buttontar"
             />
-            <span class="projectpopup-text07"><span>.tar.gz</span></span>
+            <span class="projectpopup-text07"><a id="downloadtar" onclick="downloadTar()" download>.tar.gz</a></span>
           </div>
           <span class="projectpopup-text09">
-            <span>Select the file format you want to download</span>
+            <span>Choose a file compression type to download.</span>
           </span>
         </div>
       </div>
     </div>
-    <script>
-      function openPopUp() {
-          var popup = document.getElementById("popup"); 
-          if (popup.style.display === "none") {
-                  popup.style.display = "block";
-          }
-          else {
-                  popup.style.display = "none";
-          }
-      }
-  </script>
+    <script src="{% static 'jsfiles/popupload.js' %}"></script>
   </body>
 </html>

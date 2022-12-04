@@ -21,6 +21,44 @@
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
+
+.math-page-portfoliotext {
+  top: 150px;
+  left: 680px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.math-page-dev {
+  left: 4px;
+  top: 1060px;
+  position: absolute;
+  width: 258px;
+  height: auto;
+  color: rgb(126, 50, 50);
+  font-size: 12px;
+  font-style: normal;
+  font-family: Roboto;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
 .math-page-text {
   top: 92px;
   left: 790px;
@@ -58,6 +96,10 @@
 
 .math-page-dropdownmenu {
   display: none;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
 .math-page-menubutton:hover .math-page-menubuttonhover{
@@ -66,6 +108,23 @@
 
 .math-page-menubutton:hover .math-page-dropdownmenu{
   display: block;
+}
+
+.math-page-popup {
+  display:none;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+/* Add animation for download popup */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .math-page-quickmenu {
@@ -326,80 +385,4 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
-}
-.math-page-themesrectangle {
-  top: 0px;
-  left: 0px;
-  width: 167px;
-  height: 30px;
-  position: absolute;
-  box-sizing: content-box;
-  border-color: rgba(126, 50, 50, 1);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 11.326000213623047px;
-}
-.math-page-defaulttheme {
-  top: 4px;
-  left: 11px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.math-page-defaulttheme:hover{
-  border-width: 4px;
-}
-
-.math-page-bluetheme {
-  top: 4px;
-  left: 45px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.math-page-bluetheme:hover{
-  border-width: 4px;
-}
-
-.math-page-blacktheme {
-  top: 4px;
-  left: 135px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.math-page-blacktheme:hover{
-  border-width: 4px;
-}
-
-.math-page-greentheme {
-  top: 4px;
-  left: 105px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.math-page-greentheme:hover{
-  border-width: 4px;
-}
-
-.math-page-orangetheme {
-  top: 4px;
-  left: 75px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.math-page-orangetheme:hover{
-  border-width: 4px;
 }

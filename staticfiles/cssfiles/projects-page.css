@@ -21,9 +21,47 @@
   border-color: transparent;
   border-radius: 8.248282432556152px;
 }
+
+.projects-page-descriptext {
+  top: 150px;
+  left: 680px;
+  color: rgba(126, 50, 50, 1);
+  width: 544px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.projects-page-dev {
+  left: 4px;
+  top: 1060px;
+  position: absolute;
+  width: 258px;
+  height: auto;
+  color: rgb(126, 50, 50);
+  font-size: 12px;
+  font-style: normal;
+  font-family: Roboto;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
 .projects-page-projectspageheading {
   top: 92px;
-  left: 806px;
+  left: 809px;
   width: 296px;
   height: 40px;
   display: flex;
@@ -42,7 +80,7 @@
   border-radius: 11.326000213623047px;
 }
 .projects-page-text {
-  left: 90px;
+  left: 78px;
   color: rgba(255, 255, 255, 1);
   width: 255px;
   height: auto;
@@ -99,6 +137,10 @@
 
 .projects-page-dropdownmenu {
   display: none;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
 }
 
 .projects-page-menubutton:hover .projects-page-menubuttonhover{
@@ -162,7 +204,7 @@
   font-size: 45px;
   align-self: auto;
   font-style: ExtraBold;
-  text-align: left;
+  text-align: center;
   font-family: Roboto;
   font-weight: 800;
   line-height: normal;
@@ -202,7 +244,7 @@
 
 
 .projects-page-engprojectscard {
-  top: 687px;
+  top: 600px;
   left: 93px;
   width: 777px;
   height: 270px;
@@ -246,7 +288,7 @@
 }
 
 .projects-page-mathprojectscard {
-  top: 687px;
+  top: 600px;
   left: 1039px;
   width: 777px;
   height: 270px;
@@ -270,9 +312,11 @@
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
+
 .projects-page-mathprojectscard1:hover{
   text-decoration: underline overline;
 }
+
 .projects-page-text13 {
   top: 106px;
   left: 253px;
@@ -292,9 +336,11 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .projects-page-text13:hover{
   text-decoration: underline overline;
 }
+
 .projects-page-physprojectscard {
   top: 192px;
   left: 1039px;
@@ -306,6 +352,7 @@
   flex-shrink: 0;
   border-color: transparent;
 }
+
 .projects-page-physprojectscard1 {
   top: 0px;
   left: 0px;
@@ -313,6 +360,7 @@
   height: 270px;
   position: absolute;
 }
+
 .projects-page-text15 {
   top: 115px;
   left: 167px;
@@ -337,7 +385,7 @@
 }
 .projects-page-themeselector {
   top: 39px;
-  left: 876px;
+  left: 872px;
   width: 167px;
   height: 30px;
   display: flex;
@@ -346,78 +394,4 @@
   flex-shrink: 0;
   border-color: transparent;
 }
-.projects-page-themesrectangle {
-  top: 0px;
-  left: 0px;
-  width: 167px;
-  height: 30px;
-  position: absolute;
-  box-sizing: content-box;
-  border-color: rgba(126, 50, 50, 1);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 11.326000213623047px;
-}
-.projects-page-defaulttheme {
-  top: 4px;
-  left: 11px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
 
-.projects-page-defaulttheme:hover{
-  border-width: 4px;
-}
-.projects-page-bluetheme {
-  top: 4px;
-  left: 45px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.projects-page-bluetheme:hover{
-  border-width: 4px;
-}
-
-.projects-page-blacktheme {
-  top: 4px;
-  left: 135px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.projects-page-blacktheme:hover{
-  border-width: 4px;
-}
-
-.projects-page-greentheme {
-  top: 4px;
-  left: 105px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.projects-page-greentheme:hover{
-  border-width: 4px;
-}
-
-.projects-page-orangetheme {
-  top: 4px;
-  left: 75px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  border-color: transparent;
-}
-
-.projects-page-orangetheme:hover{
-  border-width: 4px;
-}
