@@ -131,5 +131,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'lungelobn@gmail.com'
-EMAIL_HOST_PASSWORD = 'akgyanblxktizhdh'
+EMAIL_HOST_PASSWORD = *****************************
 RECIPIENT_ADDRESS = 'lungelobn@gmail.com'
