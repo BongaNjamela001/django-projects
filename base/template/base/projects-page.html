@@ -51,7 +51,6 @@
   <body>
     <div>
       <link href="{% static 'cssfiles/projects-page.css' %}" rel="stylesheet" />
-
       <div class="projects-page-container">
         <div class="projects-page-projects-page">
           <img
@@ -70,33 +69,22 @@
             </span>
           </div>
           <span class="projects-page-text02"><a href="{% url 'base:contact' %}">Contact Me</a></span>
-          <div class="projects-page-menubutton">
-            <img
-              src="{% static 'imgsfiles/menubutton4636-hzgc.svg' %}"
-              alt="menubutton4636"
-            />
-            <img
-              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
-              alt="menubutton4637"
-              class="projects-page-menubuttonhover"
-            />
-          </div>
+          <span class="projects-page-text03"><a href="{% url 'base:contact' %}">Contact</a></span>
           <span class="projects-page-text04"><a href="{% url 'base:about' %}">About</a></span>
           <span class="projects-page-texthome"><a href="{% url 'base:home' %}">Home</a></span>
           <div class="projects-page-descriptext">
             <span>Click on a portfolio to view some of the projects completed by Bonga.</span>
-          </div>
+          </div> 
           <div class="projects-page-cscprojectscard">
             <img
               src="{% static 'imgsfiles/cscprojectscard4640-2up-300h.png' %}"
               alt="cscprojectscard4640"
               class="projects-page-cscprojectscard1"
+              onclick="window.open('/compeng', '_self')"
             />
             <span class="projects-page-text06">
               <a href="{% url 'base:compeng' %}">
-                <span>Computer &amp; Software</span>
-                <br />
-                <span>Engineering</span>
+                <span>Computer &amp; Software Engineering</span>
               </a>
             </span>
           </div>
@@ -105,6 +93,7 @@
               src="{% static 'imgsfiles/engprojectscard4641-17-300h.png' %}"
               alt="engprojectscard4641"
               class="projects-page-engprojectscard1"
+              onclick="window.open('/eleceng', '_self')"
             />
             <span class="projects-page-text11">
               <a href="{% url 'base:eleceng' %}">Electrical Engineering</a>
@@ -115,14 +104,16 @@
               src="{% static 'imgsfiles/mathprojectscard4642-xp6j-300h.png' %}"
               alt="mathprojectscard4642"
               class="projects-page-mathprojectscard1"
+              onclick="window.open('/math', '_self')"
             />
             <span class="projects-page-text13"><a href="{% url 'base:math' %}">Mathematics</a></span>
           </div>
           <div class="projects-page-physprojectscard">
             <img
-              src="{% static 'imgsfiles/physprojectscard4744-czr.svg' %}"
+              src="{% static 'imgsfiles/cscprojectscard4640-2up-300h.png' %}"
               alt="physprojectscard4744"
               class="projects-page-physprojectscard1"
+              onclick="window.open('/chemphys', '_self')"
             />
             <span class="projects-page-text15">
               <a href="{% url 'base:chemphy' %}">Chemistry &amp; Physics</a>
@@ -135,19 +126,27 @@
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
               class="projects-page-menubuttonhover"
             />
-            <div class="projects-page-dropdownmenu">
+            <div class="projects-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="projects-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
             </div>
           </div>
           <span class="projects-page-dev">Developed by Bonga Njamela</span>
         </div>
       </div>
     </div>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>

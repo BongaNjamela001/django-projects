@@ -58,7 +58,7 @@ class Resume(models.Model):
         verbose_name = "Resume"
 
     name = models.CharField(verbose_name="Bonga_Njamela_Resume",max_length=30)  
-    resume = models.FileField(blank=True, null=True, upload_to="resume")
+    resume = models.FileField(blank=True, null=True, upload_to="staticfiles/resume")
 
     def __str__(self):
         return f"{self.name}"

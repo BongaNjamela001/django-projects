@@ -47,21 +47,16 @@
   <body>
     <div>
       <link href="{% static 'cssfiles/home-page.css' %}" rel="stylesheet" />
-      <div class="home-page-container">
+      <div class="home-page-container" id="homecontainer">
         <div class="home-page-home-page">
-          <!-- <img
-            src="{% static 'imgsfiles/nelsonmandela12719-1026-200h.png' %}"
-            alt="nelsonmandela12719"
-            class="home-page-nelsonmandela1"
-          /> -->
           <img
             src="{% static 'imgsfiles/burgandycard2718-w619-1900w.png' %}"
             alt="burgandycard2718"
             class="home-page-burgandycard"
           />
           <img
-              src="{% static 'imgsfiles/intersect2717-rrq.svg' %}"
-              alt="deco"
+              src="{% static 'imgsfiles/decopicture.png' %}"
+              alt="deco001"
               class="home-page-decopicture"
           />
           <img
@@ -70,20 +65,19 @@
               class="home-page-decopicture-medlar"
           />
           <a class="home-page-text" target="_blank" href="https://www.google.com/maps/@-34.2969541,18.2479026,5z">Cape Town, Western Cape</a>
-          <a class="home-page-text02" target="_blank" href="{% static 'documents/Bonga_Njamela_Resume.pdf' %}">Download Resume</a>
-          <span class="home-page-text04"><a href="/about/{{about.id}}">read more</a></span>
+          <a class="home-page-text02" target="_blank" href="{% static 'resume/Bonga_Njamela_Resume.pdf' %}">Download Resume</a>
+          <span class="home-page-text04"><a href="{% url 'base:about' %}">read more</a></span>
           <span class="home-page-text06">
             <span>
-                Science, or the Philosophy of Nature as it was once known, has
-                principles rooted in the understanding of the elegance and
-                intricacies of matter, space and time. With a Bachelor of
-                Science in Applied Mathematics and Physics and pursuing a
-                Bachelor of Engineering Electrical and Computer Engineering,
-                Bonga describes himself as a 'philosopher of nature'. Through this perspective
+                This static web application was developed using the <a href="https://www.djangoproject.com/" style="text-decoration: underline;">Django</a> framework to
+                demonstrate and practice coding skills in the context of web development using Python. 
+                The source code was developed over a period of six weeks, although
+                some of the files that can be accessed in the app were compiled over
+                a period of five years. The application was built in Visual
                 ...
             </span>
           </span>
-          <span class="home-page-text08"><span>Bio</span></span>
+          <span class="home-page-text08"><span>About</span></span>
           <img
             src="{% static 'imgsfiles/quickmenu2214-vi2f-200h.png' %}"
             alt="quickmenu2214"
@@ -119,19 +113,26 @@
             alt="profilepicture105"
             class="home-page-profilepicture"
           />
-          <span class="home-page-text23"><span>Home</span></span>
+          <span class="home-page-text23"><a href="{% url 'base:home' %}">Home</a></span>
           <div class="home-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton228-58wj.svg' %}"
               alt="menubutton228"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton238"
+              id="menubuttonhover"
               class="home-page-menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="home-page-dropdownmenu">
-              {% include './dropdownmenu.html' %}
+            <div class="home-page-dropdownmenu" id="larmenu">
+               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="home-page-mediummenu" id="medmenu">
+               {% include './mediummenu.html' %}
             </div>
           </div>
           <img href="https://www.google.com/maps/@-34.2969541,18.2479026,5z"
@@ -145,6 +146,6 @@
         <span class="home-page-dev">Developed by Bonga Njamela</span>
       </div>
     </div>
-    <script scr="{% static 'jsfiles/vectorlinks.js' %}"></script>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>

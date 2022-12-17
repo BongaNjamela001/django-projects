@@ -58,13 +58,13 @@ class ContactView(generic.FormView):
 def home(request):
     return render(request, "home-page.html")
 
-
 def about(request):
     return render(request, "about-page.html")
 
 def send_email(request):
     return render(request, 'email-sent-page.html')
 
+# handle http requests from projects page
 def projects(request):
     return render(request, "projects-page.html")
 

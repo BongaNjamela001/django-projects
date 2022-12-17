@@ -46,15 +46,23 @@
 
       <div class="elec-eng-page-container">
         <div class="elec-eng-page-elec-eng-page">
-          <img
-            src="{% static 'imgsfiles/headingrectangle36640-r42m-200h.png' %}"
-            alt="headingrectangle36640"
-            class="elec-eng-page-headingrectangle3"
-          />
-          <span class="elec-eng-page-text">
-            <span>Portfolio: Electrical Engineering</span>
-          </span>
-          <div class="elec-eng-page-menubutton">
+          <div class="elec-eng-page-heading">
+            <img
+              src="{% static 'imgsfiles/headingrectangle36640-r42m-200h.png' %}"
+              alt="headingrectangle36640"
+              class="elec-eng-page-headingrectangle"
+            />
+            <span class="elec-eng-page-text-full">
+              <span>Portfolio: Electrical Engineering</span>
+            </span>
+            <span class="elec-eng-page-text-half">
+              <span>Electrical Engineering</span>
+            </span>
+            <span class="elec-eng-page-text-one">
+              <span>Engineering</span>
+            </span>
+          </div>
+          <!-- <div class="elec-eng-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton6642-0m9.svg' %}"
               alt="menubutton6642"
@@ -64,8 +72,7 @@
               alt="menubutton6641"
               class="elec-eng-page-menubuttonhover"
             />
-          </div>
-
+          </div> -->
           <img
             src="{% static 'imgsfiles/quickmenu6643-t25e-200h.png' %}"
             alt="quickmenu6643"
@@ -75,11 +82,11 @@
           <span class="elec-eng-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
           <span class="elec-eng-page-home"><a href="{% url 'base:home' %}">Home</a></span>
           <span class="elec-eng-page-text06"><a href="{% url 'base:contact' %}">Contact Me</a></span>
-          <img
+          <!-- <img
             src="{% static 'imgsfiles/elecengfilescard6647-gmmo-1800w.png' %}"
             alt="elecengfilescard6647"
             class="elec-eng-page-elecengfilescard"
-          />
+          /> -->
           <div class="elec-eng-page-portfoliotext">
             <span>Click on a project name to download file.</span>
           </div>
@@ -88,8 +95,9 @@
           <div class="elec-eng-page-elecengprojanalogcard">
             <img
               src="{% static 'imgsfiles/compengfilescardi664-uz5-200h.png' %}"
-              alt="compengfilescardI664"
-              class="elec-eng-page-compengfilescard"
+              alt="elecengfilescardI664"
+              class="elec-eng-page-elecengfilescard"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text08" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}  
@@ -99,9 +107,10 @@
           {% elif p.id == 21 %}
           <div class="elec-eng-page-elecengprojstmcard" >
             <img
-              src="{% static 'imgsfiles/compengfilescardi664-md3g-200h.png' %}"
-              alt="compengfilescardI664"
-              class="elec-eng-page-compengfilescard1"
+              src="{% static 'imgsfiles/compengfilescard5283-b68g-200h.png' %}"
+              alt="elecengfilescardI664"
+              class="elec-eng-page-elecengfilescard1"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text10" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
@@ -111,8 +120,9 @@
           <div class="elec-eng-page-elecengprojpowercard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-zwd-200h.png' %}"
-              alt="compengfilescardI665"
-              class="elec-eng-page-compengfilescard2"
+              alt="elecengfilescardI665"
+              class="elec-eng-page-elecengfilescard2"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text12" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
               {{p.name}}
@@ -122,8 +132,9 @@
           <div class="elec-eng-page-elecengprojinductorcard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-fx6-200h.png' %}"
-              alt="compengfilescardI665"
-              class="elec-eng-page-compengfilescard3"
+              alt="elecengfilescardI665"
+              class="elec-eng-page-elecengfilescard3"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text14" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
@@ -133,8 +144,9 @@
           <div class="elec-eng-page-elecengproj-d-n-scard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-n2qs-200h.png' %}"
-              alt="compengfilescardI665"
-              class="elec-eng-page-compengfilescard4"
+              alt="elecengfilescardI665"
+              class="elec-eng-page-elecengfilescard4"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text16" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
@@ -144,8 +156,9 @@
           <div class="elec-eng-page-elecengprojenergycard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-zjjd-200h.png' %}"
-              alt="compengfilescardI665"
-              class="elec-eng-page-compengfilescard5"
+              alt="elecengfilescardI665"
+              class="elec-eng-page-elecengfilescard5"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text18" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
               {{p.name}}
@@ -155,8 +168,9 @@
           <div class="elec-eng-page-elecengprojpcscard">
             <img
               src="{% static 'imgsfiles/compengfilescardi665-z7u-200h.png' %}"
-              alt="compengfilescardI665"
-              class="elec-eng-page-compengfilescard6"
+              alt="elecengfilescardI665"
+              class="elec-eng-page-elecengfilescard6"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             <div class="elec-eng-page-text20" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
@@ -171,14 +185,21 @@
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
               class="elec-eng-page-menubuttonhover"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="elec-eng-page-dropdownmenu">
+            <div class="elec-eng-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="elec-eng-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
             </div>
           </div>
           <span class="elec-eng-page-dev">
@@ -191,5 +212,6 @@
       </div>
     </div>
     <script src="{% static 'jsfiles/popupload.js' %}"></script>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>

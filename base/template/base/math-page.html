@@ -47,24 +47,15 @@
 
       <div class="math-page-container">
         <div class="math-page-math-page">
-          <img
-            src="{% static 'imgsfiles/headingrectangle46932-6x95-200h.png' %}"
-            alt="headingrectangle46932"
-            class="math-page-headingrectangle4"
-          />
-          <span class="math-page-text">
-            <span>Portfolio: Mathematics</span>
-          </span>
-          <div class="math-page-menubutton">
+          <div class="math-page-heading">
             <img
-              src="{% static 'imgsfiles/menubutton6934-3hk4.svg' %}"
-              alt="menubutton6934"
+              src="{% static 'imgsfiles/headingrectangle46932-6x95-200h.png' %}"
+              alt="headingrectangle46932"
+              class="math-page-headingrectangle4"
             />
-            <img
-              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
-              alt="menubutton6935"
-              class="math-page-menubuttonhover"
-            />
+            <span class="math-page-text">
+              <span>Portfolio: Mathematics</span>
+            </span>
           </div>
           <img
             src="{% static 'imgsfiles/quickmenu6935-vfz9-200h.png' %}"
@@ -78,16 +69,12 @@
           <div class="math-page-portfoliotext">
             <span>Click on a project name to download file.</span>
          </div>
-          <img
-            src="{% static 'imgsfiles/mathfilescard6939-32b-1800w.png' %}"
-            alt="mathfilescard6939"
-            class="math-page-mathfilescard"
-          />
-          <div class="math-page-mathprojoprescard">
+         <div class="math-page-mathprescard">
             <img
               src="{% static 'imgsfiles/compengfilescardi694-6sqp-200h.png' %}"
               alt="compengfilescardI694"
               class="math-page-compengfilescard"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             {% for p in portfolio%}
             {% if p.id == 18%}
@@ -95,22 +82,24 @@
                 {{p.name}}
             </div>
           </div>
-          <div class="math-page-mathprojracard">
+          <div class="math-page-mathprocard">
             <img
               src="{% static 'imgsfiles/compengfilescardi694-5xn-200h.png' %}"
               alt="compengfilescardI694"
-              class="math-page-compengfilescard1"
+              class="math-page-mathprocardimg"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             {% elif p.id == 19 %}
             <div class="math-page-text10" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
                 {{p.name}}
             </div>
           </div>
-          <div class="math-page-mathprojpdecard">
+          <div class="math-page-procard3">
             <img
               src="{% static 'imgsfiles/compengfilescardi694-smnp-200h.png' %}"
               alt="compengfilescardI694"
-              class="math-page-compengfilescard2"
+              class="math-page-procard3img"
+              onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')"
             />
             {% elif p.id == 27 %}
             <div class="math-page-text12" onclick="openPopUp('{{p.name}}', '{{p.zipproject.url}}','{{p.tarproject.url}}')">
@@ -119,9 +108,6 @@
           </div>
           {% endif %}
           {% endfor %}
-          <span class="math-page-dev">
-            <span>Developed by Bonga Njamela</span>
-          </span>
           <div class="math-page-themeselector">
            {% include './themeselector.html' %}
           </div>
@@ -129,22 +115,33 @@
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
+              id="menubuttonhover"
               class="math-page-menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="math-page-dropdownmenu">
+            <div class="math-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="math-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
             </div>
           </div>
           <div class="math-page-popup" id="popup">
             {% include './projectpopup.html' %}
           </div>
+          <span class="math-page-dev">
+            <span>Developed by Bonga Njamela</span>
+          </span>
         </div>
       </div>
     </div>
     <script src="{% static 'jsfiles/popupload.js' %}"></script>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>

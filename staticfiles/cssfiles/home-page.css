@@ -29,13 +29,13 @@
 } */
 
 .home-page-dev {
-  left: 4px;
-  top: 1060px;
+  left: 0.333%;
+  top: 98.8481481485%;
   position: absolute;
-  width: 13.43%;
+  width: 100%;
   height: auto;
   color: rgb(126, 50, 50);
-  font-size: 0.625%;
+  font-size: 10px;
   font-style: normal;
   font-family: Roboto;
   margin-right: 0;
@@ -43,6 +43,12 @@
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+@media only screen and (min-height:1081px) {
+  .home-page-dev {
+    display: none;
+  }
 }
 
 .home-page-burgandycard {
@@ -62,7 +68,7 @@
 .home-page-decopicture {
   top: 13.562%;
   left: 8.362%;
-  width: 76.8854%;
+  width: 76.7854%;
   height: 31.75925926%;
   position: absolute;
   border-color: transparent;
@@ -73,65 +79,26 @@
 /* 
   make decopicture (nelsonmandela) appear
 */
-@media only screen and (max-width: 1201px) and (min-width: 641px){
+@media only screen and (min-width: 1201px){
   .home-page-decopicture {
-      left: 0.0%;
-      top: 58%;
-      width: 80%;
-      height: 33.1333333%;
+      top: 13.852%;
+      width: 54.545454545%;
+      left: 3.452%;
+      height: 79.9333333%;
       display: block;
   }
 }
 
-/* medium to small device viewport */
-/* @media only screen and (max-width: 641px)  {
-  .home-page-decopicture {
-      left: 0%;
-      top: 58%;
-      width: 80%;
-  }
-} */
-
-/* small device viewport */
-/* @media only screen and (max-width: 624px) and (min-width: 571px){
-  .home-page-decopicture {
-      left: 2.826%;
-      top: 58%;
-      width: 80%;
-  }
-} */
-
-/* small to tiny device viewport */
-/* @media only screen and (max-width: 571px) and (min-width: 428px){
-  .home-page-decopicture {
-      left: 8.326%;
-      top: 58%;
-      width: 79%;
-      height: 30.742%;
-  }
-} */
-
-/* tiny device viewport */
-/* @media only screen and (max-width: 428px) {
-  .home-page-decopicture {
-      left: 8.826%;
-      top: 61%;
-      width: 80%;
-  }
-} */
-
-/* miniscule device viewport */
-/* @media only screen and (max-width: 375px) {
-  .home-page-decopicture {
-      left: 8.826%;
-      top: 63%;
-      width: 80%;
-  }
-} */
 
 /* 
-   deco table mountain
+  make decopicture (nelsonmandela) disappear
 */
+@media only screen  and (min-width: 641px) and (max-width: 1201px) {
+  .home-page-decopicture {
+      display: none;
+  }
+}
+
 .home-page-decopicture-medlar {
   top: 13.562%;
   left: 8.362%;
@@ -144,9 +111,18 @@
 }
 
 /* 
+  make decopicture (table mountain) disappear
+*/
+@media only screen and (min-width: 1201px) and (max-width: 1921px){
+  .home-page-decopicture-medlar {
+      display: none;
+  }
+}
+
+/* 
   make decopicture (table mountain) appear
 */
-@media only screen and (max-width: 1201px) and (min-width: 641px){
+@media only screen and (min-width: 641px) and (max-width: 1201px) {
   .home-page-decopicture-medlar {
       left: 4.762%;
       top: 58%;
@@ -166,6 +142,10 @@
   }
 }
 
+/*
+   Text Cape Town
+ */
+
 .home-page-text {
   top: 91.6666667%;
   left: 48.17708333%;
@@ -183,6 +163,24 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+
+@media only screen and (min-width:1681px){
+  .home-page-text {
+      top: 92.16666667%;
+      left: 48.026%;
+      width: 24.84860121%;
+      font-size: 1.05vw;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width:1681px){
+  .home-page-text {
+      top: 92.16666667%;
+      left: 48.226%;
+      width: 24.84860121%;
+      font-size: 1.05vw;
+  }
 }
 
 @media only screen and (min-width: 641px) and (max-width:1201px) {
@@ -241,6 +239,25 @@
   text-decoration: underline overline;
 }
 
+@media only screen and (min-width: 1681px) {
+  .home-page-text02 {
+      top: 91.66666667%;
+      left: 71.726%;
+      width: 24.84860121%;
+      font-size: 1.15vw;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1681px) {
+  .home-page-text02 {
+      top: 92.06666667%;
+      left: 71.726%;
+      width: 24.84860121%;
+      font-size: 1.15vw;
+  }
+}
+
+
 @media only screen and (min-width: 641px) and (max-width:1201px) {
   .home-page-text02 {
       top: 92.36666667%;
@@ -281,6 +298,14 @@
 
 .home-page-text04:hover{
   text-decoration: underline overline;
+}
+
+@media only screen and (min-width: 1201px) {
+  .home-page-text04 {
+      top: 83.916%;/*19% * 1.618*/
+      left: 59.367%;
+      width: 27%;
+  }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1201px) {
@@ -360,12 +385,21 @@
   text-decoration: none;
 }
 
+@media only screen and (min-width: 1201px) and (max-width:2241px) {
+  .home-page-text06 {
+      top: 64.36%;/*19% * 1.618*/
+      left: 59.326%;
+      width: 35%;
+      font-size: 1.1718vw;
+  }
+}
+
 @media only screen and (min-width: 641px) and (max-width: 1201px) {
   .home-page-text06 {
       top: 37.36%;/*19% * 1.618*/
       left: 4.726%;
       width: 80%;
-      font-size: 2.2718vw;
+      font-size: 2.018vw;
   }
 }
 
@@ -407,6 +441,13 @@
   text-decoration: none;
 }
 
+@media only screen and (min-width: 1201px) {
+  .home-page-text08 {
+    top: 55.056%;
+    left: 59.639%;
+  }
+}
+
 @media only screen and (min-width: 641px) and (max-width: 1201px) {
   .home-page-text08 {
     top: 33.056%;
@@ -423,17 +464,18 @@
 
 .home-page-quickmenu {
   top: 4.4444444%;
-  left: 70.75%;
+  left: 53.69%;
   width: 18.698%;
   height: 3.425925826%;
   position: relative;
   border-color: transparent;
   border-radius: 8.248282432556152px;
+  display: none;
 }
 
-@media only screen and (max-width:1682px) {
+@media only screen and (min-width:1681px) {
   .home-page-quickmenu {
-    display: none;
+    display: block;
   }
 }
 
@@ -455,6 +497,16 @@
   margin-right: 0;
   margin-bottom: 0;
   text-decoration: none;
+}
+
+/* large viewport*/
+@media only screen and (min-width: 1201px) {
+  .home-page-text10 {
+    font-size: 4.265208333vw;
+    left: 58.835416667%;
+    top: 13.562%;
+    font-size: 3.166666667vw;
+  }
 }
 
 /* medium to large viewport*/
@@ -504,7 +556,7 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 641px) {
+@media only screen and (max-width: 642px) {
   .home-page-text12 {
     top: 20.034%;
     left: 8.326%;
@@ -513,7 +565,7 @@
   }
 }
 
-@media only screen and (min-width: 641px) and (max-width: 1201px) {
+@media only screen and (min-width: 642px) and (max-width: 1201px) {
   .home-page-text12 {
     top: 20.034%;
     left: 4.726%;
@@ -563,7 +615,7 @@
 
 .home-page-text19 {
   top: 55px;
-  left: 84.84791667%;
+  left: 84.44791667%;
   color: rgba(255, 255, 255, 1);
   width: 4.21875%;
   height: auto;
@@ -585,17 +637,14 @@
   text-decoration: underline overline;
 }
 
-@media only screen and (max-width:641px) {
+@media only screen and (min-width:641px) and (max-width:1681px){
   .home-page-text19 {
-    font-size:12px;
     display: none;
   }
 }
 
-@media only screen and (min-width:641px) and (max-width:1682px){
+@media only screen and (max-width:641px) {
   .home-page-text19 {
-    top: 5.65%;
-    font-size:1.625vw;
     display: none;
   }
 }
@@ -654,6 +703,30 @@
 }
 
 /* 
+  Profile picture really large
+*/
+@media only screen and (min-width:1681px) and (max-width:1881px) {
+  .home-page-profilepicture {
+    top: 13.42592586%;
+    height: 32.259259%;
+    left: 78.4%;
+    width: 18.214%;
+  }
+}
+
+/* 
+  Profile picture tablet large
+*/
+@media only screen and (min-width:1201px) and (max-width:1681px) {
+  .home-page-profilepicture {
+    top: 13.42592586%;
+    height: 31.259259%;
+    left: 78.4%;
+    width: 18.214%;
+  }
+}
+
+/* 
   Profile picture large
 */
 @media only screen and (min-width:1081px) and (max-width:1201px) {
@@ -692,7 +765,7 @@
 /* 
   Profile picture small to medium
 */
-@media only screen and (max-width:641px) {
+@media only screen and (min-width:331px) and (max-width:641px) {
   .home-page-profilepicture {
     top: 13.562%;
     height: 21.59259259%;
@@ -701,6 +774,20 @@
   }
 }
 
+@media only screen and (min-width:309px) and (max-width:331px) {
+  .home-page-profilepicture {
+    top: 13.562%;
+    height: 21.59259259%;
+    left: 171px;
+    width: 39.5%;
+  }
+}
+
+@media only screen and (max-width:331px) {
+  .home-page-profilepicture {
+    display: none;
+  }
+}
 .home-page-text23 {
   top: 84px;
   left: 47.78125%;
@@ -721,16 +808,59 @@
   text-decoration: none;
 }
 
-/* small screen Home text moves more to the left*/
-@media only screen and (max-width:641px) {
+@media only screen and (min-width:1079px) and (max-width:1201px) {
   .home-page-text23{ 
-      left: 43.9815%;
+      left: 47.7815%;
   }
 }
 
-@media only screen and (min-width:641px) and (max-width:1201px) {
+@media only screen and (min-width:879px) and (max-width:1079px) {
   .home-page-text23{ 
-      left: 47.7815%;
+      left: 47.97815%;
+  }
+}
+
+
+@media only screen and (min-width:642px) and (max-width:879px) {
+  .home-page-text23{ 
+      left: 45.97815%;
+  }
+}
+
+@media only screen and (min-width:519px) and (max-width:642px) {
+  .home-page-text23{ 
+      left: 41.98015%;
+  }
+}
+
+@media only screen and (min-width:479px) and (max-width:519px) {
+  .home-page-text23{ 
+      left: 39.1815%;
+  }
+}
+
+@media only screen and (min-width:419px) and (max-width:479px) {
+  .home-page-text23{ 
+      left: 37.8815%;
+  }
+}
+
+@media only screen and (min-width:359px) and (max-width:419px) {
+  .home-page-text23{ 
+      left: 38.2815%;
+  }
+}
+
+/* small screen Home text moves more to the left*/
+@media only screen and (min-width:309px) and (max-width:359px) {
+  .home-page-text23{ 
+      left: 36.9815%;
+  }
+}
+
+@media only screen and (max-width: 309px) {
+  .home-page-text23 {
+    left: 35.9815%;
   }
 }
 
@@ -755,13 +885,27 @@
   display: none;
 }
 
-.home-page-menubutton:hover .home-page-menubuttonhover{
+/* .home-page-menubutton:hover .home-page-menubuttonhover{
   display: inline;
 }
 
-.home-page-menubutton:hover .home-page-dropdownmenu{
-  display: block;
+@media only screen and (max-width:1201px) {
+  .home-page-menubutton:hover .home-page-menubuttonhover{
+    display: none;
+  } 
 }
+
+@media only screen and (min-width:1201px) {
+  .home-page-menubutton:hover .home-page-dropdownmenu{
+    display: block;
+  } 
+}
+
+@media only screen and (max-width:1201px) {
+  .home-page-menubutton:hover .home-page-mediummenu{
+    display: block;
+  } 
+} */
 
 /* .home-page-nelsonmandela1 {
   top: 617px;
@@ -784,6 +928,13 @@
   width: 25px;
   height: 38px;
   position: absolute;
+}
+
+@media only screen and (min-width: 1201px) {
+  .home-page-icongithub {
+      top: 90.966667%;
+      left: 92.3333333%;
+  }
 }
 
 @media only screen and (min-width: 641px) and (max-width:1201px) {
@@ -814,6 +965,13 @@
   position: absolute;
 }
 
+@media only screen and (min-width:1201px) {
+  .home-page-iconlinkedin {
+      top: 91.56666667%;
+      left: 94.83333%;
+  }
+}
+
 @media only screen and (min-width: 641px) and (max-width:1201px) {
   .home-page-iconlinkedin {
       top: 91.96666667%;
@@ -840,24 +998,114 @@
   border-color: transparent;
 }
 
-@media only screen and (max-width: 641px) {
+@media only screen and (min-width: 1201px) and (max-width:1359px){
   .home-page-themeselector {
-    left: 34.625%;
+    left: 44.625%;
   }
 }
 
-@media only screen and (min-width: 641px) and (max-width:1201px){
+@media only screen and (min-width: 1119px) and (max-width:1201px){
   .home-page-themeselector {
     left: 43.625%;
   }
 }
 
+@media only screen and (min-width: 1079px) and (max-width:1119px){
+  .home-page-themeselector {
+    left: 43.625%;
+  }
+}
+
+@media only screen and (min-width:959px) and (max-width:1079px) {
+  .home-page-themeselector{ 
+      left: 43.97815%;
+  }
+}
+
+@media only screen and (min-width:879px) and (max-width:959px) {
+  .home-page-themeselector{ 
+      left: 43.17815%;
+  }
+}
+
+
+@media only screen and (min-width:799px) and (max-width:879px) {
+  .home-page-themeselector{ 
+      left: 39.97815%;
+  }
+}
+
+@media only screen and (min-width:699px) and (max-width:799px) {
+  .home-page-themeselector{ 
+      left: 40.57815%;
+  }
+}
+
+
+@media only screen and (min-width:642px) and (max-width:699px) {
+  .home-page-themeselector{ 
+      left: 38.97815%;
+  }
+}
+
+@media only screen and (min-width:569px) and (max-width:642px) {
+  .home-page-themeselector{ 
+      left: 34.5815%;
+  }
+}
+
+@media only screen and (min-width:519px) and (max-width:569px) {
+  .home-page-themeselector{ 
+      left: 33.9815%;
+  }
+}
+
+@media only screen and (min-width:479px) and (max-width:519px) {
+  .home-page-themeselector{ 
+      left: 29.8815%;
+  }
+}
+
+@media only screen and (min-width:419px) and (max-width:479px) {
+  .home-page-themeselector{ 
+      left: 27.8815%;
+  }
+}
+
+
+@media only screen and (min-width:359px) and (max-width:419px) {
+  .home-page-themeselector{ 
+      left: 26.8815%;
+  }
+}
+
+@media only screen and (min-width:309px) and (max-width: 359px) {
+  .home-page-themeselector {
+    left: 25.625%;
+  }
+}
+
+
+@media only screen and (max-width:309px) {
+  .home-page-themeselector {
+    display: none;
+  }
+}
+
+/* Location vector next to Cape Town text */
 .home-page-vectorlocation {
   top: 91.9966667%;
   left: 49.0625%;
   width: 1.3020833333%;
   height: 25px;
   position: absolute;
+}
+
+@media only screen and (min-width: 1201px) {
+  .home-page-vectorlocation { 
+    left: 44.526%;
+    width: 5.1%;
+  }
 }
 
 @media only screen and (min-width: 641px) and (max-width:1201px) {
@@ -876,13 +1124,45 @@
 }
 
 .home-page-dropdownmenu {
+  top: 32px;
   display: none;
   position: relative;
   align-items: flex-start;
   flex-shrink: 0;
-  border-color: transparent;
+  border-color: black;
 }
 
+.home-page-mediummenu {
+  top: 0px;
+  display: none;
+  border-color: rgba(166, 64, 96, 1);
+  border-right: 2px;
+  background-color: white;
+}
+
+/* @media only screen and (min-width: 1201px) {
+  .home-page-mediummenu {
+    display: none;
+  } 
+}
+
+@media only screen and (max-width: 1201px) {
+  .home-page-dropdownmenu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1201px) {
+  .home-page-menubutton:hover .home-page-dropdownmenu{
+    display: block;
+  } 
+}
+
+@media only screen and (max-width:1201px) {
+  .home-page-menubutton:hover .home-page-mediummenu{
+    display: block;
+  } 
+} */
 /* 
 .home-page-icongithub2 {
   top: 154px;

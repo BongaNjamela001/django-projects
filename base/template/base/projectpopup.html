@@ -56,25 +56,28 @@
             <span>
               <span></span>
               <br />
+              <!-- text taken from portfolio module in popup script -->
                 <span id="projectTitle"></span>
             </span>
           </span>
           <span class="projectpopup-text11"><span>Close</span></span>
-          <div class="projectpopup-btnzipdownload" onclick="downloadZip()">
+          <div class="projectpopup-btnzipdownload">
             <img
               src="{% static 'imgsfiles/buttonzipi224-lk7-200h.png' %}"
               alt="buttonzipI224"
               class="projectpopup-buttonzip"
+              onclick="downloadZip()"
             />
-            <span class="projectpopup-text05"><a id="downloadzip" onclick="downloadZip()" download>.zip</a></span>
+            <span class="projectpopup-text05"><a id="downloadzip" onclick="downloadZip()" download>zip</a></span>
           </div>
-          <div class="projectpopup-btntardownload" onclick="downloadTar()">
+          <div class="projectpopup-btntardownload">
             <img
               src="{% static 'imgsfiles/buttontari224-v3n9-200h.png' %}"
               alt="buttontarI224"
               class="projectpopup-buttontar"
+              onclick="downloadTar()"
             />
-            <span class="projectpopup-text07"><a id="downloadtar" onclick="downloadTar()" download>.tar.gz</a></span>
+            <span class="projectpopup-text07"><a id="downloadtar" onclick="downloadTar()" download>tar</a></span>
           </div>
           <span class="projectpopup-text09">
             <span>Choose a file compression type to download.</span>

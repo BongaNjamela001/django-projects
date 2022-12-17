@@ -46,14 +46,25 @@
 
       <div class="chem-phys-page-container">
         <div class="chem-phys-page-chem-phys-page">
-          <img
-            src="{% static 'imgsfiles/headingrectangle663-hjh-200h.png' %}"
-            alt="headingrectangle663"
-            class="chem-phys-page-headingrectangle"
-          />
-          <span class="chem-phys-page-text">
-            <span>Portfolio: Chemistry &amp; Physics</span>
-          </span>
+          <div class="chem-phys-page-heading">
+            <img
+              src="{% static 'imgsfiles/headingrectangle663-hjh-200h.png' %}"
+              alt="headingrectangle663"
+              class="chem-phys-page-headingrectangle"
+            />
+            <span class="chem-phys-page-text">
+              <span>Portfolio: Chemistry &amp; Physics</span>
+            </span>
+            <span class="chem-phys-page-text-p">
+              <span>Portfolio: Physics</span>
+            </span>
+            <span class="chem-phys-page-text-half">
+              <span>Chemistry &amp; Physics</span>
+            </span>
+            <span class="chem-phys-page-text-one">
+              <span>Physics</span>
+            </span>
+          </div>
           <div class="chem-phys-page-portfoliotext">
              <span>Click on a project name to download file.</span>
           </div>
@@ -68,7 +79,6 @@
               class="chem-phys-page-menubuttonhover"
             />
           </div>
-          
           <img
             src="{% static 'imgsfiles/quickmenu666-dk8a-200h.png' %}"
             alt="quickmenu666"
@@ -78,11 +88,11 @@
           <span class="chem-phys-page-text04"><a href="{% url 'base:projects' %}">Portfolios</a></span>
           <span class="chem-phys-page-home"><a href="{% url 'base:home' %}">Home</a></span>
           <span class="chem-phys-page-text06"><a href="{% url 'base:contact' %}">Contact Me</a></span>
-          <img
+          <!-- <img
             src="{% static 'imgsfiles//chemphysfilescard6610-vurp-1800w.png' %}"
             alt="chemphysfilescard6610"
             class="chem-phys-page-chemphysfilescard"
-          />
+          /> -->
           <div class="chem-phys-page-chemphyprojpibcard">
             <img
               src="{% static 'imgsfiles/compengfilescardi661-is38-200h.png' %}"
@@ -189,14 +199,21 @@
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
               class="chem-phys-page-menubuttonhover"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="chem-phys-page-dropdownmenu">
+            <div class="chem-phys-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="chem-phys-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
             </div>
           </div>
           <span class="chem-phys-page-dev">Developed by Bonga Njamela</span>
@@ -207,5 +224,6 @@
       </div>
     </div>
     <script src="{% static 'jsfiles/popupload.js' %}"></script>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>

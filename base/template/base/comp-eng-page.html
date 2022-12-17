@@ -46,16 +46,23 @@
 
       <div class="comp-eng-page-container">
         <div class="comp-eng-page-comp-eng-page">
-          <img
-            src="{%static 'imgsfiles/headingrectangle25280-6roq-200h.png' %}"
-            alt="headingrectangle25280"
-            class="comp-eng-page-headingrectangle2"
-          />
-          <span class="comp-eng-page-text">
-            <span>Portfolio: Computer Engineering</span>
-          </span>
-          
-          <div class="comp-eng-page-menubutton">
+          <div class="comp-eng-page-heading">
+            <img
+              src="{%static 'imgsfiles/headingrectangle25280-6roq-200h.png' %}"
+              alt="headingrectangle25280"
+              class="comp-eng-page-headingrectangle"
+            />
+            <span class="comp-eng-page-text-full">
+              <span>Portfolio: Computer Engineering</span>
+            </span>
+            <span class="comp-eng-page-text-half">
+              <span>Computer Engineering</span>
+            </span>
+            <span class="comp-eng-page-text-one">
+              <span>Programming</span>
+            </span>
+          </div>
+          <!-- <div class="comp-eng-page-menubutton">
             <img
               src="{%static 'imgsfiles/menubutton5257-4f28.svg' %}"
               alt="menubutton5257"
@@ -65,7 +72,7 @@
               alt="menubutton5258"
               class="comp-eng-page-menubuttonhover"
             />
-          </div>
+          </div> -->
 
           <img
             src="{% static 'imgsfiles/quickmenu5271-r02c-200h.png' %}"
@@ -79,11 +86,11 @@
           <div class="comp-eng-page-portfoliotext">
             <span>Click on a project name to download file.</span>
           </div>
-          <img
+          <!-- <img
             src="{%static 'imgsfiles/compengfilescard5281-swgg-1800w.png' %}"
             alt="compengfilescard5281"
             class="comp-eng-page-compengfilescard"
-          />
+          /> -->
           <div class="comp-eng-page-cengprojavltreescard">
             <img
               src="{%static 'imgsfiles/compengfilescard5282-6ka9-200h.png' %}"
@@ -196,27 +203,34 @@
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
               class="comp-eng-page-menubuttonhover"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="comp-eng-page-dropdownmenu">
+            <div class="comp-eng-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="comp-eng-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
             </div>
           </div>
           <!-- Bottom left corner developer name -->
           <span class="comp-eng-page-dev">
             <span>Developed by Bonga Njamela</span>
           </span>
-
           <div class="comp-eng-page-popup" id="popup">
             {% include './projectpopup.html' %}
           </div>
         </div>
       </div>
     </div>
-    <script src="{% static 'jsfiles/popupload.js'%}"></script>
+    <script src="{% static 'jsfiles/popupload.js' %}"></script>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>

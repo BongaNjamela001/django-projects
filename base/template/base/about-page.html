@@ -52,9 +52,9 @@
             alt="quickmenuabout3311"
             class="about-page-quickmenuabout"
           />
-          <span class="about-page-text"><a href="/projects/{{projects.id}}">Portfolios</a></span>
-          <span class="about-page-home"><a href="/{{home.id}}">Home</a></span>
-          <span class="about-page-text02"><a href="/contact/{{contact.id}}">Contact Me</a></span>
+          <span class="about-page-text"><a href="{% url 'base:projects' %}">Portfolios</a></span>
+          <span class="about-page-home"><a href="{% url 'base:home' %}">Home</a></span>
+          <span class="about-page-text02"><a href="{% url 'base:contact' %}">Contact Me</a></span>
           <div class="about-page-themeselector">
             {% include './themeselector.html' %}
           </div>
@@ -65,152 +65,189 @@
               class="about-page-aboutmetext"
             />
             <span class="about-page-text04">
-              <span>About Bonga Njamela</span>
+              <span>About Application</span>
+            </span>
+            <span class="about-page-text04-one">
+              <span>About</span>
             </span>
           </div>
-          <span class="about-page-text06">
-            <span class="about-page-text07">
-              The love for nature grew through his South African schooling
-              career as he became particularly interested in Mathematics and the
-              Natural Sciences. As his appreciation for the fundamental
-              principles that governed existence grew, Bonga chose to pursue the
-              sciences. He was particular fascinated by Physics and Mathematics
-              and how these subjects had the ability to give a full description
-              of any system in nature. Books such as Jeffery Weeks’
-            </span>
-            <span class="about-page-text08">Shape of Space</span>
-            <span class="about-page-text09">and Sir Roger Penrose’s</span>
-            <span class="about-page-text10">Road To Reality</span>
-            <span class="about-page-text11">
-              inspired Bonga to get a deeper understanding of the fabric of
-              existence. In fact, while he was studying, Bonga began to work at
-              a book shop in a local mall, where he could have access to new
-              scientific writings that would expand his horizon. There he came
-              across books such as
-            </span>
-            <span class="about-page-text12">Algorithms To Live By</span>
-            <span>
-              <span>
-                by Brian Christian and Tom Griffiths that related some
-                mathematical and computational models to everyday situations.
-                Bonga would complete his undergraduate degree in Applied
-                Mathematics and Physics at the University of Kwa-Zulu Natal, in
-                2019. It was during this journey that Bonga discovered that
-                innovation in the future would require a strong grasp of the
-                philosophy of nature. Bonga would to graduate as the top third
-                year student in the Physics.
-              </span>
-              <br />
-              <span></span>
-              <br />
-              <span>
-                To enhance his innovation skills in a manner that would allow
-                him to be close to science and mathematics and still help the
-                community, he decided to strengthen his scientific and
-                technological comprehension through studying Electrical and
-                Computer Engineering at the University of Cape Town. Although
-                clear to him that the knowledge that he had gained from his
-                previous undergraduate degree would enhance his understanding,
-                the extent to which his knowledge could be extended and applied
-                was something that he could not forsee. He also realised that he
-                had a long way to go to combine his passion for mathematics,
-                physics and humanity with topics relating to other fields such
-                as computer science and medical technology.
-              </span>
-              <br />
-              <span></span>
-              <br />
-              <span>
-                In the time since he registered for his engineering degree, in
-                2020, Bonga has worked hard to acquire skills that could help
-                him achieve his goal to innovate through mathematics and physics
-                in an impactful way. He learned coding languages such as Python,
-                Java, and C/C++ but most importantly, learned how to learn
-                quickly. He would also gain exceptional knowledge over signals
-                and the electrical devices that generated them, modulated and
-                sampled them. More and more, he realised to how data was capture
-                from nature, interpreted through computers, and used to change
-                the world.
-              </span>
-              <br />
-              <span></span>
-              <br />
-              <span>
-                Today, Bonga is continuing his ‘postgrad undergraduate’ degree
-                in Electrical and Computer Engineering. He believes that the
-                next step for him is to get his hands dirty with a challenge in
-                software engineering jobs, data center management jobs in
-                medical technology or agricultural technology that directly
-                applies the concepts that he has acquire through his educaiton.
-                He is a contributing member of the Engineers Without Borders
-                Society at the University of Cape Town where he is working on a
-                project for feeding underserved students by creating a
-                tech-garden that can monitor and control the state of the
-                environment electronically. He is also working with a team of
-                medical students on health related mobile applications for
-                monitoring and managing certain illness.
-              </span>
-              <br />
-              <span></span>
-            </span>
-          </span>
           <span class="about-page-text29">
-            <span>
-              <span>
-                The Philosophy of Nature, or science as it is known today, has
-                principles rooted in the understanding of the elegance and
-                intricacies of matter, space and time. With a Bachelor of
-                Science in Applied Mathematics and Physics and pursuing a
-                Bachelor of Engineering Electrical and Computer Engineering,
-                Bonga describes himself as a 'philosopher of nature'. Through this perspective
-                , he seeks to enhance humanity's integration with nature by working with driven 
-                teams to apply sciences and critical-thinking to fill in the gaps in society..
-              </span>
-              <br />
-              <span></span>
-              <br />
-              <span>
-                Bonga Njamela grew up in the verdant green province of
-                Mpumalanga, in South Africa. He credits his love and curiosity
-                for nature to his grandfather who had instilled in his family
-                the obligation to be rooted to reality through the appreciation
-                of nature and the world around us. On his visits to his
-                grandfather's farm, Bonga recalls adventures with his
-                grandfather, family and friends to the Kruger National Park and
-                other spectacular natural scenary around the province. His
-                grandfather and grandmother were also very crafty - with his
-                grandfather carving exceptionally beautiful wooden kitchen
-                utensils, axes, spears and other tools which would be used
-                around his farm. Bonga would observe this and later grow a
-                tremendous appreciation for mastering skills through
-                deliberation and practice.
-              </span>
-            </span>
+              <p>
+                This static web application was developed using the <a href="https://www.djangoproject.com/" style="text-decoration: underline;">Django</a> framework to
+                demonstrate and practice coding skills in the context of web development using Python. 
+                The source code was developed over a period of six weeks, although
+                some of the files that can be accessed in the app were compiled over
+                a period of five years. The application was built in Visual Studio code
+                on a Linux operating system and tested in Firefox for Linux. Coding languages used include Python and Javascript,
+                as well as the markup and styling languages, HTML, and CSS. The source code can be
+                found in this <a href="https://github.com/BongaNjamela001/django-projects" target="_blank" style="text-decoration: underline;">Github 
+                  repository</a>.
+              </p>
+              <br/>
           </span>
-          <img
+          <span class="about-page-text30">      
+              <p> 
+                Most of the time was taken in learning about the Django
+                framework, revisiting Javascript coding techniques, and adjusting the dimensions to make the website responsive. The lessons and experience
+                from building this application will significantly reduce the amount of time taken to finish a similar
+                project. Overall, experience from coding other programs in Java, C, 
+                Kotlin and Python expedited production as in the case where the knowlege of program variables, computer memory, program functions and call stacks,
+                and that the learning curve can be sharp, spurred the project to completion. This about page serves to give an informal documentation of the
+                application and the some of the sections of the code that stood out as challenging or interesting. Code is included in images as an illustration of the
+                topics discussed such as Django's views, models and settings modules which are used to handle HTTP requests and responses, define entities in the app and
+                configure the app, respectively. Sources related to building Django web applications are included at the bottom of the page.
+              </p>
+              <br/>
+          </span>
+          <span class="about-page-text31">
+              <p>
+                Each web page in the application is associated with a view in Django. In short, a view is a Python function which processes HTML templates. 
+                Each view performs certain tasks, such as the 'contact' view which captures information added to the form after the send button is clicked and transmits the notification email to 
+                the web developer. The view module handles the http requests and responses to generate a page from the HTML. Javascript functions control the features on each page, such as selecting 
+                which menu to show based on the viewport width. Together, the Python and Javascript functions ensure that the application functions as intended. Django also offers the use of the 
+                model feature, which takes ideas from object-oriented programming in that it uses classes to describe entities. Theses models can be found in the models.py 
+                module. Django constructs admin tables to more easily handle data. For example, the portfolio model declares files and file names that are associate with a project. The files come
+                in two type of compression. The programmer writes the code in Python and Django creates a secure admin page containing all the information. 
+              </p>
+              <br/>
+          </span>
+          <span class="about-page-text06">
+              <p>
+                The settings module in Django is arguably one of the things that make the
+                learning the framework worthwhile. This is because the settings.py file contains
+                configuration description required for the application to work. It tells the web 
+                browser where to look for certain instructions and handles interactions with external
+                APIs and API keys. Django describes the settings module as a "Python module with 
+                module-level variables". Items like static folders and paths containing all the images, CSS files
+                and scripts are instantiated in the settings module and their variables name can be used anywhere
+                in the app.
+              </p>
+          </span>
+          <span class="about-page-text32"> 
+              <p>
+                The part of the project that took the most time was making the app responsive. A website is responsive
+                if it can change its appearance based on the dimensions of the viewport. Nowadays, it is an unwritten
+                rule that a website should be responsive. Another unwritten rule is that designers and developers should
+                use the mobile-first approach which focuses on building a website for small to medium sized screens. 
+                This website however, did not follow that rule. The website for larger viewports was designed and 
+                coded first, and thereafter, pixels were changed to percentages of the viewport width and height to 
+                ensure a uniform design approach across different devices. Fine tuning the percentages is much like 
+                approximating an integral using the sum of areas across small intervals, where the intervals are tantamount
+                to the width intervals. Defining the appearance of a page across smaller width intervals gives a smoother
+                response and makes the website more customisable for the developer.  
+              </p>
+          </span>
+          <span class="about-page-text33">
+              <p>
+                Developing a website takes time. Every detail needs to be assessed, from the distance between images, font-size,
+                when things should be displayed to the screen and most importantly, how data retrieved from a user should be processed.
+                One can think of developing a web app like creating a brand new planet and how things look and work depends entirely on
+                the imagination of its creator. To reduce the amount of time taken to generate a web app, some of the best practices that
+                can be implemented include:   
+               </p>
+               <br/>
+               <ul id="about-page-ul">
+                  <li>Code templates for most of your work. Do not repeat code or the logic in code</li>
+                  <li>Use Javascript instead of CSS to control most features related to appearance</li>
+                  <li>Import frameworks that handle the responsiveness of the app instead of using @media excessively</li>
+                  <li>Use global variables in scripts instead of session storage to store values that need to be reused in the app</li>
+                  <li>Do not be reluctant to change images, text or the position of items on the screen to make the web page responsive 
+                    while maintaining the same design theme throughout the app 
+                  </li>
+                  <li>Use short but discernable variable names and comment code</li>
+               </ul>
+          </span>
+          <span class="about-page-text34">
+                <p>
+                  Up next should be building more advanced web applications which implement complex algorithms and APIs. The idea is to use optimisation techniques
+                  to create an AI-based product where users can automate daily tasks to improve their living standards.
+                </p>
+          </span>          
+          <span class="about-page-text35">
+              <h2>Useful Sources for Understanding the Django Framework</h2>
+                 <p> For more, check out these sources used to gain a better understanding of the Django framework and build the app include:</p>
+                    <ol>
+                      <li><a href="https://docs.djangoproject.com/en/4.1/topics/files/" target="_blank">Django Project Documentation: Managing Downloads</a></li>
+                      <li><a href="https://pypi.org/project/django-compress-storage/" target="_blank">PyPi: Django Compress Storage</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=PtQiiknWUcI&t=2766s" target="_blank">Python Django 7 Hour Course</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=0oSsLbh_Kv4&t=222s" target="_blank">Django Tutorial: Create A Digital Resume with a Python Backend</a></li>
+                      <li><a href="https://www.figma.com/community/plugin/855496422115211923" target="_blank">Figma for Linux: Opensource Design Software</a></li>
+                      <li><a href="https://play.teleporthq.io/" target="_blank">TeleportHQ Figma Plugin: Design HTML/CSS</a></li>
+                    </ol>
+                  <p>For more about the source code, visit this <a href="https://github.com/BongaNjamela001/django-projects" target="_blank">link</a> or click on an image with code to check out the git repo.</p>
+          </span>
+          <!-- <img
             src="{% static 'imgsfiles/profilepicturehflip1091-7w3-400w.png' %}"
             alt="profilepicturehflip1091"
             class="about-page-profilepicturehflip"
-          />
+          /> -->
           <img
+            src="{% static 'imgsfiles/profilepicturehflip1091-7w3-400.png' %}"
+            alt="profilepicturehflip1091"
+            class="about-page-tempbaseimg"
+          />
+          <!-- <img
             src="{% static 'imgsfiles/profilepicturehflip1091-6rse-400w.png' %}"
             alt="profilepicturehflip1091"
             class="about-page-profilepicturehflip1"
+          /> -->
+          <img
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-600.png' %}"
+            alt="profilepicturehflip91"
+            class="about-page-cssimg"
+            onclick="window.open('https://github.com/BongaNjamela001/django-projects/blob/main/staticfiles/cssfiles/comp-eng-page.css', '_blank')"
           />
           <img
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-601.png' %}"
+            alt="profilepicturehflip191"
+            onclick="window.open('https://github.com/BongaNjamela001/django-projects/blob/main/base/views.py','_blank')"
+            class="about-page-views"
+          />
+          <img
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-604.png' %}"
+            alt="profilepicturehflip10"
+            class="about-page-settings"
+            onclick="window.open('https://github.com/BongaNjamela001/django-projects/blob/main/njamelaswebsite/settings.py', '_blank')"
+          />
+          <!-- <img
             src="{% static 'imgsfiles/profilepicturehflip3327-21fa-300h.png' %}"
             alt="profilepicturehflip3327"
             class="about-page-profilepicturehflip2"
+          /> -->
+          <img
+            src="{% static 'imgsfiles/django-logo.png' %}"
+            alt="sunset327"
+            class="about-page-djangologo"
+            onclick="window.open('https://docs.djangoproject.com/en/4.1/', '_blank')"
           />
           <img
             src="{% static 'imgsfiles/profilepicturehflip1091-316r-300h.png' %}"
             alt="profilepicturehflip1091"
-            class="about-page-profilepicturehflip3"
+            class="about-page-sunset"
           />
           <img
-            src="{% static 'imgsfiles/aboutimage014629-ow7q-600h.png' %}"
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-603.png' %}"
             alt="aboutimage014629"
-            class="about-page-aboutimage01"
+            class="about-page-portfoliomodelimg"
+            onclick="window.open('https://github.com/BongaNjamela001/django-projects/blob/main/base/models.py','_blank')"
+          />
+          <img
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-606.png' %}"
+            alt="aboutimage014629"
+            class="about-page-portfoliomodelsmall"
+            onclick="window.open('https://github.com/BongaNjamela001/django-projects/blob/main/base/models.py','_blank')"
+          />
+          <img
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-605.png' %}"
+            alt="aboutimage014629"
+            class="about-page-integration"
+            onclick="window.open('https://www.stewartcalculus.com/media/10_home.php', '_blank')"
+          />
+          <img
+            src="{% static 'imgsfiles/aboutimage014629-ow7q-602.png' %}"
+            alt="aboutimage014629"
+            class="about-page-viewscontact"
+            onclick="window.open('https://github.com/BongaNjamela001/django-projects/blob/main/base/models.py','_blank')"
           />
           <img
             src="{% static 'imgsfiles/aboutimage011091-a0u-300h.png' %}"
@@ -221,19 +258,27 @@
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
               class="about-page-menubuttonhover"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="about-page-dropdownmenu">
+            <div class="about-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
             </div>            
+            <div class="about-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
+            </div>
           </div>
           <span class="about-page-dev">Developed by Bonga Njamela</span>
         </div>
       </div>
     </div>
+    <script src="{% static 'jsfiles/menubutton.js'%}"></script>
   </body>
 </html>

@@ -46,20 +46,6 @@
 
       <div class="email-sent-page-container">
         <div class="email-sent-page-email-sent-page">
-          <div class="email-sent-page-menubutton">
-            <img
-              src="{% static 'imgsfiles/menubutton2308-keq9.svg' %}"
-              alt="menubutton2308"
-            />
-            <img 
-              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
-              alt="menubutton2309"
-              class="email-sent-page-menubuttonhover"
-            />
-            <div class="email-sent-dropdownmenu">
-              {% include './dropdownmenu.html' %}
-            </div>
-          </div>
           <div class="email-sent-page-themeselector">
             {% include './themeselector.html' %}
           </div>
@@ -71,26 +57,50 @@
           <span class="email-sent-page-text"><a href="{% url 'base:about' %}">About</a></span>
           <span class="email-sent-page-text02"><a href="{% url 'base:home' %}">Home</a></span>
           <span class="email-sent-page-text04"><a href="{% url 'base:projects' %}">Portfolio</a></span>
-          <img
-            src="{% static 'imgsfiles/headingrectangle42301-kfjxo-200h.png' %}"
-            alt="headingrectangle42301"
-            class="email-sent-page-headingrectangle4"
-          />
-          <span class="email-sent-page-text06">
-            <a href="{% url 'base:home' %}">Thank you. Notification email sent to Bonga.</a>
-          </span>
+          <div class="email-sent-page-heading">
+            <img
+              src="{% static 'imgsfiles/headingrectangle42301-kfjxo-200h.png' %}"
+              alt="headingrectangle42301"
+              class="email-sent-page-headingrectangle4"
+            />
+            <span class="email-sent-page-text06">
+              <a href="{% url 'base:home' %}">Thank you. Notification email sent to Bonga.</a>
+            </span>
+          </div>
           <span class="email-sent-page-text08">
-            <span>Download Resume</span>
+                <a href="{% static 'resume/Bonga_Njamela_Resume.pdf' %}" target="_blank">Download Resume</a>
           </span>
           <img
             src="{% static 'imgsfiles/vectordownload2301-pflr.svg' %}"
             alt="vectordownload2301"
             class="email-sent-page-vectordownload"
           />
+          <div class="email-sent-page-menubutton">
+            <img
+              src="{% static 'imgsfiles/menubutton2308-keq9.svg' %}"
+              alt="menubutton2308"
+              id="menubutton"
+              onclick="showMenu()"
+            />
+            <img 
+              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+              alt="menubutton2309"
+              class="email-sent-page-menubuttonhover"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
+            />
+            <div class="email-sent-dropdownmenu" id="larmenu">
+              {% include './dropdownmenu.html' %}
+            </div>
+            <div class="email-sent-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
+            </div>
+          </div>
           <span class="email-sent-page-dev">
             <span>Developed by Bonga Njamela</span>
           </span>
         </div>
+        <script src="{% static 'jsfiles/menubutton.js' %}"></script>
       </div>
     </div>
   </body>

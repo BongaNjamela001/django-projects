@@ -3,19 +3,83 @@
 }
 
 .projectpopup-projectpopup {
-  width: 546px;
-  height: 266px;
+  top:300px; 
+  left: 35.78125%;
+  width: 28.4375%;
+  height: 30.62962963%;
   position: fixed;
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
 }
 
+@media only screen and (min-width:1819px) and (max-width: 1919px) {
+  .projectpopup-projectpopup {
+    width: 36%;
+    left: 32%;
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width:1639px) and (max-width: 1819px) {
+  .projectpopup-projectpopup {
+    width: 38%;
+    left: 31%;
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width:1359px) and (max-width: 1639px) {
+  .projectpopup-projectpopup {
+    width: 48%;
+    left: 26%;
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width:1079px) and (max-width: 1359px) {
+  .projectpopup-projectpopup {
+    width: 58%;
+    left: 21%;
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width:719px) and (max-width: 1079px) {
+  .projectpopup-projectpopup {
+    width: 62%;
+    left: 19%;
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width:439px) and (max-width: 719px) {
+  .projectpopup-projectpopup {
+    width: 70%;
+    left: 15%;
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width:186px) and (max-width: 439px) {
+  .projectpopup-projectpopup {
+    width: 80%;
+    left: 10%;
+    height: 35%;
+  }
+}
+
+@media only screen and (max-width:186px) {
+  .projectpopup-projectpopup {
+    display: none;
+  }
+}
+
 .projectpopup-popupdownload {
-  top: 280px;
-  left: 670px;
-  width: 546px;
-  height: 266px;
+  /* top: 51.28205128%;
+  left: 34.858333333%; */
+  width: 100%;/*546px*/
+  height: 100%;/*266px*/
   position: absolute;
   border-color: rgba(126, 50, 50, 1);
   border-style: solid;
@@ -23,23 +87,15 @@
   border-radius: 11.326000213623047px;
 }
 
-.projectpopup-vectorclose {
-  top: 294px;
-  left: 1180px;
-  width: 25px;
-  height: 22px;
-  position: absolute;
-}
-
+/* Text name: File name*/
 .projectpopup-text {
-  top: 321px;
-  left: 670px;
+  top: 28px;/*115.799976px = 10.72222222%*/
+  left: 10%;
   color: rgba(126, 50, 50, 1);
-  width: 544px;
+  width: 80%;
   height: auto;
   position: absolute;
   font-size: 16px;
-  align-self: auto;
   font-style: Bold;
   text-align: center;
   font-family: Inter;
@@ -51,10 +107,44 @@
   text-decoration: none;
 }
 
+@media only screen and (min-width:399px)and (max-width: 719px) {
+  .projectpopup-text {
+    font-size: 15.2px;
+    left: 10%;
+    top: 32px;
+  }
+}
+
+
+@media only screen and (min-width:359px)and (max-width: 399px) {
+  .projectpopup-text {
+    font-size: 13.8px;
+    left: 10%;
+    top: 32px;
+  }
+}
+
+@media only screen and (min-width:199px)and (max-width: 359px) {
+  .projectpopup-text {
+    font-size: 10px;
+    left: 10%;
+    top: 30px;
+  }
+}
+
+@media only screen and (min-width:186px)and (max-width: 199px) {
+  .projectpopup-text {
+    font-size: 10px;
+    left: 10%;
+    top: 20px;
+  }
+}
+
+/* Zip button parent div */
 .projectpopup-btnzipdownload {
-  top: 464px;
-  left: 713px;
-  width: 145px;
+  top: 200px;/*464px*/
+  left: 10.13541667%;/*713px*/
+  width: 7.55208333%;
   height: 41px;
   display: flex;
   position: absolute;
@@ -63,6 +153,71 @@
   border-color: transparent;
 }
 
+@media only screen and (min-width:439px)and (max-width: 719px) {
+  .projectpopup-btnzipdownload {
+    top: 200px;
+    left: 5%;
+  }
+}
+
+@media only screen and (min-width:399px)and (max-width: 439px) {
+  .projectpopup-btnzipdownload {
+    top: 200px;
+    left: 5%;
+  }
+}
+
+@media only screen and (min-width:359px)and (max-width: 399px) {
+  .projectpopup-btnzipdownload {
+    top: 200px;
+    left: 0%;
+  }
+}
+
+
+@media only screen and (min-width:319px)and (max-width: 359px) {
+  .projectpopup-btnzipdownload {
+    top: 140px;
+    left: 22%;
+  }
+}
+
+@media only screen and (min-width:299px)and (max-width: 319px) {
+  .projectpopup-btnzipdownload {
+    top: 140px;
+    left: 18%;
+  }
+}
+
+@media only screen and (min-width:259px)and (max-width: 299px) {
+  .projectpopup-btnzipdownload {
+    top: 140px;
+    left: 14.8%;
+  }
+}
+
+@media only screen and (min-width:229px)and (max-width: 259px) {
+  .projectpopup-btnzipdownload {
+    top: 140px;
+    left: 10%;
+  }
+}
+
+@media only screen and (min-width:199px)and (max-width: 229px) {
+  .projectpopup-btnzipdownload {
+    top: 140px;
+    left: 5%;
+  }
+}
+
+@media only screen and (min-width:186px)and (max-width: 199px) {
+  .projectpopup-btnzipdownload {
+    top: 140px;
+    left: 0%;
+  }
+}
+
+/* Zip button image*/
 .projectpopup-buttonzip {
   top: 10px;
   left: 20px;
@@ -80,14 +235,14 @@
   height: 41px;
   position: absolute;
   display: none;
-  border-color: transparent;
+  border: 2px solid rgba(126, 50, 50, 1);
   border-radius: 11.326000213623047px;
 }
 
+/*Text: 'zip'*/
 .projectpopup-text05 {
   top: 14px;
   color: rgba(255, 255, 255, 1);
-  right: 0px;
   width: 145px;
   height: auto;
   position: absolute;
@@ -103,11 +258,12 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
 .projectpopup-btntardownload {
-  top: 464px;
-  left: 1028px;
-  width: 145px;
-  height: 71px;
+  top: 200px;
+  left: 64.3125%;/*1028px=82.3125%*/
+  width: 7.55208333%;/*145px=7.55208333%*/
+  height: 41px;
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -115,16 +271,126 @@
   border-color: transparent;
 }
 
+@media only screen and (min-width:689px)and (max-width: 719px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 63.9%;
+  }
+}
+
+
+@media only screen and (min-width:639px)and (max-width: 689px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 62.9%;
+  }
+}
+
+
+@media only screen and (min-width:599px)and (max-width: 639px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 59.9%;
+  }
+}
+
+@media only screen and (min-width:559px)and (max-width: 599px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 57.9%;
+  }
+}
+
+@media only screen and (min-width:511px)and (max-width: 559px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 55.9%;
+  }
+}
+
+@media only screen and (min-width:439px)and (max-width: 511px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 50.9%;
+  }
+}
+
+@media only screen and (min-width:419px)and (max-width: 439px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 50.9%;
+  }
+}
+
+
+@media only screen and (min-width:399px)and (max-width: 419px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 48.8%;
+  }
+}
+
+@media only screen and (min-width:373px)and (max-width: 399px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 49.8%;
+  }
+}
+
+@media only screen and (min-width:359px)and (max-width: 373px) {
+  .projectpopup-btntardownload {
+    top: 200px;
+    left: 48%;
+  }
+}
+
+@media only screen and (min-width:319px)and (max-width: 359px) {
+  .projectpopup-btntardownload {
+    left: 23.897%;
+  }
+}
+
+@media only screen and (min-width:299px)and (max-width: 319px) {
+  .projectpopup-btntardownload {
+    left: 19.99%;
+  }
+}
+
+@media only screen and (min-width:259px)and (max-width: 299px) {
+  .projectpopup-btntardownload {
+    left: 16.8%;
+  }
+}
+
+@media only screen and (min-width:229px)and (max-width: 259px) {
+  .projectpopup-btntardownload {
+    left: 12.5%;
+  }
+}
+
+@media only screen and (min-width:199px)and (max-width: 229px) {
+  .projectpopup-btntardownload {
+    left: 8%;
+  }
+}
+
+@media only screen and (min-width:186px)and (max-width: 199px) {
+  .projectpopup-btntardownload {
+    left: 3%;
+  }
+}
+
 .projectpopup-buttontar {
   top: 10px;
   left: 15px;
   width: 115px;
-  height: 41px;
+  height: 41px; 
   position: absolute;
   border-color: transparent;
   border-radius: 11.326000213623047px;
 }
 
+/* Button text: "tarball"*/
 .projectpopup-text07 {
   top: 14px;
   left: 0px;
@@ -145,14 +411,15 @@
   text-decoration: none;
 }
 
+/* Text: 'Choose file' */
 .projectpopup-text09 {
-  top: 406px;
-  left: 672px;
+  top: 45%;
+  left: 24.6666666666667%;
   color: rgba(126, 50, 50, 1);
-  width: 544px;
+  width: 50.33333%;
   height: auto;
   position: absolute;
-  font-size: 18px;
+  font-size: 17px;
   align-self: auto;
   font-style: Regular;
   text-align: center;
@@ -165,15 +432,141 @@
   text-decoration: none;
 }
 
+@media only screen and (min-width:439px)and (max-width: 719px) {
+  .projectpopup-text09 {
+    font-size: 13px;
+    width: 80%;
+    left: 10%;
+    top: 50%;
+  }
+}
+
+@media only screen and (min-width:359px)and (max-width: 439px) {
+  .projectpopup-text09 {
+    font-size: 12.8px;
+    width: 80%;
+    left: 10%;
+    top: 50%;
+  }
+}
+
+@media only screen and (min-width:186px)and (max-width: 359px) {
+  .projectpopup-text09 {
+    font-size: 9.6px;
+    width: 80%;
+    left: 10%;
+    top: 40%;
+  }
+}
+
+.projectpopup-vectorclose {
+  top: 10px;
+  left: 93.4583333333%;
+  width: 25px;
+  height: 22px;
+  position: absolute;
+}
+
+@media only screen and (min-width:719px)and (max-width: 759px) {
+  .projectpopup-vectorclose {
+    left: 90.9%;
+}
+}
+
+
+@media only screen and (min-width:689px)and (max-width: 719px) {
+  .projectpopup-vectorclose {
+    left: 90.9%;
+}
+}
+
+
+@media only screen and (min-width:639px)and (max-width: 689px) {
+  .projectpopup-vectorclose {
+    left: 90.9%;
+}
+}
+
+
+@media only screen and (min-width:511px)and (max-width: 639px) {
+  .projectpopup-vectorclose {
+    left: 90.9%;
+}
+}
+
+@media only screen and (min-width:479px)and (max-width: 511px) {
+  .projectpopup-vectorclose {
+    left: 89.0%;
+}
+}
+
+@media only screen and (min-width:439px)and (max-width: 479px) {
+  .projectpopup-vectorclose {
+    left: 89.9%;
+}
+}
+
+@media only screen and (min-width:399px)and (max-width: 439px) {
+  .projectpopup-vectorclose {
+    left: 89.6%;
+}
+}
+
+
+@media only screen and (min-width:359px)and (max-width: 399px) {
+  .projectpopup-vectorclose {
+    left: 89.6%;
+}
+}
+
+@media only screen and (min-width:319px)and (max-width: 359px) {
+  .projectpopup-vectorclose {
+    left: 87%;
+  }
+}
+
+@media only screen and (min-width:299px)and (max-width: 319px) {
+  .projectpopup-vectorclose {
+    left: 86%;
+  }
+}
+
+@media only screen and (min-width:259px)and (max-width: 299px) {
+  .projectpopup-vectorclose {
+    left: 85%;
+  }
+}
+
+@media only screen and (min-width:229px)and (max-width: 259px) {
+  .projectpopup-vectorclose {
+    left: 84%;
+  }
+}
+
+@media only screen and (min-width:199px)and (max-width: 229px) {
+  .projectpopup-vectorclose {
+    left: 82%;
+  }
+}
+
+@media only screen and (min-width:186px)and (max-width: 199px) {
+  .projectpopup-vectorclose {
+    left: 80%;
+  }
+}
+
+
+/*Text: 'Close' */
 .projectpopup-text11 {
-  top: 317px;
-  left: 920px;
+  top: 35px;
+  left: 93.4583333333%;
   color: rgba(126, 50, 50, 1);
   width: 544px;
   height: auto;
+  display: flex;
   position: absolute;
   font-size: 10px;
-  align-self: auto;
+  /* align-self: auto; */
   font-style: Regular;
   text-align: center;
   font-family: Inter;
@@ -184,3 +577,94 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+
+@media only screen and (min-width:689px)and (max-width: 719px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 90.6%;
+}
+}
+
+
+@media only screen and (min-width:639px)and (max-width: 689px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 90.6%;
+}
+}
+
+@media only screen and (min-width:511px)and (max-width: 639px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 90.6%;
+}
+}
+
+@media only screen and (min-width:479px)and (max-width: 511px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 89.0%;
+}
+}
+
+@media only screen and (min-width:439px)and (max-width: 479px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 89.9%;
+}
+}
+
+@media only screen and (min-width:399px)and (max-width: 439px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 89.9%;
+    font-size: 8px;  }
+}
+
+@media only screen and (min-width:359px)and (max-width: 399px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 89.8%;
+    font-size: 8px;  }
+}
+
+@media only screen and (min-width:319px)and (max-width: 359px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 87.6%;
+    font-size: 8px;  }
+}
+
+@media only screen and (min-width:299px)and (max-width: 319px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 86.9%;
+    font-size: 8px;  }
+}
+
+@media only screen and (min-width:259px)and (max-width: 299px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 85.9%;
+    font-size: 8px;  }
+  }
+
+@media only screen and (min-width:229px)and (max-width: 259px) {
+  .projectpopup-text11 {
+    top: 33px;
+    left: 84.9%;
+    font-size: 8px;  }
+}
+
+@media only screen and (min-width:199px)and (max-width: 229px) {
+  .projectpopup-text11 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:186px)and (max-width: 199px) {
+  .projectpopup-text11 {
+    display: none;
+  }
+}
+

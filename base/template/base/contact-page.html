@@ -47,27 +47,29 @@
 
       <div class="contact-page-container">
         <div class="contact-page-contact-page">
-          <img
-            src="{% static 'imgsfiles/headingrectangle46962-4lea-200h.png' %}"
-            alt="headingrectangle46962"
-            class="contact-page-headingrectangle4"
-          />
-          <span class="contact-page-text"><span>Contact</span></span>
-          <div class="contact-page-menubutton">
+          <div class="contact-page-heading">
             <img
-              src="{% static 'imgsfiles/menubutton6964-712h.svg' %}"
-              alt="menubutton6964"
+              src="{% static 'imgsfiles/headingrectangle46962-4lea-200h.png' %}"
+              alt="headingrectangle46962"
+              class="contact-page-headingrectangle4"
             />
-            <img
-              src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
-              alt="menubutton6965"
-              class="contact-page-menubuttonhover"
-            />
+            <span class="contact-page-text"><span>Contact</span></span>
           </div>
+          <!-- <div class="contact-page-menubutton">
+          <img
+            src="{% static 'imgsfiles/menubutton6964-712h.svg' %}"
+            alt="menubutton6964"
+          />
+          <img
+            src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
+            alt="menubutton6965"
+            class="contact-page-menubuttonhover"
+          />
+          </div> -->
           <div class="contact-page-themeselector">
             {% include './themeselector.html' %}
           </div>
-          <span class="contact-page-text02"><a target="_blank" href="{% static 'documents/Bonga_Njamela_Resume.pdf' %}">Download Resume</a></span>
+          <span class="contact-page-text02"><a href="{% static 'resume/Bonga_Njamela_Resume.pdf' %}" target="_blank">Download Resume</a></span>
           <img
             src="{% static 'imgsfiles/quickmenu1249-a7oe-200h.png' %}"
             alt="quickmenu1249"
@@ -79,34 +81,41 @@
           <div class="contact-page-instructions">
             <span>Fill in the form and click Send to get in touch with Bonga.</span>
           </div>
-          <div id="contactformcard">
+          <div class="contact-page-formcard">
             
             <img
               src="{% static 'imgsfiles/cardname1617-6t99-1300w.png' %}"
               alt="cardname1617"
               class="contact-page-cardname"
             />
+            <!-- Form for filling in contact details -->
             <form id="contactform" action="/contact/" method="post">          
                 {% csrf_token %}
+                  <!-- Name field -->
                   <span class="contact-page-text10">
                     <span name="name">Name</span>
                   </span>
                   <div class="contact-page-boxnamefield">
                     {{form.name}}
                   </div>
+                  <!-- Email address field -->
                   <span class="contact-page-text12">
                     <span name="message">Brief</span>
                   </span>
                   <div class="contact-page-boxemailfield">
                     {{form.email}}
                   </div>
+                  <!-- Message field -->
                   <span class="contact-page-text14">
                     <span name="email">Email</span>
                   </span>  
                   <div class="contact-page-boxbrieffield">
                     {{form.brief}}
                   </div>
-                  <input class="contact-page-sendbutton" type="submit" value="Send">
+                  <!-- Send button -->
+                  <div class="contact-page-sendbutton">
+                    <input class="contact-page-sendbuttonimg" type="submit" value="Send">
+                  </div>
                   <img
                     src="{% static  'imgsfiles/boxsendbuttonwhite2197-k67n-200h.png' %}"
                     alt="boxnamefield1616"
@@ -116,7 +125,7 @@
                     alt="boxnamefield1617"
                     class="contact-page-sendbuttonhover"
                   />
-              </button>
+              <!-- </button> -->
             </form>
           </div>
           <img
@@ -124,24 +133,32 @@
             alt="vectordownload1628"
             class="contact-page-vectordownload"
           />
-          
+          <!-- Menu button -->
           <div class="contact-page-menubutton">
             <img
               src="{% static 'imgsfiles/menubutton3319-uc6.svg' %}"
               alt="menubutton3319"
+              id="menubutton"
+              onclick="showMenu()"
             />
             <img
               src="{% static 'imgsfiles/menubutton228-yfz.svg' %}"
               alt="menubutton3320"
               class="contact-page-menubuttonhover"
+              id="menubuttonhover"
+              onclick="hideMediumMenu()"
             />
-            <div class="contact-page-dropdownmenu">
+            <div class="contact-page-dropdownmenu" id="larmenu">
               {% include './dropdownmenu.html' %}
+            </div>
+            <div class="contact-page-mediummenu" id="medmenu">
+              {% include './mediummenu.html' %}
             </div>
           </div>
         <span class="contact-page-dev">Developed by Bonga Njamela</span>
        </div>
       </div>
     </div>
+    <script src="{% static 'jsfiles/menubutton.js' %}"></script>
   </body>
 </html>
